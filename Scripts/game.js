@@ -11,7 +11,7 @@ var queue;
 // Game Objects
 var plane;
 var island;
-var ocean;
+var Background;
 var scoreboard;
 
 // Cloud Array
@@ -19,7 +19,7 @@ var clouds = [];
 
 // Game Constants
 var CLOUD_NUM = 3;
-var GAME_FONT = "40px Consolas";
+var GAME_FONT = "30px Consolas";
 var FONT_COLOUR = "#FFFF00";
 var PLAYER_LIVES = 3;
 
@@ -31,7 +31,7 @@ function preload() {
         { id: "plane", src: "images/plane.png" },
         { id: "island", src: "images/island.png" },
         { id: "cloud", src: "images/cloud.png" },
-        { id: "ocean", src: "images/ocean.gif" },
+        { id: "background", src: "images/bg.png" },
         { id: "yay", src: "sounds/yay.ogg" },
         { id: "thunder", src: "sounds/thunder.ogg" },
         { id: "engine", src: "sounds/engine.ogg" }
@@ -48,7 +48,7 @@ function init() {
 
 // Game Loop
 function gameLoop(event) {
-    ocean.update();
+    background.update();
     island.update();
     plane.update();
 
@@ -80,6 +80,7 @@ var Plane = (function () {
     }
     Plane.prototype.update = function () {
         this.image.x = stage.mouseX;
+        this.image.y = stage.mouseY;
     };
     return Plane;
 })();
@@ -138,27 +139,27 @@ var Cloud = (function () {
     return Cloud;
 })();
 
-// Ocean Class
-var Ocean = (function () {
-    function Ocean() {
-        this.image = new createjs.Bitmap(queue.getResult("ocean"));
+// Background Class
+var Background = (function () {
+    function Background() {
+        this.image = new createjs.Bitmap(queue.getResult("background"));
         this.width = this.image.getBounds().width;
         this.height = this.image.getBounds().height;
         this.dy = 5;
         stage.addChild(this.image);
         this.reset();
     }
-    Ocean.prototype.reset = function () {
+    Background.prototype.reset = function () {
         this.image.y = -960;
     };
 
-    Ocean.prototype.update = function () {
+    Background.prototype.update = function () {
         this.image.y += this.dy;
         if (this.image.y >= 0) {
             this.reset();
         }
     };
-    return Ocean;
+    return Background;
 })();
 
 // The Distance Utility Function
@@ -257,7 +258,7 @@ function gameStart() {
     var point1 = new createjs.Point();
     var point2 = new createjs.Point();
 
-    ocean = new Ocean();
+    background = new Background();
     island = new Island();
     plane = new Plane();
 
