@@ -1,4 +1,4 @@
-﻿var managers;
+var managers;
 (function (managers) {
     // Image and Sound Manifest;
     var assetManifest = [
@@ -8,7 +8,6 @@
         { id: "thunder", src: "assets/sounds/thunder.ogg" },
         { id: "yay", src: "assets/sounds/yay.ogg" }
     ];
-
     // SpriteSheet Data Object
     var spriteSheetData = {
         "images": ["assets/images/atlas.png"],
@@ -29,7 +28,6 @@
             "tryAgainButton": [5]
         }
     };
-
     // Asset Manager Class
     var Assets = (function () {
         function Assets() {
@@ -45,3 +43,4 @@
     })();
     managers.Assets = Assets;
 })(managers || (managers = {}));
+//# sourceMappingURL=asset.js.map

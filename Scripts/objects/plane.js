@@ -1,4 +1,5 @@
-﻿var objects;
+/// <reference path="../managers/asset.ts" />
+var objects;
 (function (objects) {
     // Plane Class
     var Plane = (function () {
@@ -6,7 +7,7 @@
             this.stage = stage;
             this.game = game;
             this.image = new createjs.Sprite(managers.Assets.atlas, "plane");
-            this.image.y = 430;
+            this.image.y = 130;
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;
             this.image.regX = this.width / 2;
@@ -16,6 +17,7 @@
         }
         Plane.prototype.update = function () {
             this.image.x = this.stage.mouseX;
+            this.image.y = this.stage.mouseY;
         };
         Plane.prototype.destroy = function () {
             this.engineSound.stop();
@@ -25,3 +27,4 @@
     })();
     objects.Plane = Plane;
 })(objects || (objects = {}));
+//# sourceMappingURL=plane.js.map

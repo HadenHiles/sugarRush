@@ -1,14 +1,7 @@
-﻿/// <reference path="../objects/button.ts" />
-/// <reference path="../objects/cloud.ts" />
-/// <reference path="../objects/island.ts" />
-/// <reference path="../objects/label.ts" />
-/// <reference path="../objects/ocean.ts" />
-/// <reference path="../objects/plane.ts" />
-/// <reference path="../objects/scoreboard.ts" />
-/// <reference path="../managers/collision.ts" />
+﻿
 module states {
     export function playState() {
-        ocean.update();
+        background.update();
         island.update();
         plane.update();
 
@@ -35,7 +28,7 @@ module states {
         game = new createjs.Container();
 
         // Instantiate Game Objects
-        ocean = new objects.Ocean(stage, game);
+        background = new objects.Background(stage, game);
         island = new objects.Island(stage, game);
         plane = new objects.Plane(stage, game);
 

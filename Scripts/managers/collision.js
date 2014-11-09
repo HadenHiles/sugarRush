@@ -1,4 +1,8 @@
-﻿var managers;
+/// <reference path="../objects/cloud.ts" />
+/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/plane.ts" />
+/// <reference path="../objects/scoreboard.ts" />
+var managers;
 (function (managers) {
     // Collision Manager Class
     var Collision = (function () {
@@ -14,18 +18,13 @@
             var result = 0;
             var xPoints = 0;
             var yPoints = 0;
-
             xPoints = p2.x - p1.x;
             xPoints = xPoints * xPoints;
-
             yPoints = p2.y - p1.y;
             yPoints = yPoints * yPoints;
-
             result = Math.sqrt(xPoints + yPoints);
-
             return result;
         };
-
         // check collision between plane and any cloud object
         Collision.prototype.planeAndCloud = function (cloud) {
             var p1 = new createjs.Point();
@@ -40,7 +39,6 @@
                 cloud.reset();
             }
         };
-
         // check collision between plane and island
         Collision.prototype.planeAndIsland = function () {
             var p1 = new createjs.Point();
@@ -55,7 +53,6 @@
                 this.island.reset();
             }
         };
-
         // Utility Function to Check Collisions
         Collision.prototype.update = function () {
             for (var count = 0; count < constants.CLOUD_NUM; count++) {
@@ -67,3 +64,4 @@
     })();
     managers.Collision = Collision;
 })(managers || (managers = {}));
+//# sourceMappingURL=collision.js.map

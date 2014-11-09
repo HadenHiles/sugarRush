@@ -1,4 +1,4 @@
-﻿var objects;
+var objects;
 (function (objects) {
     // Scoreboard Class
     var Scoreboard = (function () {
@@ -12,14 +12,12 @@
             this.update();
             this.width = this.label.getBounds().width;
             this.height = this.label.getBounds().height;
-
             game.addChild(this.label);
         }
         Scoreboard.prototype.update = function () {
             this.labelText = "Lives: " + this.lives.toString() + " Score: " + this.score.toString();
             this.label.text = this.labelText;
         };
-
         Scoreboard.prototype.destroy = function () {
             game.removeChild(this.label);
         };
@@ -27,3 +25,4 @@
     })();
     objects.Scoreboard = Scoreboard;
 })(objects || (objects = {}));
+//# sourceMappingURL=scoreboard.js.map
