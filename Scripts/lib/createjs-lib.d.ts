@@ -16,7 +16,7 @@
 // Library documentation : http://www.createjs.com/Docs/TweenJS/modules/TweenJS.html
 
 
-declare module createjs {
+declare module createjs{
     export class Event {
         constructor(type: string, bubbles: boolean, cancelable: boolean);
 
