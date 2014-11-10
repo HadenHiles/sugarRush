@@ -9,7 +9,8 @@ module states {
             clouds[count].update();
         }
 
-        collision.update();
+        islandCollisionManager.update();
+        cloudCollisionManager.update();
         scoreboard.update();
 
         if (scoreboard.lives <= 0) {
@@ -44,7 +45,17 @@ module states {
         scoreboard = new objects.Scoreboard(stage, game);
 
         // Instantiate Collision Manager
-        collision = new managers.Collision(plane, island, clouds, scoreboard);
+        islandCollisionManager = new managers.Collision([plane], [island], function(object1:any, object2:any) {
+            scoreboard.score += 100;
+            object2.reset();
+            createjs.Sound.play("yay");
+        });
+        cloudCollisionManager = new managers.Collision([plane], clouds, function(object1:any, object2:any) {
+            scoreboard.lives -= 1;
+            object2.reset();
+            createjs.Sound.play("thunder");
+        });
+
 
         stage.addChild(game);
     }

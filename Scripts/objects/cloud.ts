@@ -4,16 +4,35 @@
         image: createjs.Sprite;
         stage: createjs.Stage;
         game: createjs.Container;
-        width: number;
-        height: number;
         dy: number;
         dx: number;
         constructor(stage: createjs.Stage, game: createjs.Container) {
+            Object.defineProperty(this, "x",{
+                get: () => {
+                    return this.image.x;
+                }
+            });
+            Object.defineProperty(this, "y",{
+                get: () => {
+                    return this.image.y;
+                }
+            });
+            Object.defineProperty(this, "height",{
+                get: () => {
+                    return this.image.getTransformedBounds().height;
+                }
+            });
+            Object.defineProperty(this, "width",{
+                get: () => {
+                    return this.image.getTransformedBounds().width;
+                }
+            });
+
             this.stage = stage;
             this.game = game;
             this.image = new createjs.Sprite(managers.Assets.atlas, "cloud");
-            this.width = this.image.getBounds().width;
-            this.height = this.image.getBounds().height;
+            this.image.scaleX = .6;
+            this.image.scaleY = .6;
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             this.reset();
@@ -33,11 +52,12 @@
             this.image.y = Math.floor(Math.random() * this.stage.canvas.height);
             this.dx = Math.floor(Math.random() * 4 + 4);
             this.dy = Math.floor(Math.random() * -3) + Math.floor(Math.random() * 3);
-            this.image.x = 480;
+            this.image.x = this.stage.canvas.width;
         }
 
         destroy() {
             game.removeChild(this.image);
         }
-    }
+   }
+
 }

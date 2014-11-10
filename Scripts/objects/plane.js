@@ -4,12 +4,31 @@ var objects;
     // Plane Class
     var Plane = (function () {
         function Plane(stage, game) {
+            var _this = this;
+            Object.defineProperty(this, "x", {
+                get: function () {
+                    return _this.image.x;
+                }
+            });
+            Object.defineProperty(this, "y", {
+                get: function () {
+                    return _this.image.y;
+                }
+            });
+            Object.defineProperty(this, "height", {
+                get: function () {
+                    return _this.image.getTransformedBounds().height;
+                }
+            });
+            Object.defineProperty(this, "width", {
+                get: function () {
+                    return _this.image.getTransformedBounds().width;
+                }
+            });
             this.stage = stage;
             this.game = game;
             this.image = new createjs.Sprite(managers.Assets.atlas, "plane");
             this.image.y = 130;
-            this.width = this.image.getBounds().width;
-            this.height = this.image.getBounds().height;
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             game.addChild(this.image);

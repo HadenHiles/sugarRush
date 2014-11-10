@@ -3,11 +3,32 @@ var objects;
     // Cloud class
     var Cloud = (function () {
         function Cloud(stage, game) {
+            var _this = this;
+            Object.defineProperty(this, "x", {
+                get: function () {
+                    return _this.image.x;
+                }
+            });
+            Object.defineProperty(this, "y", {
+                get: function () {
+                    return _this.image.y;
+                }
+            });
+            Object.defineProperty(this, "height", {
+                get: function () {
+                    return _this.image.getTransformedBounds().height;
+                }
+            });
+            Object.defineProperty(this, "width", {
+                get: function () {
+                    return _this.image.getTransformedBounds().width;
+                }
+            });
             this.stage = stage;
             this.game = game;
             this.image = new createjs.Sprite(managers.Assets.atlas, "cloud");
-            this.width = this.image.getBounds().width;
-            this.height = this.image.getBounds().height;
+            this.image.scaleX = .6;
+            this.image.scaleY = .6;
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             this.reset();
@@ -24,7 +45,7 @@ var objects;
             this.image.y = Math.floor(Math.random() * this.stage.canvas.height);
             this.dx = Math.floor(Math.random() * 4 + 4);
             this.dy = Math.floor(Math.random() * -3) + Math.floor(Math.random() * 3);
-            this.image.x = 480;
+            this.image.x = this.stage.canvas.width;
         };
         Cloud.prototype.destroy = function () {
             game.removeChild(this.image);
