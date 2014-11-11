@@ -1,4 +1,4 @@
-﻿
+﻿﻿
 module states {
     export function playState() {
         background.update();
@@ -45,12 +45,12 @@ module states {
         scoreboard = new objects.Scoreboard(stage, game);
 
         // Instantiate Collision Manager
-        islandCollisionManager = new managers.Collision([plane], [island], function(object1:any, object2:any) {
+        islandCollisionManager = new managers.Collision([plane], [island], function(object1: DisplayObject, object2: DisplayObject) {
             scoreboard.score += 100;
             object2.reset();
             createjs.Sound.play("yay");
         });
-        cloudCollisionManager = new managers.Collision([plane], clouds, function(object1:any, object2:any) {
+        cloudCollisionManager = new managers.Collision([plane], clouds, function(object1: DisplayObject, object2: DisplayObject) {
             scoreboard.lives -= 1;
             object2.reset();
             createjs.Sound.play("thunder");

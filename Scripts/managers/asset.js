@@ -28,6 +28,34 @@ var managers;
             "tryAgainButton": [5]
         }
     };
+    //Veggies Spritesheet
+    var veggiesSpritesheet = {
+        "images": ["assets/images/veggies.png"],
+        "frames": [
+            [483, 2, 119, 502],
+            [336, 2, 145, 628],
+            [832, 337, 244, 309],
+            [604, 2, 226, 399],
+            [541, 506, 279, 427],
+            [2, 2, 332, 633],
+            [822, 648, 218, 314],
+            [282, 637, 257, 314],
+            [832, 2, 251, 333],
+            [2, 637, 278, 325]
+        ],
+        "animations": {
+            "carrot": [0],
+            "cellery": [1],
+            "green-pepper": [2],
+            "hot-pepper": [3],
+            "jalapeno": [4],
+            "lettuce": [5],
+            "onion": [6],
+            "orange-pepper": [7],
+            "red-pepper": [8],
+            "yellow-pepper": [9]
+        }
+    };
     // Asset Manager Class
     var Assets = (function () {
         function Assets() {
@@ -38,6 +66,7 @@ var managers;
             this.loader.installPlugin(createjs.Sound);
             this.loader.loadManifest(assetManifest);
             this.atlas = new createjs.SpriteSheet(spriteSheetData);
+            this.veggies = new createjs.SpriteSheet(veggiesSpritesheet);
         };
         return Assets;
     })();

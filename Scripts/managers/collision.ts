@@ -1,4 +1,4 @@
-﻿/// <reference path="../objects/cloud.ts" />
+﻿﻿﻿/// <reference path="../objects/cloud.ts" />
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/plane.ts" />
 /// <reference path="../objects/scoreboard.ts" />
@@ -9,8 +9,8 @@ module managers {
         // class variables
         private displayObjectSet1 = [];
         private displayObjectSet2 = [];
-        public collisionHandlerCallback: (displayObject1: any, dispalyObject2: any) => void;
-        constructor(displayObjectSet1, displayObjectSet2, collisionHandler: (displayObject1: any, displayObject2: any)=>void) {
+        public collisionHandlerCallback: (displayObject1: DisplayObject, dispalyObject2: DisplayObject) => void;
+        constructor(displayObjectSet1, displayObjectSet2, collisionHandler: (displayObject1: DisplayObject, displayObject2: DisplayObject)=>void) {
             this.displayObjectSet1 = displayObjectSet1;
             this.displayObjectSet2 = displayObjectSet2;
             this.collisionHandlerCallback = collisionHandler;
@@ -33,7 +33,7 @@ module managers {
             return result;
         }
 
-        // check for collisions between two images
+        // check for collisions between two images (objects)
         private checkForCollision(displayObject1, displayObject2) {
             var p1: createjs.Point = new createjs.Point();
             var p2: createjs.Point = new createjs.Point();

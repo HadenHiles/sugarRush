@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf6f163-2474-4df3-9125-596297f7400e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/1945.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/atlas.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/bg.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/sideplane.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/veggies.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/managers/asset.js.map" afterPath="$PROJECT_DIR$/Scripts/managers/asset.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/managers/asset.js" afterPath="$PROJECT_DIR$/Scripts/managers/asset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/managers/asset.ts" afterPath="$PROJECT_DIR$/Scripts/managers/asset.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/cloud.js.map" afterPath="$PROJECT_DIR$/Scripts/objects/cloud.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/cloud.js" afterPath="$PROJECT_DIR$/Scripts/objects/cloud.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/cloud.ts" afterPath="$PROJECT_DIR$/Scripts/objects/cloud.ts" />
@@ -12,49 +19,44 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/managers/collision.js" afterPath="$PROJECT_DIR$/Scripts/managers/collision.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/managers/collision.ts" afterPath="$PROJECT_DIR$/Scripts/managers/collision.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/game.js.map" afterPath="$PROJECT_DIR$/Scripts/game.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/game.js" afterPath="$PROJECT_DIR$/Scripts/game.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/game.ts" afterPath="$PROJECT_DIR$/Scripts/game.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/island.js.map" afterPath="$PROJECT_DIR$/Scripts/objects/island.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/island.js" afterPath="$PROJECT_DIR$/Scripts/objects/island.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/island.ts" afterPath="$PROJECT_DIR$/Scripts/objects/island.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/lib/jquery-2.1.1.js" afterPath="$PROJECT_DIR$/Scripts/lib/jquery-2.1.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/plane.js.map" afterPath="$PROJECT_DIR$/Scripts/objects/plane.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/plane.js" afterPath="$PROJECT_DIR$/Scripts/objects/plane.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/plane.ts" afterPath="$PROJECT_DIR$/Scripts/objects/plane.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/states/play.js.map" afterPath="$PROJECT_DIR$/Scripts/states/play.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/states/play.js" afterPath="$PROJECT_DIR$/Scripts/states/play.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/states/play.ts" afterPath="$PROJECT_DIR$/Scripts/states/play.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sugarRush.iml" afterPath="$PROJECT_DIR$/sugarRush.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sugarRush.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415583830877" ignored="false" />
+    <file path="/Dummy.txt" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415671519879" ignored="false" />
     <file path="/app.css" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415245998028" ignored="false" />
     <file path="/game.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415404922317" ignored="false" />
     <file path="/gameOriginal.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415405098305" ignored="false" />
     <file path="/plane.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415406169874" ignored="false" />
-    <file path="/index.html" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415561731151" ignored="false" />
+    <file path="/index.html" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415674777784" ignored="false" />
     <file path="/menu.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415561935357" ignored="false" />
     <file path="/background.js.map" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415414478990" ignored="false" />
     <file path="/a.dummy" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415591032507" ignored="false" />
     <file path="/createjs-lib.d.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415555432751" ignored="false" />
     <file path="/test.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415557044217" ignored="false" />
     <file path="/background.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415570506792" ignored="false" />
-    <file path="/game.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415591178563" ignored="false" />
-    <file path="/play.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415594632074" ignored="false" />
+    <file path="/game.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415675044216" ignored="false" />
+    <file path="/play.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415678234143" ignored="false" />
     <file path="$USER_HOME$/Downloads/mailPilot-v11-master/mailPilot-v11/Scripts/states/play.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415561515567" ignored="false" />
     <file path="/menu.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415561959595" ignored="false" />
     <file path="/gameover.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415565972664" ignored="false" />
-    <file path="/plane.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415593426203" ignored="false" />
-    <file path="/cloud.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415594010703" ignored="false" />
+    <file path="/plane.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415678907077" ignored="false" />
+    <file path="/cloud.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415678455622" ignored="false" />
     <file path="/island.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415590445205" ignored="false" />
     <file path="/fragment.java" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415584663037" ignored="false" />
-    <file path="/collision.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415595053279" ignored="false" />
+    <file path="/collision.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415680674306" ignored="false" />
     <file path="/play.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415589379697" ignored="false" />
+    <file path="/asset.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415672597522" ignored="false" />
+    <file path="/redPeppers.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415675049433" ignored="false" />
+    <file path="$PROJECT_DIR$/Scripts/objects/background.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415677874201" ignored="false" />
+    <file path="$PROJECT_DIR$/Scripts/game.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415677879020" ignored="false" />
+    <file path="$PROJECT_DIR$/Scripts/states/play.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415680923512" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +76,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -110,7 +113,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -123,16 +125,34 @@
       <file leaf-file-name="plane.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/objects/plane.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="41" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
+            <state line="32" column="31" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/game.ts">
+      <file leaf-file-name="asset.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scripts/managers/asset.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="37" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.0">
+            <state line="67" column="52" selection-start="1965" selection-end="1965" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cloud.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scripts/objects/cloud.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="34" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="52" selection-start="958" selection-end="958" vertical-scroll-proportion="-13.75">
               <folding />
             </state>
           </provider>
@@ -141,25 +161,7 @@
       <file leaf-file-name="play.ts" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Scripts/states/play.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="25" selection-start="1738" selection-end="1743" vertical-scroll-proportion="0.7835498">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="island.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/objects/island.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="23" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="island.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/objects/island.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="15" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
+            <state line="52" column="127" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.7625">
               <folding />
             </state>
           </provider>
@@ -168,43 +170,7 @@
       <file leaf-file-name="collision.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/managers/collision.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="61" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="atlas.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/images/atlas.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cloud.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/objects/cloud.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="40" selection-start="534" selection-end="534" vertical-scroll-proportion="-3.3392856">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="asset.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/managers/asset.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="easeljs.d.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/lib/easeljs.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="12" selection-start="8236" selection-end="8240" vertical-scroll-proportion="0.0">
+            <state line="12" column="137" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -228,22 +194,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Scripts/constants.ts" />
         <option value="$PROJECT_DIR$/Scripts/objects/button.ts" />
         <option value="$PROJECT_DIR$/Scripts/states/menu.js" />
         <option value="$PROJECT_DIR$/Scripts/states/menu.ts" />
         <option value="$PROJECT_DIR$/Scripts/states/background.ts" />
-        <option value="$PROJECT_DIR$/Scripts/managers/asset.ts" />
         <option value="$PROJECT_DIR$/Scripts/states/gameover.ts" />
         <option value="$PROJECT_DIR$/Scripts/objects/background.ts" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Scripts/states/play.js" />
-        <option value="$PROJECT_DIR$/Scripts/game.ts" />
-        <option value="$PROJECT_DIR$/Scripts/objects/plane.ts" />
         <option value="$PROJECT_DIR$/Scripts/objects/island.ts" />
-        <option value="$PROJECT_DIR$/Scripts/states/play.ts" />
-        <option value="$PROJECT_DIR$/Scripts/managers/collision.ts" />
+        <option value="$PROJECT_DIR$/Scripts/objects/redPeppers.ts" />
+        <option value="$PROJECT_DIR$/Scripts/game.ts" />
+        <option value="$PROJECT_DIR$/Scripts/managers/asset.ts" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Scripts/objects/cloud.ts" />
+        <option value="$PROJECT_DIR$/Scripts/objects/plane.ts" />
+        <option value="$PROJECT_DIR$/Scripts/managers/collision.ts" />
+        <option value="$PROJECT_DIR$/Scripts/states/play.ts" />
       </list>
     </option>
   </component>
@@ -298,6 +264,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -316,23 +283,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sugarRush" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sugarRush" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,12 +303,12 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="sugarRush" serverId="bfbaae62-877a-481b-b424-ee2936ed8575">
     <servers>
@@ -429,6 +381,9 @@
             <mapping local="$PROJECT_DIR$/COMP2068-MailPilot-Builder" />
           </mappings>
         </serverdata>
+      </server>
+      <server id="76d28b63-6473-46c3-971f-c76fb8d2ad1d">
+        <serverdata />
       </server>
       <server id="a93e3931-33d2-4d28-87a2-ab7a222c1c5e">
         <serverdata>
@@ -564,22 +519,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" node-parameters="static" working-dir="$PROJECT_DIR$">
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -608,6 +547,22 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" node-parameters="static" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -630,6 +585,13 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -649,13 +611,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -724,7 +679,11 @@
       <created>1415580343962</created>
       <updated>1415580343962</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-refactored collision class and methods to be more DRY making it easier to add collision functionality to objects">
+      <created>1415596459941</created>
+      <updated>1415596459941</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -755,7 +714,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -771,11 +729,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24927954" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32978722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -822,7 +781,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="-got clouds and islands scrolling sideways&#10;-going to start adding new objects and custom images soon" />
+    <option name="LAST_COMMIT_MESSAGE" value="-refactored collision class and methods to be more DRY making it easier to add collision functionality to objects" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -843,6 +802,7 @@
     <MESSAGE value="-re-added the typescript files for the objects, states, and managers" />
     <MESSAGE value="-typescript/javascript organization updates&#10;-background scrolls sideways now&#10;-working on obstacles and point gainers to scroll sideways also" />
     <MESSAGE value="-got clouds and islands scrolling sideways&#10;-going to start adding new objects and custom images soon" />
+    <MESSAGE value="-refactored collision class and methods to be more DRY making it easier to add collision functionality to objects" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -854,39 +814,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Scripts/managers/asset.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="58" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/plane.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/background.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="35" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="369" selection-end="369" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/states/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="29" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="40" column="29" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/images/atlas.png">
@@ -901,34 +831,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/managers/asset.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/states/play.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1250" selection-end="1578" vertical-scroll-proportion="0.6527778">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/plane.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="41" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/managers/collision.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="61" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="39" column="0" selection-start="1250" selection-end="1578" vertical-scroll-proportion="0.6527778" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/objects/island.js">
@@ -938,30 +843,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/managers/asset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.14583333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/constants.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/game.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="37" selection-start="2359" selection-end="2359" vertical-scroll-proportion="0.0">
+        <state line="22" column="35" selection-start="778" selection-end="778" vertical-scroll-proportion="0.1875">
+          <folding>
+            <element signature="e#1#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/objects/island.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="26" selection-start="1606" selection-end="1606" vertical-scroll-proportion="1.0625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="52" selection-start="958" selection-end="958" vertical-scroll-proportion="-13.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/managers/collision.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="137" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/objects/cloud.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="40" selection-start="534" selection-end="534" vertical-scroll-proportion="-3.3392856">
+        <state line="33" column="34" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/island.ts">
+    <entry file="file://$PROJECT_DIR$/Scripts/objects/plane.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
+        <state line="32" column="31" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/managers/asset.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="52" selection-start="1965" selection-end="1965" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/states/play.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="25" selection-start="1738" selection-end="1743" vertical-scroll-proportion="0.7835498">
+        <state line="52" column="127" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.7625">
           <folding />
         </state>
       </provider>

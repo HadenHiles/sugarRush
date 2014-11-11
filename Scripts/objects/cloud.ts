@@ -1,4 +1,4 @@
-﻿module objects {
+﻿﻿module objects {
     // Cloud class
     export class Cloud {
         image: createjs.Sprite;
@@ -30,9 +30,9 @@
 
             this.stage = stage;
             this.game = game;
-            this.image = new createjs.Sprite(managers.Assets.atlas, "cloud");
-            this.image.scaleX = .6;
-            this.image.scaleY = .6;
+            this.image = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+            this.image.scaleX = .4;
+            this.image.scaleY = .4;
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             this.reset();

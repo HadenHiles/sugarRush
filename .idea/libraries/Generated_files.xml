@@ -2,21 +2,23 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/Scripts/managers/collision.js" />
-        <item url="file://$PROJECT_DIR$/Scripts/managers/asset.js" />
-        <item url="file://$PROJECT_DIR$/Scripts/game.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/objects/redPeppers.js" />
         <item url="file://$PROJECT_DIR$/Scripts/objects/background.js" />
-        <item url="file://$PROJECT_DIR$/Scripts/states/menu.js" />
-        <item url="file://$PROJECT_DIR$/Scripts/constants.js" />
-        <item url="file://$PROJECT_DIR$/Scripts/objects/plane.js" />
         <item url="file://$PROJECT_DIR$/Scripts/states/gameover.js" />
         <item url="file://$PROJECT_DIR$/Scripts/states/play.js" />
         <item url="file://$PROJECT_DIR$/Scripts/objects/button.js" />
-        <item url="file://$PROJECT_DIR$/Scripts/objects/cloud.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/managers/collision.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/managers/asset.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/game.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/states/menu.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/constants.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/objects/plane.js" />
         <item url="file://$PROJECT_DIR$/Scripts/objects/island.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/objects/cloud.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/Scripts/objects/redPeppers.js" />
       <root url="file://$PROJECT_DIR$/Scripts/objects/background.js" />
       <root url="file://$PROJECT_DIR$/Scripts/states/gameover.js" />
       <root url="file://$PROJECT_DIR$/Scripts/states/play.js" />
@@ -27,8 +29,8 @@
       <root url="file://$PROJECT_DIR$/Scripts/states/menu.js" />
       <root url="file://$PROJECT_DIR$/Scripts/constants.js" />
       <root url="file://$PROJECT_DIR$/Scripts/objects/plane.js" />
-      <root url="file://$PROJECT_DIR$/Scripts/objects/island.js" />
       <root url="file://$PROJECT_DIR$/Scripts/objects/cloud.js" />
+      <root url="file://$PROJECT_DIR$/Scripts/objects/island.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

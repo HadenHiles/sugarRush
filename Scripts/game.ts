@@ -1,4 +1,4 @@
-﻿/// <reference path="constants.ts" />
+﻿﻿/// <reference path="constants.ts" />
 /// <reference path="managers/asset.ts" />
 /// <reference path="objects/cloud.ts" />
 /// <reference path="objects/island.ts" />

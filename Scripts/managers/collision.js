@@ -26,7 +26,7 @@ var managers;
             result = Math.sqrt(xPoints + yPoints);
             return result;
         };
-        // check for collisions between two images
+        // check for collisions between two images (objects)
         Collision.prototype.checkForCollision = function (displayObject1, displayObject2) {
             var p1 = new createjs.Point();
             var p2 = new createjs.Point();
