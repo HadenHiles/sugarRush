@@ -4,7 +4,7 @@ var states;
         background.update();
         island.update();
         plane.update();
-        for (var count = 0; count < constants.CLOUD_NUM; count++) {
+        for (var count = 0; count < clouds.length; count++) {
             clouds[count].update();
         }
         islandCollisionManager.update();
@@ -30,8 +30,13 @@ var states;
         plane = new objects.Plane(stage, game);
         // Show Cursor
         stage.cursor = "none";
+        // Create my veggies
+        var imageNum = 0;
         for (var count = 0; count < constants.CLOUD_NUM; count++) {
-            clouds[count] = new objects.Cloud(stage, game);
+            for (var imageIdx in managers.Assets.veggies._animations) {
+                clouds[imageNum] = new objects.MovingImage(stage, game, new createjs.Sprite(managers.Assets.veggies, managers.Assets.veggies._animations[imageIdx]));
+                imageNum++;
+            }
         }
         // Display Scoreboard
         scoreboard = new objects.Scoreboard(stage, game);

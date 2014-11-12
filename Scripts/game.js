@@ -1,6 +1,6 @@
 /// <reference path="constants.ts" />
 /// <reference path="managers/asset.ts" />
-/// <reference path="objects/cloud.ts" />
+/// <reference path="objects/movingImage.ts" />
 /// <reference path="objects/island.ts" />
 /// <reference path="objects/background.ts" />
 /// <reference path="objects/plane.ts" />

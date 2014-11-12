@@ -32,8 +32,8 @@ module objects {
             this.image = new createjs.Sprite(managers.Assets.atlas, "plane");
             this.image.y = 130;
             this.image.rotation += 90;
-            this.image.regX = this.image.getTransformedBounds().width / 2;
-            this.image.regY = this.image.getTransformedBounds().height / 2;
+            this.image.regX = this.width / 2;
+            this.image.regY = this.height / 2;
             game.addChild(this.image);
             this.engineSound = createjs.Sound.play('engine', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }

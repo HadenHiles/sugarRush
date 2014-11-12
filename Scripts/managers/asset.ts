@@ -33,6 +33,7 @@
     var veggiesSpritesheet = {
         "images": ["assets/images/veggies.png"],
         "frames": [
+
             [483, 2, 119, 502],
             [336, 2, 145, 628],
             [832, 337, 244, 309],
@@ -45,6 +46,7 @@
             [2, 637, 278, 325]
         ],
         "animations": {
+
             "carrot":[0],
             "cellery":[1],
             "green-pepper":[2],

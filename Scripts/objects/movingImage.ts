@@ -1,12 +1,12 @@
 ﻿﻿module objects {
-    // Cloud class
-    export class Cloud {
+    // MovingImage class
+    export class MovingImage {
         image: createjs.Sprite;
         stage: createjs.Stage;
         game: createjs.Container;
         dy: number;
         dx: number;
-        constructor(stage: createjs.Stage, game: createjs.Container) {
+        constructor(stage: createjs.Stage, game: createjs.Container, image: createjs.Sprite) {
             Object.defineProperty(this, "x",{
                 get: () => {
                     return this.image.x;
@@ -30,9 +30,11 @@
 
             this.stage = stage;
             this.game = game;
-            this.image = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+            this.image = image;
+            //Scale relative to the collision/registration point
             this.image.scaleX = .4;
             this.image.scaleY = .4;
+            //Set collision/registraion point to be in the center of the object
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             this.reset();
@@ -56,7 +58,7 @@
         }
 
         destroy() {
-            game.removeChild(this.image);
+            this.game.removeChild(this.image);
         }
    }
 
