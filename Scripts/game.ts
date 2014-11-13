@@ -21,6 +21,7 @@ var island: objects.Island;
 var clouds = []; // Clouds array;
 var scoreboard: objects.Scoreboard;
 
+var obstacleManager: managers.ObstacleManager;
 var islandCollisionManager: managers.Collision;
 var cloudCollisionManager: managers.Collision;
 

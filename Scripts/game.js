@@ -18,6 +18,7 @@ var plane;
 var island;
 var clouds = []; // Clouds array;
 var scoreboard;
+var obstacleManager;
 var islandCollisionManager;
 var cloudCollisionManager;
 var tryAgain;

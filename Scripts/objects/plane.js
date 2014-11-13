@@ -27,13 +27,14 @@ var objects;
             });
             this.stage = stage;
             this.game = game;
-            this.image = new createjs.Sprite(managers.Assets.atlas, "plane");
+            this.image = new createjs.Sprite(managers.Assets.atlas, "candy-craver");
             this.image.y = 130;
-            this.image.rotation += 90;
+            this.image.scaleX -= .5;
+            this.image.scaleY -= .5;
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             game.addChild(this.image);
-            this.engineSound = createjs.Sound.play('engine', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
+            this.engineSound = createjs.Sound.play('candypump', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }
         Plane.prototype.update = function () {
             this.image.x = this.stage.mouseX;

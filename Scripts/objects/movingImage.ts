@@ -1,4 +1,4 @@
-﻿﻿module objects {
+﻿module objects {
     // MovingImage class
     export class MovingImage {
         image: createjs.Sprite;
@@ -32,6 +32,7 @@
             this.game = game;
             this.image = image;
             //Scale relative to the collision/registration point
+            this.image.x = this.stage.canvas.width * 2;
             this.image.scaleX = .4;
             this.image.scaleY = .4;
             //Set collision/registraion point to be in the center of the object

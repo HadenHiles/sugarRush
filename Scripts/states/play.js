@@ -13,6 +13,7 @@ var states;
         if (scoreboard.lives <= 0) {
             stage.removeChild(game);
             plane.destroy();
+            obstacleManager.destroy();
             game.removeAllChildren();
             game.removeAllEventListeners();
             currentState = constants.GAME_OVER_STATE;
@@ -20,7 +21,6 @@ var states;
         }
     }
     states.playState = playState;
-    // play state Function
     function play() {
         // Declare new Game Container
         game = new createjs.Container();
@@ -30,26 +30,23 @@ var states;
         plane = new objects.Plane(stage, game);
         // Show Cursor
         stage.cursor = "none";
-        // Create my veggies
-        var imageNum = 0;
-        for (var count = 0; count < constants.CLOUD_NUM; count++) {
-            for (var imageIdx in managers.Assets.veggies._animations) {
-                clouds[imageNum] = new objects.MovingImage(stage, game, new createjs.Sprite(managers.Assets.veggies, managers.Assets.veggies._animations[imageIdx]));
-                imageNum++;
-            }
-        }
+        clouds = [];
+        obstacleManager = new managers.ObstacleManager(stage, game, managers.Assets.veggies, function (displayObject) {
+            var idx = clouds.length;
+            clouds[idx] = displayObject;
+        });
         // Display Scoreboard
         scoreboard = new objects.Scoreboard(stage, game);
         // Instantiate Collision Manager
         islandCollisionManager = new managers.Collision([plane], [island], function (object1, object2) {
             scoreboard.score += 100;
             object2.reset();
-            createjs.Sound.play("yay");
+            createjs.Sound.play("slurp");
         });
         cloudCollisionManager = new managers.Collision([plane], clouds, function (object1, object2) {
             scoreboard.lives -= 1;
             object2.reset();
-            createjs.Sound.play("thunder");
+            createjs.Sound.play("ew");
         });
         stage.addChild(game);
     }

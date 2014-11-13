@@ -29,7 +29,9 @@ module objects {
 
             this.stage = stage;
             this.game = game;
-            this.image = new createjs.Sprite(managers.Assets.atlas, "island");
+            this.image = new createjs.Sprite(managers.Assets.atlas, "candy");
+            this.image.scaleX = .7;
+            this.image.scaleY = .7;
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             this.reset();

@@ -1,5 +1,4 @@
-﻿﻿
-module states {
+﻿module states {
     export function playState() {
         background.update();
         island.update();
@@ -16,6 +15,7 @@ module states {
         if (scoreboard.lives <= 0) {
             stage.removeChild(game);
             plane.destroy();
+            obstacleManager.destroy();
             game.removeAllChildren();
             game.removeAllEventListeners();
             currentState = constants.GAME_OVER_STATE;
@@ -23,7 +23,6 @@ module states {
         }
     }
 
-    // play state Function
     export function play(): void {
         // Declare new Game Container
         game = new createjs.Container();
@@ -35,15 +34,11 @@ module states {
 
         // Show Cursor
         stage.cursor = "none";
-
-        // Create my veggies
-        var imageNum = 0;
-        for (var count = 0; count < constants.CLOUD_NUM; count++) {
-            for (var imageIdx in managers.Assets.veggies._animations) {
-                clouds[imageNum] = new objects.MovingImage(stage, game, new createjs.Sprite(managers.Assets.veggies, managers.Assets.veggies._animations[imageIdx]));
-                imageNum++;
-            }
-        }
+        clouds = [];
+        obstacleManager = new managers.ObstacleManager(stage, game, managers.Assets.veggies, function(displayObject) {
+            var idx:number = clouds.length;
+            clouds[idx] = displayObject;
+        });
 
         // Display Scoreboard
         scoreboard = new objects.Scoreboard(stage, game);
@@ -52,14 +47,13 @@ module states {
         islandCollisionManager = new managers.Collision([plane], [island], function(object1: DisplayObject, object2: DisplayObject) {
             scoreboard.score += 100;
             object2.reset();
-            createjs.Sound.play("yay");
+            createjs.Sound.play("slurp");
         });
         cloudCollisionManager = new managers.Collision([plane], clouds, function(object1: DisplayObject, object2: DisplayObject) {
             scoreboard.lives -= 1;
             object2.reset();
-            createjs.Sound.play("thunder");
+            createjs.Sound.play("ew");
         });
-
 
         stage.addChild(game);
     }

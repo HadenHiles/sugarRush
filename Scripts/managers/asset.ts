@@ -3,29 +3,27 @@
     var assetManifest = [
         { id: "loading", src: "assets/images/loading.jpg" },
         { id: "background", src: "assets/images/bg.png" },
-        { id: "engine", src: "assets/sounds/engine.ogg" },
-        { id: "thunder", src: "assets/sounds/thunder.ogg" },
-        { id: "yay", src: "assets/sounds/yay.ogg" }
+        { id: "candypump", src: "assets/sounds/candy-pump.mp3" },
+        { id: "ew", src: "assets/sounds/Ew.mp3" },
+        { id: "slurp", src: "assets/sounds/Slurp.mp3" }
     ];
 
     // SpriteSheet Data Object
     var spriteSheetData = {
         "images": ["assets/images/atlas.png"],
         "frames": [
-            [2, 2, 226, 178],
-            [230, 2, 211, 69],
-            [443, 69, 62, 63],
-            [443, 2, 65, 65],
-            [230, 73, 211, 69],
-            [230, 144, 211, 69]
+
+            [2, 2, 96, 106],
+            [236, 2, 65, 65],
+            [100, 2, 134, 66],
+            [303, 2, 124, 61]
         ],
         "animations": {
-            "cloud": [0],
-            "instructionsButton": [1],
-            "island": [2],
-            "plane": [3],
-            "playButton": [4],
-            "tryAgainButton": [5]
+
+            "candy-craver":[0],
+            "candy":[1],
+            "playButton":[2],
+            "tryAgainButton":[3]
         }
     }
 
@@ -33,7 +31,6 @@
     var veggiesSpritesheet = {
         "images": ["assets/images/veggies.png"],
         "frames": [
-
             [483, 2, 119, 502],
             [336, 2, 145, 628],
             [832, 337, 244, 309],
