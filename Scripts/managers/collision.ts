@@ -1,6 +1,6 @@
 ﻿﻿﻿﻿﻿/// <reference path="../objects/movingImage.ts" />
 /// <reference path="../objects/island.ts" />
-/// <reference path="../objects/plane.ts" />
+/// <reference path="../objects/character.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 
 module managers {

@@ -853,7 +853,7 @@ function createCache() {
 	var keys = [];
 
 	function cache( key, value ) {
-		// Use (key + " ") to avoid islandCollisionManager with native prototype properties (see Issue #157)
+		// Use (key + " ") to avoid candyCollisionManager with native prototype properties (see Issue #157)
 		if ( keys.push( key + " " ) > Expr.cacheLength ) {
 			// Only keep the most recent entries
 			delete cache[ keys.shift() ];

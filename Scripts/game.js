@@ -3,7 +3,7 @@
 /// <reference path="objects/movingImage.ts" />
 /// <reference path="objects/island.ts" />
 /// <reference path="objects/background.ts" />
-/// <reference path="objects/plane.ts" />
+/// <reference path="objects/character.ts" />
 /// <reference path="objects/scoreboard.ts" />
 /// <reference path="objects/label.ts" />
 /// <reference path="objects/button.ts" />
@@ -19,8 +19,8 @@ var island;
 var clouds = []; // Clouds array;
 var scoreboard;
 var obstacleManager;
-var islandCollisionManager;
-var cloudCollisionManager;
+var candyCollisionManager;
+var veggieCollisionManager;
 var tryAgain;
 var playButton;
 var currentState;

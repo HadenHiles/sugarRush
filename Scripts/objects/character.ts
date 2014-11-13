@@ -19,7 +19,8 @@ module objects {
             });
             Object.defineProperty(this, "height",{
                 get: () => {
-                    return this.image.getTransformedBounds().height;                }
+                    return this.image.getTransformedBounds().height;
+                }
             });
             Object.defineProperty(this, "width",{
                 get: () => {
@@ -30,11 +31,10 @@ module objects {
             this.stage = stage;
             this.game = game;
             this.image = new createjs.Sprite(managers.Assets.atlas, "candy-craver");
-            this.image.y = 130;
-            this.image.scaleX -= .5;
-            this.image.scaleY -= .5;
-            this.image.regX = this.width / 2;
-            this.image.regY = this.height / 2;
+            this.image.scaleX = .5;
+            this.image.scaleY = .5;
+            this.image.regX = 30;
+            this.image.regY = 53;
             game.addChild(this.image);
             this.engineSound = createjs.Sound.play('candypump', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }

@@ -4,7 +4,7 @@
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/background.ts" />
-/// <reference path="../objects/plane.ts" />
+/// <reference path="../objects/character.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 module states {
     export function gameOverState() {

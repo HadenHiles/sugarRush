@@ -1,6 +1,6 @@
 /// <reference path="../constants.ts" />
 /// <reference path="../objects/scoreboard.ts" />
-/// <reference path="../objects/plane.ts" />
+/// <reference path="../objects/character.ts" />
 /// <reference path="../objects/background.ts" />
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/movingImage.ts" />
@@ -32,10 +32,10 @@ var states;
         // Show Cursor
         stage.cursor = "default";
         // Display Game Over
-        gameNameLabel = new objects.Label(stage.canvas.width / 2, 40, "MAIL PILOT");
+        gameNameLabel = new objects.Label(stage.canvas.width / 2, 120, "Sugar Rush");
         game.addChild(gameNameLabel);
         // Display Play Again Button
-        playButton = new objects.Button(stage.canvas.width / 2, 300, "playButton");
+        playButton = new objects.Button(stage.canvas.width / 2, 240, "playButton");
         game.addChild(playButton);
         playButton.addEventListener("click", playButtonClicked);
         stage.addChild(game);

@@ -10,13 +10,13 @@
         <item url="file://$PROJECT_DIR$/Scripts/states/menu.js" />
         <item url="file://$PROJECT_DIR$/Scripts/constants.js" />
         <item url="file://$PROJECT_DIR$/Scripts/managers/collision.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/objects/character.js" />
         <item url="file://$PROJECT_DIR$/Scripts/objects/plane.js" />
-        <item url="file://$PROJECT_DIR$/Scripts/managers/ObstacleManager.js" />
         <item url="file://$PROJECT_DIR$/Scripts/managers/ObstacleManager.js" />
         <item url="file://$PROJECT_DIR$/Scripts/objects/movingImage.js" />
         <item url="file://$PROJECT_DIR$/Scripts/groups/red-peppers.js" />
-        <item url="file://$PROJECT_DIR$/Scripts/managers/testCollision.js" />
         <item url="file://$PROJECT_DIR$/Scripts/objects/island.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/managers/testCollision.js" />
         <item url="file://$PROJECT_DIR$/Scripts/states/play.js" />
         <item url="file://$PROJECT_DIR$/Scripts/groups/redPeppers.js" />
       </sourceFilesUrls>
@@ -26,6 +26,7 @@
       <root url="file://$PROJECT_DIR$/Scripts/objects/cloud.js" />
       <root url="file://$PROJECT_DIR$/Scripts/objects/cloud.js" />
       <root url="file://$PROJECT_DIR$/Scripts/objects/cloud.js" />
+      <root url="file://$PROJECT_DIR$/Scripts/objects/plane.js" />
       <root url="file://$PROJECT_DIR$/Scripts/objects/background.js" />
       <root url="file://$PROJECT_DIR$/Scripts/states/gameover.js" />
       <root url="file://$PROJECT_DIR$/Scripts/objects/button.js" />
@@ -35,10 +36,10 @@
       <root url="file://$PROJECT_DIR$/Scripts/managers/collision.js" />
       <root url="file://$PROJECT_DIR$/Scripts/constants.js" />
       <root url="file://$PROJECT_DIR$/Scripts/objects/plane.js" />
+      <root url="file://$PROJECT_DIR$/Scripts/objects/character.js" />
       <root url="file://$PROJECT_DIR$/Scripts/managers/ObstacleManager.js" />
-      <root url="file://$PROJECT_DIR$/Scripts/managers/ObstacleManager.js" />
-      <root url="file://$PROJECT_DIR$/Scripts/objects/island.js" />
       <root url="file://$PROJECT_DIR$/Scripts/managers/testCollision.js" />
+      <root url="file://$PROJECT_DIR$/Scripts/objects/island.js" />
       <root url="file://$PROJECT_DIR$/Scripts/groups/red-peppers.js" />
       <root url="file://$PROJECT_DIR$/Scripts/objects/movingImage.js" />
       <root url="file://$PROJECT_DIR$/Scripts/states/play.js" />

@@ -8,8 +8,8 @@
             clouds[count].update();
         }
 
-        islandCollisionManager.update();
-        cloudCollisionManager.update();
+        candyCollisionManager.update();
+        veggieCollisionManager.update();
         scoreboard.update();
 
         if (scoreboard.lives <= 0) {
@@ -44,15 +44,19 @@
         scoreboard = new objects.Scoreboard(stage, game);
 
         // Instantiate Collision Manager
-        islandCollisionManager = new managers.Collision([plane], [island], function(object1: DisplayObject, object2: DisplayObject) {
+        candyCollisionManager = new managers.Collision([plane], [island], function(object1: DisplayObject, object2: DisplayObject) {
             scoreboard.score += 100;
             object2.reset();
             createjs.Sound.play("slurp");
         });
-        cloudCollisionManager = new managers.Collision([plane], clouds, function(object1: DisplayObject, object2: DisplayObject) {
+        veggieCollisionManager = new managers.Collision([plane], clouds, function(object1: DisplayObject, object2: DisplayObject) {
             scoreboard.lives -= 1;
             object2.reset();
             createjs.Sound.play("ew");
+
+            setTimeout(function(){
+
+            }, 300);
         });
 
         stage.addChild(game);
