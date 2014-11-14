@@ -39,11 +39,13 @@ module objects {
             this.engineSound = createjs.Sound.play('candypump', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }
 
-
+        //Update the position of the character according to the mouse position
         update() {
             this.image.x = this.stage.mouseX;
             this.image.y = this.stage.mouseY;
         }
+
+        //remove the character
         destroy() {
             this.engineSound.stop();
             game.removeChild(this.image);

@@ -31,7 +31,7 @@ module managers {
         //Control the number of display objects that are added to the screen
         private addDisplayObject(tickEvent) {
             if (this.tickCount++ > 0 && this.tickCount % 60 == 0){
-                var randomAnimationIdx:number = Math.floor(Math.random() * (this.spriteSheet._animations.length-1));
+                var randomAnimationIdx:number = Math.floor(Math.random() * (this.spriteSheet._animations.length + 1));
                 var image:createjs.Sprite = new createjs.Sprite(this.spriteSheet, this.spriteSheet._animations[randomAnimationIdx])
                 var o:objects.MovingImage = new objects.MovingImage(stage, game, image);
                 this.displayObjectsCreated++;
@@ -39,7 +39,7 @@ module managers {
                 this.tickCount = 0;
             }
             //Only allow a max of 5 display objects to be on the stage at any given time
-            if (this.displayObjectsCreated > 4) {
+            if (this.displayObjectsCreated > 20) {
                 createjs.Ticker.removeEventListener("tick", this.addDisplayObjectProxy);
             }
         }

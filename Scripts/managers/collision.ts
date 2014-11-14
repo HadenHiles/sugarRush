@@ -17,9 +17,9 @@ module managers {
         }
 
         // Utility method - Distance calculation between two points
-        public rectIntersect(p1: any, p2: any): boolean {
-            return  this.rangeIntersect(p1.x, p1.x + p1.width, p2.x, p2.x + p2.width) &&
-                    this.rangeIntersect(p1.y, p1.y + p1.height, p2.y, p2.y + p2.height);
+        public rectIntersect(o1: any, o2: any, o1Width: number, o1Height: number, o2Width: number, o2Height: number): boolean {
+            return  this.rangeIntersect(o1.x, o1.x + o1Width, o2.x, o2.x + o2Width) &&
+                    this.rangeIntersect(o1.y, o1.y + o1Height, o2.y, o2.y + o2Height);
         }
 
         public rangeIntersect(rangeAMin: number, rangeAMax: number, rangeBMin: number, rangeBMax: number): boolean{
@@ -27,13 +27,26 @@ module managers {
                     Math.min(rangeAMin, rangeAMax) <= Math.max(rangeBMin, rangeBMax);
         }
 
+        //Scale the objects and pass them through to the collision check method
+        private filter(o1: any, o2: any){
+            o1.scaleX = 0.8;
+            o1.scaleY = 0.8;
+            o2.scaleX = 0.8;
+            o2.scaleY = 0.8;
+            var o1Width:number = o1.width * 0.8;
+            var o1Height:number = o1.height * 0.8;
+            var o2Width:number = o2.width * 0.8;
+            var o2Height:number = o2.height * 0.8;
+            this.checkForCollision(o1, o2, o1Width, o1Height, o2Width, o2Height);
+        }
+
         // check for collisions between two images (objects)
-        private checkForCollision(displayObject1, displayObject2) {
+        private checkForCollision(displayObject1, displayObject2, object1Width, object1Height, object2Width, object2Height) {
             var object1: any;
             var object2: any;
             object1 = displayObject1;
             object2 = displayObject2;
-            if (this.rectIntersect(object1, object2)) {
+            if (this.rectIntersect(object1, object2, object1Width, object1Height, object2Width, object2Height)) {
                 this.collisionHandlerCallback(displayObject1, displayObject2);
             }
         }
@@ -42,7 +55,7 @@ module managers {
         update() {
             for(var idx1 in this.displayObjectSet1) {
                 for (var idx2 in this.displayObjectSet2) {
-                    this.checkForCollision(this.displayObjectSet1[idx1], this.displayObjectSet2[idx2]);
+                    this.filter(this.displayObjectSet1[idx1], this.displayObjectSet2[idx2]);
                 }
             }
         }
