@@ -57,6 +57,29 @@
         }
     }
 
+    //Candy Spritesheet
+    var candySpritesheet = {
+        "images": ["assets/images/candy.png"],
+        "frames": [
+
+            [136, 2, 65, 65],
+            [203, 2, 65, 65],
+            [270, 2, 65, 65],
+            [337, 2, 65, 64],
+            [2, 2, 65, 70],
+            [69, 2, 65, 69]
+        ],
+        "animations": {
+
+            "candy":[0],
+            "candy1":[1],
+            "candy2":[2],
+            "candy3":[3],
+            "candy4":[4],
+            "candy5":[5]
+        }
+    }
+
     // Asset Manager Class
     export class Assets {
         public static manifest;
@@ -65,6 +88,7 @@
         public static loader;
         public static atlas: createjs.SpriteSheet;
         public static veggies: createjs.SpriteSheet;
+        public static candy: createjs.SpriteSheet;
 
         public static init() {
             createjs.Sound.initializeDefaultPlugins();
@@ -73,6 +97,7 @@
             this.loader.loadManifest(assetManifest);
             this.atlas = new createjs.SpriteSheet(spriteSheetData);
             this.veggies = new createjs.SpriteSheet(veggiesSpritesheet);
+            this.candy = new createjs.SpriteSheet(candySpritesheet);
         }
 
     }

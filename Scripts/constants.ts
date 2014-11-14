@@ -6,7 +6,8 @@
 
     // Game Constants
     export var CLOUD_NUM: number = 1;
-    export var LABEL_FONT = "40px Consolas";
+    export var LABEL_FONT = "40px Arial";
+    export var INSTRUCTIONS_FONT = "20px Arial";
     export var LABEL_COLOUR = "#97bf0f";
     export var PLANE_LIVES = 3;
 }

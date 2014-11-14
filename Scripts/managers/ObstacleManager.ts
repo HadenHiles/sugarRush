@@ -32,7 +32,7 @@ module managers {
         private addDisplayObject(tickEvent) {
             if (this.tickCount++ > 0 && this.tickCount % 60 == 0){
                 var randomAnimationIdx:number = Math.floor(Math.random() * (this.spriteSheet._animations.length + 1));
-                var image:createjs.Sprite = new createjs.Sprite(this.spriteSheet, this.spriteSheet._animations[randomAnimationIdx])
+                var image:createjs.Sprite = new createjs.Sprite(this.spriteSheet, this.spriteSheet._animations[randomAnimationIdx]);
                 var o:objects.MovingImage = new objects.MovingImage(stage, game, image);
                 this.displayObjectsCreated++;
                 this.newDisplayObjectCallback(o);

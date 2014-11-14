@@ -1,7 +1,7 @@
-﻿module states {
+﻿﻿module states {
     export function playState() {
         background.update();
-        island.update();
+        candy.update();
         plane.update();
 
         for (var count = 0; count < clouds.length; count++) {
@@ -29,7 +29,7 @@
 
         // Instantiate Game Objects
         background = new objects.Background(stage, game);
-        island = new objects.Island(stage, game);
+        candy = new objects.Candy(stage, game);
         plane = new objects.Plane(stage, game);
 
         // Show Cursor
@@ -44,7 +44,7 @@
         scoreboard = new objects.Scoreboard(stage, game);
 
         // Instantiate Collision Manager
-        candyCollisionManager = new managers.Collision([plane], [island], function(object1: DisplayObject, object2: DisplayObject) {
+        candyCollisionManager = new managers.Collision([plane], [candy], function(object1: DisplayObject, object2: DisplayObject) {
             scoreboard.score += 100;
             object2.reset();
             createjs.Sound.play("slurp");

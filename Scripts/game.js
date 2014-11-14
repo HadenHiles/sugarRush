@@ -1,7 +1,7 @@
 /// <reference path="constants.ts" />
 /// <reference path="managers/asset.ts" />
 /// <reference path="objects/movingImage.ts" />
-/// <reference path="objects/island.ts" />
+/// <reference path="objects/candy.ts" />
 /// <reference path="objects/background.ts" />
 /// <reference path="objects/character.ts" />
 /// <reference path="objects/scoreboard.ts" />
@@ -15,7 +15,7 @@ var stage;
 var game;
 var background;
 var plane;
-var island;
+var candy;
 var clouds = []; // Clouds array;
 var scoreboard;
 var obstacleManager;

@@ -1,11 +1,12 @@
 ﻿/// <reference path="../managers/asset.ts" />
 module objects {
-    // Island Class
-    export class Island {
+    // Candy Class
+    export class Candy {
         image: createjs.Sprite;
         stage: createjs.Stage;
         game: createjs.Container;
         dx: number;
+        randomAnimationIdx: number;
         constructor(stage: createjs.Stage, game: createjs.Container) {
             Object.defineProperty(this, "x",{
                 get: () => {
@@ -29,28 +30,28 @@ module objects {
 
             this.stage = stage;
             this.game = game;
-            this.image = new createjs.Sprite(managers.Assets.atlas, "candy");
-            this.image.scaleX = .7;
-            this.image.scaleY = .7;
-            this.image.regX = this.width / 2;
-            this.image.regY = this.height / 2;
             this.reset();
 
             this.dx = 4;
-
-            game.addChild(this.image);
         }
-
         update() {
             this.image.x -= this.dx;
+            this.randomAnimationIdx = Math.floor(Math.random() * (managers.Assets.candy._animations.length + 1));
             if (this.image.x <= 0) {
                 this.reset();
             }
         }
 
         reset() {
+            game.removeChild(this.image);
+            this.image = new createjs.Sprite(managers.Assets.candy, managers.Assets.candy._animations[this.randomAnimationIdx]);
+            this.image.scaleX = .7;
+            this.image.scaleY = .7;
+            this.image.regX = this.width / 2;
+            this.image.regY = this.height / 2;
             this.image.y = Math.floor(Math.random() * this.stage.canvas.height);
             this.image.x = this.stage.canvas.width;
+            game.addChild(this.image);
         }
 
         destroy() {

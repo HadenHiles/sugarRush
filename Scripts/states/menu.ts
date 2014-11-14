@@ -2,7 +2,7 @@
 /// <reference path="../objects/scoreboard.ts" />
 /// <reference path="../objects/character.ts" />
 /// <reference path="../objects/background.ts" />
-/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/candy.ts" />
 /// <reference path="../objects/movingImage.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/label.ts" />
@@ -23,6 +23,7 @@ module states {
 
     export function menu() {
         var gameNameLabel: objects.Label;
+        var gameInstructions: objects.Instructions;
 
         // Declare new Game Container
         game = new createjs.Container();
@@ -34,14 +35,20 @@ module states {
         // Show Cursor
         stage.cursor = "default";
 
-        // Display Game Over
+        // Display Game Title
         gameNameLabel = new objects.Label(stage.canvas.width / 2, 120, "Sugar Rush");
         game.addChild(gameNameLabel);
 
-        // Display Play Again Button
+        // Display Play Button
         playButton = new objects.Button(stage.canvas.width / 2, 240, "playButton");
         game.addChild(playButton);
         playButton.addEventListener("click", playButtonClicked);
+
+        // Display Instructions
+        gameInstructions = new objects.Instructions(stage.canvas.width / 2, 320,    "1. Last as long as you can before you run out of sugar!\n" +
+                                                                                    "2. Avoid Veggies to keep your sugar meter high.\n" +
+                                                                                    "3. Collect Candy to boost your sugar meter.");
+        game.addChild(gameInstructions);
 
         stage.addChild(game);
     }

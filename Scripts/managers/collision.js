@@ -1,5 +1,5 @@
 /// <reference path="../objects/movingImage.ts" />
-/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/candy.ts" />
 /// <reference path="../objects/character.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 var managers;
@@ -24,13 +24,13 @@ var managers;
         //Scale the objects and pass them through to the collision check method
         Collision.prototype.filter = function (o1, o2) {
             o1.scaleX = 0.8;
-            o1.scaleY = 0.8;
+            o1.scaleY = 0.9;
             o2.scaleX = 0.8;
-            o2.scaleY = 0.8;
+            o2.scaleY = 0.9;
             var o1Width = o1.width * 0.8;
-            var o1Height = o1.height * 0.8;
+            var o1Height = o1.height * 0.9;
             var o2Width = o2.width * 0.8;
-            var o2Height = o2.height * 0.8;
+            var o2Height = o2.height * 0.9;
             this.checkForCollision(o1, o2, o1Width, o1Height, o2Width, o2Height);
         };
         // check for collisions between two images (objects)

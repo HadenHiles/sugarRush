@@ -1,7 +1,7 @@
 ﻿﻿/// <reference path="constants.ts" />
 /// <reference path="managers/asset.ts" />
 /// <reference path="objects/movingImage.ts" />
-/// <reference path="objects/island.ts" />
+/// <reference path="objects/candy.ts" />
 /// <reference path="objects/background.ts" />
 /// <reference path="objects/character.ts" />
 /// <reference path="objects/scoreboard.ts" />
@@ -17,7 +17,7 @@ var game: createjs.Container;
 
 var background: objects.Background;
 var plane: objects.Plane;
-var island: objects.Island;
+var candy: objects.Candy;
 var clouds = []; // Clouds array;
 var scoreboard: objects.Scoreboard;
 
