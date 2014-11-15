@@ -1,16 +1,17 @@
-/// <reference path="../constants.ts" />
-/// <reference path="../objects/scoreboard.ts" />
-/// <reference path="../objects/character.ts" />
-/// <reference path="../objects/background.ts" />
-/// <reference path="../objects/candy.ts" />
-/// <reference path="../objects/movingImage.ts" />
-/// <reference path="../objects/button.ts" />
-/// <reference path="../objects/label.ts" />
+/**
+ *  File: menu.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is responsible for displaying the game title,
+ *  instructions for the game, and a play button that starts the game
+ */
 var states;
 (function (states) {
     function playButtonClicked(event) {
         stage.removeChild(game);
-        plane.destroy();
+        character.destroy();
         game.removeAllChildren();
         game.removeAllEventListeners();
         currentState = constants.PLAY_STATE;
@@ -19,28 +20,28 @@ var states;
     states.playButtonClicked = playButtonClicked;
     function menuState() {
         background.update();
-        plane.update();
+        character.update();
     }
     states.menuState = menuState;
     function menu() {
         var gameNameLabel;
         var gameInstructions;
-        // Declare new Game Container
+        //Declare new Game Container
         game = new createjs.Container();
-        // Instantiate Game Objects
+        //Instantiate Game Objects
         background = new objects.Background(stage, game);
-        plane = new objects.Plane(stage, game);
-        // Show Cursor
+        character = new objects.Character(stage, game);
+        //Show Cursor
         stage.cursor = "default";
         // Display Game Title
         gameNameLabel = new objects.Label(stage.canvas.width / 2, 120, "Sugar Rush");
         game.addChild(gameNameLabel);
         // Display Play Button
-        playButton = new objects.Button(stage.canvas.width / 2, 240, "playButton");
+        playButton = new objects.Button(stage.canvas.width / 2, 320, "playButton");
         game.addChild(playButton);
         playButton.addEventListener("click", playButtonClicked);
         // Display Instructions
-        gameInstructions = new objects.Instructions(stage.canvas.width / 2, 320, "1. Last as long as you can before you run out of sugar!\n" + "2. Avoid Veggies to keep your sugar meter high.\n" + "3. Collect Candy to boost your sugar meter.");
+        gameInstructions = new objects.Instructions(stage.canvas.width / 2, stage.canvas.height / 2, "1. Last as long as you can before you run out of sugar!\n" + "2. Your sugar meter decreases over time.\n" + "3. Eating Veggies reduces your sugar meter.\n" + "4. Eating Candy boosts your sugar meter.");
         game.addChild(gameInstructions);
         stage.addChild(game);
     }

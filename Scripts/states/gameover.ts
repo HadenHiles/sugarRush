@@ -1,11 +1,12 @@
-﻿/// <reference path="../constants.ts" />
-/// <reference path="../objects/button.ts" />
-/// <reference path="../objects/movingImage.ts" />
-/// <reference path="../objects/candy.ts" />
-/// <reference path="../objects/label.ts" />
-/// <reference path="../objects/background.ts" />
-/// <reference path="../objects/character.ts" />
-/// <reference path="../objects/scoreboard.ts" />
+﻿/**
+ *  File: gameover.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is responsible for displaying the game over screen text
+ *  along with their score when the user loses the game.
+ */
 module states {
     export function gameOverState() {
         background.update();
@@ -22,6 +23,7 @@ module states {
 
     // Game Over Scene
     export function gameOver() {
+        //Local Variables
         var gameOverLabel: objects.Label;
         var finalScoreLabel: objects.Label;
         var finalScore: objects.Label;
@@ -36,11 +38,11 @@ module states {
         stage.cursor = "default";
 
         // Display Game Over
-        gameOverLabel = new objects.Label(stage.canvas.width / 2, 40, "GAME OVER");
+        gameOverLabel = new objects.Label(stage.canvas.width / 2, 40, "NICE RUSH!");
         game.addChild(gameOverLabel);
 
         // Display Final Score Label
-        finalScoreLabel = new objects.Label(stage.canvas.width / 2, 120, "FINAL SCORE");
+        finalScoreLabel = new objects.Label(stage.canvas.width / 2, 120, "YOUR SCORE:");
         game.addChild(finalScoreLabel);
 
         // Display Final Score
@@ -48,7 +50,7 @@ module states {
         game.addChild(finalScore);
 
         // Display Try Again Button
-        tryAgain = new objects.Button(stage.canvas.width / 2, 300, "tryAgainButton");
+        tryAgain = new objects.Button(stage.canvas.width / 2, 240, "tryAgainButton");
         game.addChild(tryAgain);
         tryAgain.addEventListener("click", tryAgainClicked);
 

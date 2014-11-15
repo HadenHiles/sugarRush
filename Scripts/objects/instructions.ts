@@ -1,9 +1,10 @@
 /**
- * Created with IntelliJ IDEA.
- * User: HandsHiles
- * Date: 14-11-14
- * Time: 3:49 PM
- * To change this template use File | Settings | File Templates.
+ *  File: instructions.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This file generates the instructions for the menu screen
  */
 module objects {
     export class Instructions extends createjs.Text {

@@ -1,4 +1,12 @@
-﻿﻿module managers {
+﻿/**
+ *  File: asset.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This file is used to load and index all of the game assets including sounds, images, and spritesheets
+ */
+module managers {
     // Image and Sound Manifest;
     var assetManifest = [
         { id: "loading", src: "assets/images/loading.jpg" },
@@ -31,16 +39,17 @@
     var veggiesSpritesheet = {
         "images": ["assets/images/veggies.png"],
         "frames": [
-            [483, 2, 119, 502],
-            [336, 2, 145, 628],
-            [832, 337, 244, 309],
-            [604, 2, 226, 399],
-            [541, 506, 279, 427],
-            [2, 2, 332, 633],
-            [822, 648, 218, 314],
-            [282, 637, 257, 314],
-            [832, 2, 251, 333],
-            [2, 637, 278, 325]
+
+            [282, 632, 119, 502],
+            [283, 2, 145, 628],
+            [2, 1409, 244, 309],
+            [255, 1136, 226, 399],
+            [2, 2, 279, 427],
+            [248, 1537, 243, 463],
+            [2, 1720, 218, 314],
+            [2, 758, 257, 314],
+            [2, 1074, 251, 333],
+            [2, 431, 278, 325]
         ],
         "animations": {
 

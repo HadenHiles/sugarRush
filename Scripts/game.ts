@@ -1,24 +1,23 @@
-﻿﻿/// <reference path="constants.ts" />
-/// <reference path="managers/asset.ts" />
-/// <reference path="objects/movingImage.ts" />
-/// <reference path="objects/candy.ts" />
-/// <reference path="objects/background.ts" />
-/// <reference path="objects/character.ts" />
-/// <reference path="objects/scoreboard.ts" />
-/// <reference path="objects/label.ts" />
-/// <reference path="objects/button.ts" />
-/// <reference path="managers/collision.ts" />
-/// <reference path="states/play.ts" />
-/// <reference path="states/menu.ts" />
-/// <reference path="states/gameover.ts" />
+﻿/**
+ *  File: game.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is responsible for initializing all objects
+ *  as well as, creating the game loop, bringing in assets,
+ *  optimizing for mobile touch screens and triggering what
+ *  state the game is in.
+ */
 
 var stage: createjs.Stage;
 var game: createjs.Container;
 
 var background: objects.Background;
-var plane: objects.Plane;
+var character: objects.Character;
 var candy: objects.Candy;
-var clouds = []; // Clouds array;
+var veggies = []; // Veggies array;
+var candy = []; // Candy array;
 var scoreboard: objects.Scoreboard;
 
 var obstacleManager: managers.ObstacleManager;
@@ -31,13 +30,13 @@ var playButton: objects.Button;
 var currentState: number;
 var currentStateFunction;
 
-// Preload function - Loads Assets and initializes game;
+//Preload function - Loads Assets and initializes game
 function preload(): void {
     managers.Assets.init();
     managers.Assets.loader.addEventListener("complete", init);
 }
 
-// init called after Assets have been loaded.
+//init called after Assets have been loaded.
 function init(): void {
     stage = new createjs.Stage(document.getElementById("canvas"));
     stage.enableMouseOver(30);
@@ -49,19 +48,20 @@ function init(): void {
     changeState(currentState);
 }
 
-// Add touch support for mobile devices
+//Add touch support for mobile devices
 function optimizeForMobile() {
     if (createjs.Touch.isSupported()) {
         createjs.Touch.enable(stage);
     }
 }
 
-// Game Loop
+//This is the main game loop
 function gameLoop(event): void {
     currentStateFunction();
     stage.update();
 }
 
+//Change the state of the game between menu, plau, and game over
 function changeState(state: number): void {
     // Launch Various "screens"
     switch (state) {

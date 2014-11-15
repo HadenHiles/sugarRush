@@ -1,27 +1,39 @@
-﻿﻿/// <reference path="../managers/asset.ts" />
+﻿/**
+ *  File: character.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is where the main character is created and moved
+ *  around the screen according to the user's mouse position
+ *  on the canvas
+ */
 module objects {
-    // Plane Class
-    export class Plane {
+    // Character Class
+    export class Character {
         image: createjs.Sprite;
         stage: createjs.Stage;
         game: createjs.Container;
         engineSound: createjs.SoundInstance;
         constructor(stage: createjs.Stage, game: createjs.Container) {
+            //Define the x coordinate
             Object.defineProperty(this, "x",{
                 get: () => {
                     return this.image.x;
                 }
             });
+            //Define the y coordinate
             Object.defineProperty(this, "y",{
                 get: () => {
                     return this.image.y;
                 }
             });
+            //Define the width of the image
             Object.defineProperty(this, "height",{
                 get: () => {
-                    return this.image.getTransformedBounds().height;
-                }
+                    return this.image.getTransformedBounds().height;                }
             });
+            //Define the height of the image
             Object.defineProperty(this, "width",{
                 get: () => {
                     return this.image.getTransformedBounds().width;

@@ -1,9 +1,10 @@
 /**
- * Created with IntelliJ IDEA.
- * User: HandsHiles
- * Date: 14-11-11
- * Time: 11:18 PM
- * To change this template use File | Settings | File Templates.
+ *  File: testCollision
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This is a test file to ensure that the collision class works correctly
  */
 var collision = new managers.Collision(null, null, null);
 console.log(collision.rangeIntersect(501, 600, 201, 502));

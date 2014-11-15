@@ -1,5 +1,12 @@
-﻿/// <reference path="../constants.ts" />
-/// <reference path="../managers/asset.ts" />
+﻿/**
+ *  File: button.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is used to generate buttons from provided
+ *  coordinates and an id string to reference a spritesheet
+ */
 module objects {
     export class Button extends createjs.Sprite {
         constructor(x:number, y:number, buttonIDString: string) {
@@ -11,6 +18,7 @@ module objects {
             this.setButtonListeners();
         }
 
+        //Prepare for user action on buttons
         setButtonListeners() {
             this.cursor = 'pointer';
             this.on('rollover', this.onButtonOver);

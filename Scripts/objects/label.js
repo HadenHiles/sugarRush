@@ -4,6 +4,15 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
+/**
+ *  File: label.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class takes in parameters for coordinates plus a string value
+ *  and then generates one or more labels for each of the various game states
+ */
 var objects;
 (function (objects) {
     var Label = (function (_super) {

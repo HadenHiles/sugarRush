@@ -1,6 +1,16 @@
-﻿module objects {
+﻿/**
+ *  File: background.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is responsible for added and moving the
+ *  background to make it appear like the game is scrolling
+ */
+module objects {
     // Background Class
     export class Background {
+        //Class Variables
         image: createjs.Bitmap;
         stage: createjs.Stage;
         game: createjs.Container;
@@ -15,12 +25,11 @@
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;
             this.reset();
-
             this.dx = 5;
-
             game.addChild(this.image);
         }
 
+        //Move the background image right to left on the x axis
         update() {
             this.image.x = this.image.x - this.dx;
             if (this.image.x <= -480) {
@@ -28,10 +37,12 @@
             }
         }
 
+        //Reset the background back to the right of the screen
         reset() {
             this.image.x = 0;
         }
 
+        //Remove the background
         destroy() {
             game.removeChild(this.image);
         }

@@ -4,8 +4,15 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-/// <reference path="../constants.ts" />
-/// <reference path="../managers/asset.ts" />
+/**
+ *  File: button.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is used to generate buttons from provided
+ *  coordinates and an id string to reference a spritesheet
+ */
 var objects;
 (function (objects) {
     var Button = (function (_super) {
@@ -18,6 +25,7 @@ var objects;
             this.y = y;
             this.setButtonListeners();
         }
+        //Prepare for user action on buttons
         Button.prototype.setButtonListeners = function () {
             this.cursor = 'pointer';
             this.on('rollover', this.onButtonOver);

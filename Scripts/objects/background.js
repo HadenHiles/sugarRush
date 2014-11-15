@@ -1,3 +1,12 @@
+/**
+ *  File: background.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is responsible for added and moving the
+ *  background to make it appear like the game is scrolling
+ */
 var objects;
 (function (objects) {
     // Background Class
@@ -13,15 +22,18 @@ var objects;
             this.dx = 5;
             game.addChild(this.image);
         }
+        //Move the background image right to left on the x axis
         Background.prototype.update = function () {
             this.image.x = this.image.x - this.dx;
             if (this.image.x <= -480) {
                 this.reset();
             }
         };
+        //Reset the background back to the right of the screen
         Background.prototype.reset = function () {
             this.image.x = 0;
         };
+        //Remove the background
         Background.prototype.destroy = function () {
             game.removeChild(this.image);
         };
