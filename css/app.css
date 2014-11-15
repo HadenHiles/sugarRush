@@ -1,6 +1,13 @@
 ﻿body{
     background: rgba(154, 215, 233, 1);
 }
+.logo{
+    position: absolute;
+    left: 50%;
+    top: 22.5%;
+    margin-left: -145px;
+    margin-top: -176px;
+}
 #canvas {
     background: rgb(255, 255, 255);
     width: 880px;
