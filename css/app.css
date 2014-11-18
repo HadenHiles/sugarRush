@@ -9,7 +9,7 @@
     margin-top: -176px;
 }
 #canvas {
-    background: rgb(255, 255, 255);
+    background: url('../images/loading.gif') center center no-repeat #fff;
     width: 880px;
     height: 428px;
     position: absolute;

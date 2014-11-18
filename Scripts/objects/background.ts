@@ -20,12 +20,14 @@ module objects {
         constructor(stage: createjs.Stage, game: createjs.Container) {
             this.stage = stage;
             this.game = game;
+            var whiteBg = new createjs.Bitmap(managers.Assets.loader.getResult("white"));
             this.image = new createjs.Bitmap(managers.Assets.loader.getResult("background"));
             this.image.x = 0;
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;
             this.reset();
             this.dx = 5;
+            game.addChild(whiteBg);
             game.addChild(this.image);
         }
 
