@@ -1,4 +1,4 @@
-﻿/**
+﻿﻿/**
  *  File: game.ts
  *  Author: Haden Hiles
  *  Last Modified By: Haden Hiles
@@ -20,6 +20,7 @@ var veggies = []; // Veggies array;
 var candy = []; // Candy array;
 var scoreboard: objects.Scoreboard;
 
+var imageGroup: objects.ImageGroup;
 var obstacleManager: managers.ObstacleManager;
 var candyCollisionManager: managers.Collision;
 var veggieCollisionManager: managers.Collision;

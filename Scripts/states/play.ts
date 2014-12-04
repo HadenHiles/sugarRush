@@ -62,7 +62,7 @@ module states {
         character = new objects.Character(stage, game);
 
         // Hide Cursor
-        stage.cursor = "none";
+        stage.cursor = "default";
 
         //Pass through each veggie from the veggie collection of sprites
         veggies = [];
@@ -70,9 +70,6 @@ module states {
             var idx:number = veggies.length;
             veggies[idx] = displayObject;
         });
-
-        //Display the Scoreboard
-        scoreboard = new objects.Scoreboard(stage, game);
 
         //Instantiate Collision Manager for character and candy
         candyCollisionManager = new managers.Collision([character], [candy], function(object1: DisplayObject, object2: DisplayObject) {
@@ -112,6 +109,9 @@ module states {
             object2.reset();
             createjs.Sound.play("ew");
         });
+
+        //Display the Scoreboard
+        scoreboard = new objects.Scoreboard(stage, game);
 
         stage.addChild(game);
     }

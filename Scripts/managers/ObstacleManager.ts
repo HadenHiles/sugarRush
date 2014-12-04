@@ -42,10 +42,11 @@ module managers {
                 this.tickCount = 0;
             }
             //Only allow a max of 20 display objects to be on the stage at any given time
-            if (this.displayObjectsCreated > 20) {
+            if (this.displayObjectsCreated >= 20) {
                 createjs.Ticker.removeEventListener("tick", this.addDisplayObjectProxy);
             }
         }
+
         //Stop adding obstacles to the game
         destroy() {
             createjs.Ticker.removeEventListener("tick", this.addDisplayObjectProxy);

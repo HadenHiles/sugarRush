@@ -11,6 +11,7 @@ module managers {
     var assetManifest = [
         { id: "loading", src: "assets/images/loading.jpg" },
         { id: "background", src: "assets/images/bg.png" },
+        { id: "white", src: "images/white.jpg" },
         { id: "candypump", src: "assets/sounds/candy-pump.mp3" },
         { id: "ew", src: "assets/sounds/Ew.mp3" },
         { id: "slurp", src: "assets/sounds/Slurp.mp3" }
@@ -109,5 +110,8 @@ module managers {
             this.candy = new createjs.SpriteSheet(candySpritesheet);
         }
 
+        public static pauseSounds() {
+
+        }
     }
 } 

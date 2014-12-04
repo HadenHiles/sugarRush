@@ -18,8 +18,7 @@ module states {
     }
 
     export function menuState() {
-        background.update();
-        character.update();
+//        character.update();
     }
 
     export function menu() {

@@ -14,6 +14,7 @@ module objects {
         image: createjs.Sprite;
         stage: createjs.Stage;
         game: createjs.Container;
+//        obstacleGroup: objects.ImageGroup;
         dy: number;
         dx: number;
         constructor(stage: createjs.Stage, game: createjs.Container, image: createjs.Sprite) {
@@ -65,7 +66,14 @@ module objects {
             if (this.image.x <= 0) {
                 this.reset();
             }
+//            this.addImageGroup();
+//            this.obstacleGroup.update();
         }
+
+//        private addImageGroup(){
+//            this.obstacleGroup = new objects.ImageGroup("Blah");
+//            this.game.addChild(this.obstacleGroup);
+//        }
 
         //Reset the positioning of the moving image to be at a random coordinate off to the right of the screen
         reset() {

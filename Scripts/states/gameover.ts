@@ -9,7 +9,7 @@
  */
 module states {
     export function gameOverState() {
-        background.update();
+//        background.update();
     }
 
     // Restart Game when Try Again Button is clicked

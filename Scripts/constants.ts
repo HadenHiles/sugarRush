@@ -15,8 +15,8 @@ module constants {
 
     //Game Constants
     export var CLOUD_NUM: number = 1;
-    export var LABEL_FONT = "40px Comic Sans MS";
-    export var INSTRUCTIONS_FONT = "20px Comic Sans MS";
+    export var LABEL_FONT = "40px Arial";
+    export var INSTRUCTIONS_FONT = "20px Arial";
     export var LABEL_COLOUR = "#97bf0f";
     export var LIVES = 10;
 }

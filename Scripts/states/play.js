@@ -59,15 +59,13 @@ var states;
         candy = new objects.Candy(stage, game);
         character = new objects.Character(stage, game);
         // Hide Cursor
-        stage.cursor = "none";
+        stage.cursor = "default";
         //Pass through each veggie from the veggie collection of sprites
         veggies = [];
         obstacleManager = new managers.ObstacleManager(stage, game, managers.Assets.veggies, function (displayObject) {
             var idx = veggies.length;
             veggies[idx] = displayObject;
         });
-        //Display the Scoreboard
-        scoreboard = new objects.Scoreboard(stage, game);
         //Instantiate Collision Manager for character and candy
         candyCollisionManager = new managers.Collision([character], [candy], function (object1, object2) {
             //Update the lives and Sugar Meter accordingly
@@ -110,6 +108,8 @@ var states;
             object2.reset();
             createjs.Sound.play("ew");
         });
+        //Display the Scoreboard
+        scoreboard = new objects.Scoreboard(stage, game);
         stage.addChild(game);
     }
     states.play = play;

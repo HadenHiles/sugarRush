@@ -19,8 +19,7 @@ var states;
     }
     states.playButtonClicked = playButtonClicked;
     function menuState() {
-        background.update();
-        character.update();
+        //        character.update();
     }
     states.menuState = menuState;
     function menu() {

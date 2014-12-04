@@ -10,7 +10,7 @@
 var states;
 (function (states) {
     function gameOverState() {
-        background.update();
+        //        background.update();
     }
     states.gameOverState = gameOverState;
     // Restart Game when Try Again Button is clicked

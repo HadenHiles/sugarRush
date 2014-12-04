@@ -1,14 +1,14 @@
 /**
- *  File: game.ts
- *  Author: Haden Hiles
- *  Last Modified By: Haden Hiles
- *  Date Last Modified: November 14th
- *  Description:
- *  This class is responsible for initializing all objects
- *  as well as, creating the game loop, bringing in assets,
- *  optimizing for mobile touch screens and triggering what
- *  state the game is in.
- */
+*  File: game.ts
+*  Author: Haden Hiles
+*  Last Modified By: Haden Hiles
+*  Date Last Modified: November 14th
+*  Description:
+*  This class is responsible for initializing all objects
+*  as well as, creating the game loop, bringing in assets,
+*  optimizing for mobile touch screens and triggering what
+*  state the game is in.
+*/
 var stage;
 var game;
 var background;
@@ -17,6 +17,7 @@ var candy;
 var veggies = []; // Veggies array;
 var candy = []; // Candy array;
 var scoreboard;
+var imageGroup;
 var obstacleManager;
 var candyCollisionManager;
 var veggieCollisionManager;

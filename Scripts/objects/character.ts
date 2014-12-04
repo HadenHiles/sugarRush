@@ -14,7 +14,7 @@ module objects {
         image: createjs.Sprite;
         stage: createjs.Stage;
         game: createjs.Container;
-        engineSound: createjs.SoundInstance;
+        soundTrack: createjs.SoundInstance;
         constructor(stage: createjs.Stage, game: createjs.Container) {
             //Define the x coordinate
             Object.defineProperty(this, "x",{
@@ -43,24 +43,40 @@ module objects {
             this.stage = stage;
             this.game = game;
             this.image = new createjs.Sprite(managers.Assets.atlas, "candy-craver");
+            this.image.x = 100;
+            this.image.y = 220;
             this.image.scaleX = .5;
             this.image.scaleY = .5;
             this.image.regX = 30;
             this.image.regY = 53;
             game.addChild(this.image);
-            this.engineSound = createjs.Sound.play('candypump', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
+            this.soundTrack = createjs.Sound.play('candypump', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }
 
         //Update the position of the character according to the mouse position
         update() {
-            this.image.x = this.stage.mouseX;
-            this.image.y = this.stage.mouseY;
+            this.moveCharacter(this.image.x, this.image.y, this.stage.mouseX, this.stage.mouseY, 7);
+        }
+
+        moveCharacter(characterX: number, characterY: number, mouseXPos: number, mouseYPos: number, speed: number) {
+            if (characterX < mouseXPos + speed) {
+                this.image.x += speed;
+            }
+            if (characterX > mouseXPos - speed) {
+                this.image.x -= speed;
+            }
+            if (characterY < mouseYPos + speed) {
+                this.image.y += speed;
+            }
+            if (characterY > mouseYPos - speed) {
+                this.image.y -= speed;
+            }
         }
 
         //remove the character
         destroy() {
-            this.engineSound.stop();
-            game.removeChild(this.image);
+            this.soundTrack.stop();
+            this.game.removeChild(this.image);
         }
     }
 

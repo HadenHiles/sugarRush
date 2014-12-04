@@ -12,6 +12,7 @@ var managers;
     var assetManifest = [
         { id: "loading", src: "assets/images/loading.jpg" },
         { id: "background", src: "assets/images/bg.png" },
+        { id: "white", src: "images/white.jpg" },
         { id: "candypump", src: "assets/sounds/candy-pump.mp3" },
         { id: "ew", src: "assets/sounds/Ew.mp3" },
         { id: "slurp", src: "assets/sounds/Slurp.mp3" }
@@ -92,6 +93,8 @@ var managers;
             this.atlas = new createjs.SpriteSheet(spriteSheetData);
             this.veggies = new createjs.SpriteSheet(veggiesSpritesheet);
             this.candy = new createjs.SpriteSheet(candySpritesheet);
+        };
+        Assets.pauseSounds = function () {
         };
         return Assets;
     })();
