@@ -21,8 +21,8 @@ var managers;
             this.collisionHandlerCallback = collisionHandler;
         }
         //Get the min and max values of 2 objects and pass them through the rangeIntersect method to determine if there is overlap
-        Collision.prototype.rectIntersect = function (o1, o2, o1Width, o1Height, o2Width, o2Height) {
-            return this.rangeIntersect(o1.x, o1.x + o1Width, o2.x, o2.x + o2Width) && this.rangeIntersect(o1.y, o1.y + o1Height, o2.y, o2.y + o2Height);
+        Collision.prototype.rectIntersect = function (o1, o2) {
+            return this.rangeIntersect(o1.x, o1.x + o1.width, o2.x, o2.x + o2.width) && this.rangeIntersect(o1.y, o1.y + o1.height, o2.y, o2.y + o2.height);
         };
         //Determine whethere there is an overlap with the two display objects or not
         Collision.prototype.rangeIntersect = function (rangeAMin, rangeAMax, rangeBMin, rangeBMax) {
@@ -38,23 +38,20 @@ var managers;
             var o1Height = o1.height * 0.95;
             var o2Width = o2.width * 0.9;
             var o2Height = o2.height * 0.95;
-            this.checkForCollision(o1, o2, o1Width, o1Height, o2Width, o2Height);
-        };
-        //Check for collisions between two images (display objects)
-        Collision.prototype.checkForCollision = function (displayObject1, displayObject2, object1Width, object1Height, object2Width, object2Height) {
-            var object1;
-            var object2;
-            object1 = displayObject1;
-            object2 = displayObject2;
-            if (this.rectIntersect(object1, object2, object1Width, object1Height, object2Width, object2Height)) {
-                this.collisionHandlerCallback(displayObject1, displayObject2);
-            }
+            //            this.checkForCollision(o1, o2, o1Width, o1Height, o2Width, o2Height);
         };
         //loop through both object collections and check for a collision with each item in a collection (ex. veggies)
         Collision.prototype.update = function () {
+            // We need to fake the object dimensions to improve perceived collisions.
+            var scaledObjectA = new filters.Scale();
+            var scaledObjectB = new filters.Scale();
             for (var idx1 in this.displayObjectSet1) {
                 for (var idx2 in this.displayObjectSet2) {
-                    this.filter(this.displayObjectSet1[idx1], this.displayObjectSet2[idx2]);
+                    scaledObjectA.original = this.displayObjectSet1[idx1];
+                    scaledObjectB.original = this.displayObjectSet2[idx2];
+                    if (this.rectIntersect(scaledObjectA, scaledObjectB)) {
+                        this.collisionHandlerCallback(scaledObjectA.original, scaledObjectB.original);
+                    }
                 }
             }
         };

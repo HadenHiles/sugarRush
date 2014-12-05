@@ -15,6 +15,10 @@ module objects {
         stage: createjs.Stage;
         game: createjs.Container;
         soundTrack: createjs.SoundInstance;
+        line: createjs.Shape;
+        linePosX: number;
+        linePosY: number;
+        lineColor: String;
         constructor(stage: createjs.Stage, game: createjs.Container) {
             //Define the x coordinate
             Object.defineProperty(this, "x",{
@@ -51,11 +55,23 @@ module objects {
             this.image.regY = 53;
             game.addChild(this.image);
             this.soundTrack = createjs.Sound.play('candypump', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
+            this.line = new createjs.Shape();
+            this.lineColor = createjs.Graphics.getRGB(0xFFFFFF * Math.random(), 1);
+            this.line.graphics.setStrokeStyle(3);
+            game.addChild(this.line);
         }
 
         //Update the position of the character according to the mouse position
         update() {
+//            this.image.x = this.stage.mouseX;
+//            this.image.y = this.stage.mouseY;
+            this.linePosX = this.image.x;
+            this.linePosY = this.image.y;
             this.moveCharacter(this.image.x, this.image.y, this.stage.mouseX, this.stage.mouseY, 7);
+            this.line.graphics.beginStroke(this.lineColor);
+            this.line.graphics.moveTo(this.linePosX, this.linePosY);
+            this.line.graphics.lineTo(this.image.x, this.image.y);
+            this.line.graphics.endStroke();
         }
 
         moveCharacter(characterX: number, characterY: number, mouseXPos: number, mouseYPos: number, speed: number) {
