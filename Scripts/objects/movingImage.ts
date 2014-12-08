@@ -56,7 +56,7 @@ module objects {
 //            this.image.rotation *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
             this.reset();
 
-            game.addChild(this.image);
+//            game.addChild(this.image);
         }
 
         //Move the images on the x and y axis
@@ -85,7 +85,7 @@ module objects {
 
         //Remove the image
         destroy() {
-            this.game.removeChild(this.image);
+//            this.game.removeChild(this.image);
         }
    }
 

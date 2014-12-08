@@ -1,4 +1,4 @@
-﻿﻿/**
+﻿﻿﻿/**
  *  File: game.ts
  *  Author: Haden Hiles
  *  Last Modified By: Haden Hiles
@@ -31,6 +31,9 @@ var playButton: objects.Button;
 var currentState: number;
 var currentStateFunction;
 
+var keys = {};
+var muteButton: objects.Button;
+
 //Preload function - Loads Assets and initializes game
 function preload(): void {
     managers.Assets.init();
@@ -47,6 +50,10 @@ function init(): void {
 
     currentState = constants.MENU_STATE;
     changeState(currentState);
+
+    //Reference keydown and keyup events
+    this.document.onkeydown = keydown;
+    this.document.onkeyup = keyup;
 }
 
 //Add touch support for mobile devices
@@ -56,9 +63,50 @@ function optimizeForMobile() {
     }
 }
 
+//Initialize keydown and keyup events for volume toggle
+function keydown(event) {
+    keys[event.keyCode] = true;
+}
+function keyup(event) {
+    delete keys[event.keyCode];
+}
+
+//Swap the image for the volume icon
+function muteButtonClicked(event){
+    if(createjs.Sound.getVolume() == 1){
+        createjs.Sound.setVolume(0);
+        stage.removeChild(muteButton);
+        muteButton = new objects.Button(850, 30, "not-mute");
+        stage.addChild(muteButton);
+        muteButton.addEventListener("click", muteButtonClicked);
+    } else if(createjs.Sound.getVolume() == 0){
+        createjs.Sound.setVolume(1);
+        stage.removeChild(muteButton);
+        muteButton = new objects.Button(850, 30, "mute");
+        stage.addChild(muteButton);
+        muteButton.addEventListener("click", muteButtonClicked);
+    }
+}
+
 //This is the main game loop
 function gameLoop(event): void {
     currentStateFunction();
+
+    //Toggle the volume depending on what arrow is pressed (down or up)
+    if (keys[40]){
+        createjs.Sound.setVolume(0);
+        stage.removeChild(muteButton);
+        muteButton = new objects.Button(850, 30, "not-mute");
+        stage.addChild(muteButton);
+        muteButton.addEventListener("click", muteButtonClicked);
+    }
+    if (keys[38]){
+        createjs.Sound.setVolume(1);
+        stage.removeChild(muteButton);
+        muteButton = new objects.Button(850, 30, "mute");
+        stage.addChild(muteButton);
+        muteButton.addEventListener("click", muteButtonClicked);
+    }
     stage.update();
 }
 
@@ -70,18 +118,51 @@ function changeState(state: number): void {
             // instantiate menu screen
             currentStateFunction = states.menuState;
             states.menu();
+            if(createjs.Sound.getVolume() == 1){
+                stage.removeChild(muteButton);
+                muteButton = new objects.Button(850, 30, "mute");
+                stage.addChild(muteButton);
+                muteButton.addEventListener("click", muteButtonClicked);
+            } else{
+                stage.removeChild(muteButton);
+                muteButton = new objects.Button(850, 30, "not-mute");
+                stage.addChild(muteButton);
+                muteButton.addEventListener("click", muteButtonClicked);
+            }
             break;
 
         case constants.PLAY_STATE:
             // instantiate play screen
             currentStateFunction = states.playState;
             states.play();
+            if(createjs.Sound.getVolume() == 1){
+                stage.removeChild(muteButton);
+                muteButton = new objects.Button(850, 30, "mute");
+                stage.addChild(muteButton);
+                muteButton.addEventListener("click", muteButtonClicked);
+            } else{
+                stage.removeChild(muteButton);
+                muteButton = new objects.Button(850, 30, "not-mute");
+                stage.addChild(muteButton);
+                muteButton.addEventListener("click", muteButtonClicked);
+            }
             break;
 
         case constants.GAME_OVER_STATE:
             currentStateFunction = states.gameOverState;
             // instantiate game over screen
             states.gameOver();
+            if(createjs.Sound.getVolume() == 1){
+                stage.removeChild(muteButton);
+                muteButton = new objects.Button(850, 30, "mute");
+                stage.addChild(muteButton);
+                muteButton.addEventListener("click", muteButtonClicked);
+            } else{
+                stage.removeChild(muteButton);
+                muteButton = new objects.Button(850, 30, "not-mute");
+                stage.addChild(muteButton);
+                muteButton.addEventListener("click", muteButtonClicked);
+            }
             break;
     }
 }

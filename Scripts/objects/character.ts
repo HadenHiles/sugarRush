@@ -35,7 +35,8 @@ module objects {
             //Define the width of the image
             Object.defineProperty(this, "height",{
                 get: () => {
-                    return this.image.getTransformedBounds().height;                }
+                    return this.image.getTransformedBounds().height;
+                }
             });
             //Define the height of the image
             Object.defineProperty(this, "width",{
@@ -63,15 +64,13 @@ module objects {
 
         //Update the position of the character according to the mouse position
         update() {
-//            this.image.x = this.stage.mouseX;
-//            this.image.y = this.stage.mouseY;
-            this.linePosX = this.image.x;
-            this.linePosY = this.image.y;
             this.moveCharacter(this.image.x, this.image.y, this.stage.mouseX, this.stage.mouseY, 7);
-            this.line.graphics.beginStroke(this.lineColor);
-            this.line.graphics.moveTo(this.linePosX, this.linePosY);
-            this.line.graphics.lineTo(this.image.x, this.image.y);
-            this.line.graphics.endStroke();
+//            this.linePosX = this.image.x;
+//            this.linePosY = this.image.y;
+//            this.line.graphics.beginStroke(this.lineColor);
+//            this.line.graphics.moveTo(this.linePosX, this.linePosY);
+//            this.line.graphics.lineTo(this.image.x, this.image.y);
+//            this.line.graphics.endStroke();
         }
 
         moveCharacter(characterX: number, characterY: number, mouseXPos: number, mouseYPos: number, speed: number) {

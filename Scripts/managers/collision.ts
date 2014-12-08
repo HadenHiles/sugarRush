@@ -15,7 +15,14 @@ module managers {
         private displayObjectSet1 = [];
         private displayObjectSet2 = [];
         public collisionHandlerCallback: (displayObject1: any, dispalyObject2: any) => void;
-        constructor(displayObjectSet1, displayObjectSet2, collisionHandler: (displayObject1: any, displayObject2: any)=>void) {
+        constructor(convertPoints: Boolean, displayObjectSet1, displayObjectSet2, collisionHandler: (displayObject1: any, displayObject2: any)=>void) {
+            if(convertPoints) {
+                var object1x = displayObjectSet1.x;
+                var object1y = displayObjectSet1.y;
+                var object2x = displayObjectSet2.x;
+                var object2y = displayObjectSet2.y;
+                displayObjectSet2.globalToLocal(displayObjectSet2.x, displayObjectSet2.y);
+            }
             this.displayObjectSet1 = displayObjectSet1;
             this.displayObjectSet2 = displayObjectSet2;
             this.collisionHandlerCallback = collisionHandler;
@@ -31,19 +38,6 @@ module managers {
         public rangeIntersect(rangeAMin: number, rangeAMax: number, rangeBMin: number, rangeBMax: number): boolean{
             return  Math.max(rangeAMin, rangeAMax) >= Math.min(rangeBMin, rangeBMax) &&
                     Math.min(rangeAMin, rangeAMax) <= Math.max(rangeBMin, rangeBMax);
-        }
-
-        //Scale the objects and pass them through to the collision check method ("goggles")
-        private filter(o1: any, o2: any){
-            o1.scaleX = 0.9;
-            o1.scaleY = 0.95;
-            o2.scaleX = 0.9;
-            o2.scaleY = 0.95;
-            var o1Width:number = o1.width * 0.9;
-            var o1Height:number = o1.height * 0.95;
-            var o2Width:number = o2.width * 0.9;
-            var o2Height:number = o2.height * 0.95;
-//            this.checkForCollision(o1, o2, o1Width, o1Height, o2Width, o2Height);
         }
 
         //loop through both object collections and check for a collision with each item in a collection (ex. veggies)

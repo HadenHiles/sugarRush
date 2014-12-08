@@ -1,4 +1,4 @@
-﻿/**
+﻿﻿/**
  *  File: play.ts
  *  Author: Haden Hiles
  *  Last Modified By: Haden Hiles
@@ -49,6 +49,7 @@ module states {
                 scoreboard.sugarMeterWidth = 0;
             }
         }
+        imageGroup.update();
     }
 
     //Main loop of the play class
@@ -58,8 +59,10 @@ module states {
 
         // Instantiate Game Objects
         background = new objects.Background(stage, game);
-        candy = new objects.Candy(stage, game);
         character = new objects.Character(stage, game);
+        candy = new objects.Candy(stage, game);
+        imageGroup = new objects.ImageGroup("blah");
+        game.addChild(imageGroup);
 
         // Hide Cursor
         stage.cursor = "default";
@@ -72,7 +75,7 @@ module states {
         });
 
         //Instantiate Collision Manager for character and candy
-        candyCollisionManager = new managers.Collision([character], [candy], function(object1: DisplayObject, object2: DisplayObject) {
+        candyCollisionManager = new managers.Collision(false, [character], [candy], function(object1: DisplayObject, object2: DisplayObject) {
             //Update the lives and Sugar Meter accordingly
             if (scoreboard.lives < 20) {
                 if (scoreboard.sugarMeterWidth <= 80) {
@@ -91,7 +94,27 @@ module states {
             createjs.Sound.play("slurp");
         });
         //Instantiate Collision Manager for character and veggies
-        veggieCollisionManager = new managers.Collision([character], veggies, function(object1: DisplayObject, object2: DisplayObject) {
+        veggieCollisionManager = new managers.Collision(false, [character], veggies, function(object1: DisplayObject, object2: DisplayObject) {
+            //Update the lives and Sugar Meter accordingly
+            if (scoreboard.lives >= 0) {
+                if (scoreboard.sugarMeterWidth <= 80) {
+                    scoreboard.sugarMeterColor = "#FE0000";
+                } else {
+                    scoreboard.sugarMeterColor = "#B1C243";
+                }
+                scoreboard.lives -= 1;
+            }
+            if(scoreboard.sugarMeterWidth >= 10){
+                scoreboard.sugarMeterWidth -= 10;
+            } else if (scoreboard.sugarMeterWidth > 0) {
+                scoreboard.sugarMeterWidth = 0;
+            }
+            object2.reset();
+            createjs.Sound.play("ew");
+        });
+
+        //Instantiate Collision Manager for character and veggies
+        veggieGroupCollisionManager = new managers.Collision(true, [character], imageGroup.children, function(object1: DisplayObject, object2: DisplayObject) {
             //Update the lives and Sugar Meter accordingly
             if (scoreboard.lives >= 0) {
                 if (scoreboard.sugarMeterWidth <= 80) {

@@ -23,23 +23,37 @@ module objects{
 //            this.regX = bounds.width / 2;
 //            this.regY = bounds.height / 2;
             this.groupKind = groupKind;
-            this.image = new createjs.Sprite(managers.Assets.atlas, "candy-craver");
-            this.image2 = new createjs.Sprite(managers.Assets.atlas, "candy-craver");
-            this.image3 = new createjs.Sprite(managers.Assets.atlas, "candy-craver");
-            this.image4 = new createjs.Sprite(managers.Assets.atlas, "candy-craver");
-            this.image2.x += 200;
-            this.image3.y += 200;
-            this.image4.x += 200;
-            this.image4.y += 200;
+            this.image = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+            this.image2 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+            this.image3 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+            this.image4 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+            this.image.scaleX = 0.3;
+            this.image.scaleY = 0.3;
+            this.image2.scaleX = 0.3;
+            this.image2.scaleY = 0.3;
+            this.image3.scaleX = 0.3;
+            this.image3.scaleY = 0.3;
+            this.image4.scaleX = 0.3;
+            this.image4.scaleY = 0.3;
+            this.image2.x += 250;
+            this.image3.y += 250;
+            this.image4.x += 250;
+            this.image4.y += 250;
+            this.regX = 145;
+            this.regY = 145;
             this.reset();
             this.addChild(this.image, this.image2, this.image3, this.image4);
         }
 
         //Move the group on the x and y axis
         update() {
+            this.image.rotation += 1;
+            this.image2.rotation += 1;
+            this.image3.rotation += 1;
+            this.image4.rotation += 1;
             this.y += this.dy;
             this.x -= this.dx;
-//            this.rotation += 15;
+            this.rotation -= 1;
             if (this.x <= 0) {
                 this.reset();
             }
@@ -47,9 +61,9 @@ module objects{
 
         //Reset the positioning of the moving image to be at a random coordinate off to the right of the screen
         reset() {
-            this.y = Math.floor(Math.random() * 440);
+            this.y = Math.floor(Math.random() * (300 - 100 + 1)) + 100;
             this.dx = Math.floor(Math.random() * 4 + 4);
-            this.dy = Math.floor(Math.random() * -3) + Math.floor(Math.random() * 3);
+            this.dy = Math.floor(Math.random() * 3);
             this.x = 880 * 1.25;
         }
 

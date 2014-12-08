@@ -23,16 +23,18 @@ module managers {
         "frames": [
 
             [2, 2, 96, 106],
-            [236, 2, 65, 65],
+            [236, 65, 40, 40],
+            [278, 65, 40, 40],
             [100, 2, 134, 66],
-            [303, 2, 124, 61]
+            [236, 2, 124, 61]
         ],
         "animations": {
 
             "candy-craver":[0],
-            "candy":[1],
-            "playButton":[2],
-            "tryAgainButton":[3]
+            "mute":[1],
+            "not-mute":[2],
+            "playButton":[3],
+            "tryAgainButton":[4]
         }
     }
 

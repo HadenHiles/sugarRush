@@ -12,10 +12,17 @@ var managers;
 (function (managers) {
     // Collision Manager Class
     var Collision = (function () {
-        function Collision(displayObjectSet1, displayObjectSet2, collisionHandler) {
+        function Collision(convertPoints, displayObjectSet1, displayObjectSet2, collisionHandler) {
             // class variables
             this.displayObjectSet1 = [];
             this.displayObjectSet2 = [];
+            if (convertPoints) {
+                var object1x = displayObjectSet1.x;
+                var object1y = displayObjectSet1.y;
+                var object2x = displayObjectSet2.x;
+                var object2y = displayObjectSet2.y;
+                displayObjectSet2.globalToLocal(displayObjectSet2.x, displayObjectSet2.y);
+            }
             this.displayObjectSet1 = displayObjectSet1;
             this.displayObjectSet2 = displayObjectSet2;
             this.collisionHandlerCallback = collisionHandler;
@@ -27,18 +34,6 @@ var managers;
         //Determine whethere there is an overlap with the two display objects or not
         Collision.prototype.rangeIntersect = function (rangeAMin, rangeAMax, rangeBMin, rangeBMax) {
             return Math.max(rangeAMin, rangeAMax) >= Math.min(rangeBMin, rangeBMax) && Math.min(rangeAMin, rangeAMax) <= Math.max(rangeBMin, rangeBMax);
-        };
-        //Scale the objects and pass them through to the collision check method ("goggles")
-        Collision.prototype.filter = function (o1, o2) {
-            o1.scaleX = 0.9;
-            o1.scaleY = 0.95;
-            o2.scaleX = 0.9;
-            o2.scaleY = 0.95;
-            var o1Width = o1.width * 0.9;
-            var o1Height = o1.height * 0.95;
-            var o2Width = o2.width * 0.9;
-            var o2Height = o2.height * 0.95;
-            //            this.checkForCollision(o1, o2, o1Width, o1Height, o2Width, o2Height);
         };
         //loop through both object collections and check for a collision with each item in a collection (ex. veggies)
         Collision.prototype.update = function () {
