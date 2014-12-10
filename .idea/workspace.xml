@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bf6f163-2474-4df3-9125-596297f7400e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/objects/image.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/objects/rotatingGroup.ts" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scripts/objects/imageGroup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scripts/objects/imageGroup.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scripts/objects/imageGroup.ts" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/candy.ts" afterPath="$PROJECT_DIR$/Scripts/objects/candy.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/character.ts" afterPath="$PROJECT_DIR$/Scripts/objects/character.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/managers/collision.js.map" afterPath="$PROJECT_DIR$/Scripts/managers/collision.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/managers/collision.js" afterPath="$PROJECT_DIR$/Scripts/managers/collision.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/managers/collision.ts" afterPath="$PROJECT_DIR$/Scripts/managers/collision.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/game.js.map" afterPath="$PROJECT_DIR$/Scripts/game.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/game.js" afterPath="$PROJECT_DIR$/Scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/game.ts" afterPath="$PROJECT_DIR$/Scripts/game.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/movingImage.ts" afterPath="$PROJECT_DIR$/Scripts/objects/movingImage.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/states/play.js.map" afterPath="$PROJECT_DIR$/Scripts/states/play.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/states/play.js" afterPath="$PROJECT_DIR$/Scripts/states/play.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/states/play.ts" afterPath="$PROJECT_DIR$/Scripts/states/play.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/filters/scale.ts" afterPath="$PROJECT_DIR$/Scripts/filters/scale.ts" />
+    <list default="true" id="7bf6f163-2474-4df3-9125-596297f7400e" name="Default" comment="-started to create rotating group with individual images in it">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/managers/obstacleManager.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/managers/obstacleManager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/managers/testCollision.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/managers/testCollision.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sugarRush.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418236287115" ignored="false" />
+    <file path="/Dummy.txt" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418244175915" ignored="false" />
     <file path="/app.css" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1416601453863" ignored="false" />
     <file path="/game.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415404922317" ignored="false" />
     <file path="/gameOriginal.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415405098305" ignored="false" />
@@ -65,11 +49,8 @@
     <file path="/obstacleManager.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1417976051587" ignored="false" />
     <file path="/imageGroup.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418174347004" ignored="false" />
     <file path="/scale.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418135126492" ignored="false" />
-    <file path="$PROJECT_DIR$/Scripts/states/gameover.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1417991736149" ignored="false" />
-    <file path="$PROJECT_DIR$/Scripts/constants.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1417996084381" ignored="false" />
     <file path="$USER_HOME$/Dropbox/Websites/amcustom.ca/includes/support-files.php" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418092678071" ignored="false" />
     <file path="/support-files.php" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418092660950" ignored="false" />
-    <file path="$PROJECT_DIR$/Scripts/objects/movingImage.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418100638967" ignored="false" />
     <file path="/abstractImage.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418230262418" ignored="false" />
     <file path="/rotatingGroup.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418239321938" ignored="false" />
     <file path="/image.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418240401340" ignored="false" />
@@ -337,42 +318,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sugarRush" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sugarRush" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="objects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sugarRush" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sugarRush" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -881,7 +826,15 @@
       <created>1417998319246</created>
       <updated>1417998319246</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="-started to create rotating group with individual images in it">
+      <created>1418242974389</created>
+      <updated>1418242974390</updated>
+    </task>
+    <task id="LOCAL-00026" summary="-commit for all missing js files">
+      <created>1418244178914</created>
+      <updated>1418244178914</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -920,6 +873,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -934,7 +888,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -980,7 +933,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="-got one image group to display on the screen and move as expected&#10;-added mute button that can be activated on click by using the up and down arrows" />
+    <option name="LAST_COMMIT_MESSAGE" value="-commit for all missing js files" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1016,6 +969,8 @@
     <MESSAGE value="-got image group class adding to the stage successfully&#10;-added delay to character when moving the mouse" />
     <MESSAGE value="-added new object oriented filter scale technique&#10;-added line to trail the character... going to fix this up with fade delay or another solution" />
     <MESSAGE value="-got one image group to display on the screen and move as expected&#10;-added mute button that can be activated on click by using the up and down arrows" />
+    <MESSAGE value="-started to create rotating group with individual images in it" />
+    <MESSAGE value="-commit for all missing js files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
