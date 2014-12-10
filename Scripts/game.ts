@@ -1,4 +1,4 @@
-﻿﻿﻿/**
+﻿/**
  *  File: game.ts
  *  Author: Haden Hiles
  *  Last Modified By: Haden Hiles
@@ -13,6 +13,7 @@
 var stage: createjs.Stage;
 var game: createjs.Container;
 
+var rotatingGroup: objects.RotatingGroup;
 var background: objects.Background;
 var character: objects.Character;
 var candy: objects.Candy;
@@ -20,10 +21,10 @@ var veggies = []; // Veggies array;
 var candy = []; // Candy array;
 var scoreboard: objects.Scoreboard;
 
-var imageGroup: objects.ImageGroup;
 var obstacleManager: managers.ObstacleManager;
 var candyCollisionManager: managers.Collision;
 var veggieCollisionManager: managers.Collision;
+var veggieGroupCollisionManager: managers.Collision;
 
 var tryAgain: objects.Button;
 var playButton: objects.Button;

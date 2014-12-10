@@ -15,23 +15,18 @@ module managers {
         private displayObjectSet1 = [];
         private displayObjectSet2 = [];
         public collisionHandlerCallback: (displayObject1: any, dispalyObject2: any) => void;
-        constructor(convertPoints: Boolean, displayObjectSet1, displayObjectSet2, collisionHandler: (displayObject1: any, displayObject2: any)=>void) {
-            if(convertPoints) {
-                var object1x = displayObjectSet1.x;
-                var object1y = displayObjectSet1.y;
-                var object2x = displayObjectSet2.x;
-                var object2y = displayObjectSet2.y;
-                displayObjectSet2.globalToLocal(displayObjectSet2.x, displayObjectSet2.y);
-            }
+        constructor(displayObjectSet1, displayObjectSet2, collisionHandler: (displayObject1: any, displayObject2: any)=>void) {
             this.displayObjectSet1 = displayObjectSet1;
             this.displayObjectSet2 = displayObjectSet2;
             this.collisionHandlerCallback = collisionHandler;
         }
 
         //Get the min and max values of 2 objects and pass them through the rangeIntersect method to determine if there is overlap
-        public rectIntersect(o1: any, o2: any): boolean {
-            return  this.rangeIntersect(o1.x, o1.x + o1.width, o2.x, o2.x + o2.width) &&
-                    this.rangeIntersect(o1.y, o1.y + o1.height, o2.y, o2.y + o2.height);
+        public rectIntersect(objectA: any, objectB: any): boolean {
+            var globalPointA = objectA.localToGlobal(objectA.x, objectA.y);
+            var globalPointB = objectB.localToGlobal(objectB.x, objectB.y);
+            return  this.rangeIntersect(globalPointA.x,globalPointA.x + objectA.width, globalPointB.x, globalPointB.x + objectB.width) &&
+                    this.rangeIntersect(globalPointA.y, globalPointA.y + objectA.height, globalPointB.y, globalPointB.y + objectB.height);
         }
 
         //Determine whethere there is an overlap with the two display objects or not

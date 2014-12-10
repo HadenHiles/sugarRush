@@ -1,26 +1,27 @@
 /**
-*  File: game.ts
-*  Author: Haden Hiles
-*  Last Modified By: Haden Hiles
-*  Date Last Modified: November 14th
-*  Description:
-*  This class is responsible for initializing all objects
-*  as well as, creating the game loop, bringing in assets,
-*  optimizing for mobile touch screens and triggering what
-*  state the game is in.
-*/
+ *  File: game.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is responsible for initializing all objects
+ *  as well as, creating the game loop, bringing in assets,
+ *  optimizing for mobile touch screens and triggering what
+ *  state the game is in.
+ */
 var stage;
 var game;
+var rotatingGroup;
 var background;
 var character;
 var candy;
 var veggies = []; // Veggies array;
 var candy = []; // Candy array;
 var scoreboard;
-var imageGroup;
 var obstacleManager;
 var candyCollisionManager;
 var veggieCollisionManager;
+var veggieGroupCollisionManager;
 var tryAgain;
 var playButton;
 var currentState;
@@ -78,7 +79,7 @@ function muteButtonClicked(event) {
 //This is the main game loop
 function gameLoop(event) {
     currentStateFunction();
-    //Toggle the volume depending on what arrow is pressed (down or up
+    //Toggle the volume depending on what arrow is pressed (down or up)
     if (keys[40]) {
         createjs.Sound.setVolume(0);
         stage.removeChild(muteButton);

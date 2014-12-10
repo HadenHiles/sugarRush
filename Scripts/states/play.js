@@ -56,11 +56,11 @@ var states;
         // Declare new Game Container
         game = new createjs.Container();
         // Instantiate Game Objects
+        rotatingGroup = new objects.RotatingGroup(new createjs.Sprite(managers.Assets.veggies, "red-pepper"), 4);
+        game.addChild(rotatingGroup);
         background = new objects.Background(stage, game);
         character = new objects.Character(stage, game);
         candy = new objects.Candy(stage, game);
-        imageGroup = new objects.ImageGroup("blah");
-        game.addChild(imageGroup);
         // Hide Cursor
         stage.cursor = "default";
         //Pass through each veggie from the veggie collection of sprites
@@ -70,7 +70,7 @@ var states;
             veggies[idx] = displayObject;
         });
         //Instantiate Collision Manager for character and candy
-        candyCollisionManager = new managers.Collision(false, [character], [candy], function (object1, object2) {
+        candyCollisionManager = new managers.Collision([character], [candy], function (object1, object2) {
             //Update the lives and Sugar Meter accordingly
             if (scoreboard.lives < 20) {
                 if (scoreboard.sugarMeterWidth <= 80) {
@@ -91,7 +91,7 @@ var states;
             createjs.Sound.play("slurp");
         });
         //Instantiate Collision Manager for character and veggies
-        veggieCollisionManager = new managers.Collision(false, [character], veggies, function (object1, object2) {
+        veggieCollisionManager = new managers.Collision([character], veggies, function (object1, object2) {
             //Update the lives and Sugar Meter accordingly
             if (scoreboard.lives >= 0) {
                 if (scoreboard.sugarMeterWidth <= 80) {
@@ -111,8 +111,8 @@ var states;
             object2.reset();
             createjs.Sound.play("ew");
         });
-        //Instantiate Collision Manager for character and veggies
-        veggieGroupCollisionManager = new managers.Collision(true, [character], imageGroup.children, function (object1, object2) {
+        //Instantiate Collision Manager for character and images withing rotating group
+        veggieGroupCollisionManager = new managers.Collision([character], rotatingGroup.children, function (object1, object2) {
             //Update the lives and Sugar Meter accordingly
             if (scoreboard.lives >= 0) {
                 if (scoreboard.sugarMeterWidth <= 80) {

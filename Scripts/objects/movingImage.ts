@@ -70,11 +70,6 @@ module objects {
 //            this.obstacleGroup.update();
         }
 
-//        private addImageGroup(){
-//            this.obstacleGroup = new objects.ImageGroup("Blah");
-//            this.game.addChild(this.obstacleGroup);
-//        }
-
         //Reset the positioning of the moving image to be at a random coordinate off to the right of the screen
         reset() {
             this.image.y = Math.floor(Math.random() * this.stage.canvas.height);

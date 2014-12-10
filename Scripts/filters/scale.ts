@@ -47,5 +47,8 @@ module filters{
                 }
             });
         }
+        localToGlobal(x: number, y: number): createjs.Point{
+            return this._original.localToGlobal(x, y);
+        }
     }
 }
