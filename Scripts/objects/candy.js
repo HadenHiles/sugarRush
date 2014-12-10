@@ -19,7 +19,8 @@ var objects;
     var Candy = (function (_super) {
         __extends(Candy, _super);
         function Candy(stage, game) {
-            _super.call(this, stage, game, this.image = new createjs.Sprite(managers.Assets.candy, managers.Assets.candy._animations[this.randomAnimationIdx]));
+            _super.call(this, stage, game, new createjs.Sprite(managers.Assets.candy, managers.Assets.candy._animations[this.randomAnimationIdx]));
+            this.randomAnimationIdx = 0;
             this.reset();
             this.dx = 4;
         }
@@ -32,17 +33,17 @@ var objects;
         };
         //Set the candy back to the right of the canvas
         Candy.prototype.reset = function () {
-            this.game.removeChild(this.image);
             this.randomAnimationIdx = Math.floor(Math.random() * (managers.Assets.candy._animations.length + 1));
+            this.image = new createjs.Sprite(managers.Assets.candy, managers.Assets.candy._animations[this.randomAnimationIdx]);
             this.image.scaleX = .7;
             this.image.scaleY = .7;
-            this.image.regX = this.width / 2;
-            this.image.regY = this.height / 2;
+            this.image.regX = this.image.width / 2;
+            this.image.regY = this.image.height / 2;
             this.image.y = Math.floor(Math.random() * this.stage.canvas.height);
             this.image.x = this.stage.canvas.width;
         };
         return Candy;
-    })(objects.AbstractImage);
+    })(objects.Image);
     objects.Candy = Candy;
 })(objects || (objects = {}));
 //# sourceMappingURL=candy.js.map
