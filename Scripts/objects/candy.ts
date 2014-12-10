@@ -9,7 +9,7 @@
  */
 module objects {
     // Candy Class
-    export class Candy extends objects.Image{
+    export class Candy extends objects.Image {
         dx: number;
         randomAnimationIdx: number = 0;
         constructor(stage: createjs.Stage, game: createjs.Container) {
@@ -32,8 +32,8 @@ module objects {
             this.image = new createjs.Sprite(managers.Assets.candy, managers.Assets.candy._animations[this.randomAnimationIdx]));
             this.image.scaleX = .7;
             this.image.scaleY = .7;
-            this.image.regX = this.width / 2;
-            this.image.regY = this.height / 2;
+            this.image.regX = this.image.width / 2;
+            this.image.regY = this.image.height / 2;
             this.image.y = Math.floor(Math.random() * this.stage.canvas.height);
             this.image.x = this.stage.canvas.width;
         }
