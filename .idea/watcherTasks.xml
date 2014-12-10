@@ -3,11 +3,11 @@
   <component name="ProjectTasksOptions">
     <TaskOptions isEnabled="true">
       <option name="arguments" value="--sourcemap $FileName$" />
-      <option name="checkSyntaxErrors" value="true" />
+      <option name="checkSyntaxErrors" value="false" />
       <option name="description" value="Compiles .ts files into .js files" />
-      <option name="exitCodeBehavior" value="NEVER" />
+      <option name="exitCodeBehavior" value="ALWAYS" />
       <option name="fileExtension" value="ts" />
-      <option name="immediateSync" value="true" />
+      <option name="immediateSync" value="false" />
       <option name="name" value="TypeScript" />
       <option name="output" value="$FileNameWithoutExtension$.js:$FileNameWithoutExtension$.js.map" />
       <option name="outputFilters">
@@ -21,7 +21,7 @@
       </option>
       <option name="outputFromStdout" value="false" />
       <option name="passParentEnvs" value="true" />
-      <option name="program" value="/usr/local/bin/tsc" />
+      <option name="program" value="$USER_HOME$/AppData/Roaming/npm/tsc.cmd" />
       <option name="scopeName" value="Project Files" />
       <option name="trackOnlyRoot" value="true" />
       <option name="workingDir" value="$FileDir$" />

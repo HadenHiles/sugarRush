@@ -10,7 +10,7 @@
  */
 module managers {
     // Collision Manager Class
-    export class Collision {
+    export class Collision  {
         // class variables
         private displayObjectSet1 = [];
         private displayObjectSet2 = [];

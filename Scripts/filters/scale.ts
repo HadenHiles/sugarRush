@@ -5,8 +5,8 @@
  * Time: 6:56 PM
  * To change this template use File | Settings | File Templates.
  */
-module filters{
-    export class Scale{
+module filters {
+    export class Scale {
         private _original: any;
         private _scaleX:number;
         private _scaleY:number;
@@ -48,7 +48,7 @@ module filters{
             });
         }
         localToGlobal(x: number, y: number): createjs.Point{
-            return this._original.localToGlobal(x, y);
+            return this._original.localToGlobal(x, y) ;
         }
     }
 }

@@ -10,7 +10,7 @@
  */
 module objects {
     // Character Class
-    export class Character extends objects.Image{
+    export class Character extends objects.Image {
         soundTrack: createjs.SoundInstance;
         line: createjs.Shape;
         linePosX: number;
