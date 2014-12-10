@@ -16,7 +16,6 @@ var background;
 var character;
 var candy;
 var veggies = []; // Veggies array;
-var candy = []; // Candy array;
 var scoreboard;
 var obstacleManager;
 var candyCollisionManager;

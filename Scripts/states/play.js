@@ -12,8 +12,8 @@ var states;
 (function (states) {
     function playState() {
         background.update();
-        candy.update();
-        character.update();
+        candy.moveImage();
+        character.moveImage();
         for (var count = 0; count < veggies.length; count++) {
             veggies[count].update();
         }

@@ -18,7 +18,6 @@ var background: objects.Background;
 var character: objects.Character;
 var candy: objects.Candy;
 var veggies = []; // Veggies array;
-var candy = []; // Candy array;
 var scoreboard: objects.Scoreboard;
 
 var obstacleManager: managers.ObstacleManager;

@@ -11,8 +11,8 @@
 module states {
     export function playState() {
         background.update();
-        candy.update();
-        character.update();
+        candy.moveImage();
+        character.moveImage();
         //Loop through the collection of veggies and update
         for (var count = 0; count < veggies.length; count++) {
             veggies[count].update();

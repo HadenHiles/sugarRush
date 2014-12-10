@@ -10,6 +10,7 @@
 module objects {
     // Candy Class
     export class Candy extends objects.Image {
+        image: createjs.Sprite;
         dx: number;
         randomAnimationIdx: number = 0;
         constructor(stage: createjs.Stage, game: createjs.Container) {

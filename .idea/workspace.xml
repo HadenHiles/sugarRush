@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bf6f163-2474-4df3-9125-596297f7400e" name="Default" comment="-started to create rotating group with individual images in it">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/managers/obstacleManager.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/managers/obstacleManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/managers/testCollision.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/managers/testCollision.js" />
+    <list default="true" id="7bf6f163-2474-4df3-9125-596297f7400e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/candy.js.map" afterPath="$PROJECT_DIR$/Scripts/objects/candy.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/objects/candy.ts" afterPath="$PROJECT_DIR$/Scripts/objects/candy.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/game.js.map" afterPath="$PROJECT_DIR$/Scripts/game.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/game.js" afterPath="$PROJECT_DIR$/Scripts/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/game.ts" afterPath="$PROJECT_DIR$/Scripts/game.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/states/play.js.map" afterPath="$PROJECT_DIR$/Scripts/states/play.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/states/play.js" afterPath="$PROJECT_DIR$/Scripts/states/play.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/states/play.ts" afterPath="$PROJECT_DIR$/Scripts/states/play.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sugarRush.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418244175915" ignored="false" />
+    <file path="/Dummy.txt" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418249592108" ignored="false" />
     <file path="/app.css" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1416601453863" ignored="false" />
     <file path="/game.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415404922317" ignored="false" />
     <file path="/gameOriginal.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415405098305" ignored="false" />
@@ -23,7 +28,7 @@
     <file path="/test.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415557044217" ignored="false" />
     <file path="/background.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1416284467992" ignored="false" />
     <file path="/game.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418235721273" ignored="false" />
-    <file path="/play.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418235273702" ignored="false" />
+    <file path="/play.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418249931811" ignored="false" />
     <file path="$USER_HOME$/Downloads/mailPilot-v11-master/mailPilot-v11/Scripts/states/play.js" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415561515567" ignored="false" />
     <file path="/menu.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1417991494620" ignored="false" />
     <file path="/gameover.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1416029552445" ignored="false" />
@@ -44,7 +49,7 @@
     <file path="/character.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418230497522" ignored="false" />
     <file path="/constants.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415998500870" ignored="false" />
     <file path="/instructions.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1415998217370" ignored="false" />
-    <file path="/candy.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418241247490" ignored="false" />
+    <file path="/candy.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418250264417" ignored="false" />
     <file path="/scoreboard.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1416082010489" ignored="false" />
     <file path="/obstacleManager.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1417976051587" ignored="false" />
     <file path="/imageGroup.ts" changelist="7bf6f163-2474-4df3-9125-596297f7400e" time="1418174347004" ignored="false" />
@@ -119,10 +124,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="play.ts" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="play.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/states/play.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="41" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.53323907">
+            <state line="14" column="30" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,7 +136,7 @@
       <file leaf-file-name="game.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/game.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="33" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+            <state line="19" column="35" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,7 +145,7 @@
       <file leaf-file-name="rotatingGroup.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/objects/rotatingGroup.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="13" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
+            <state line="15" column="40" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,10 +169,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="candy.ts" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="candy.ts" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Scripts/objects/candy.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
+            <state line="9" column="14" selection-start="268" selection-end="268" vertical-scroll-proportion="0.1875">
               <folding />
             </state>
           </provider>
@@ -228,12 +233,12 @@
         <option value="$PROJECT_DIR$/Scripts/objects/imageGroup.ts" />
         <option value="$PROJECT_DIR$/Scripts/objects/abstractImage.ts" />
         <option value="$PROJECT_DIR$/Scripts/objects/character.ts" />
-        <option value="$PROJECT_DIR$/Scripts/game.ts" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Scripts/objects/image.ts" />
         <option value="$PROJECT_DIR$/Scripts/objects/rotatingGroup.ts" />
-        <option value="$PROJECT_DIR$/Scripts/objects/candy.ts" />
         <option value="$PROJECT_DIR$/Scripts/states/play.ts" />
+        <option value="$PROJECT_DIR$/Scripts/game.ts" />
+        <option value="$PROJECT_DIR$/Scripts/objects/candy.ts" />
       </list>
     </option>
   </component>
@@ -318,6 +323,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sugarRush" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sugarRush" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="objects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -834,7 +857,19 @@
       <created>1418244178914</created>
       <updated>1418244178914</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="-added remaining missing js files">
+      <created>1418244473916</created>
+      <updated>1418244473916</updated>
+    </task>
+    <task id="LOCAL-00028" summary="-changed this.width and this.height to this.image to try and fix typescript transpile failure">
+      <created>1418247672091</created>
+      <updated>1418247672091</updated>
+    </task>
+    <task id="LOCAL-00029" summary="-found syntax error within the reset function">
+      <created>1418249596983</created>
+      <updated>1418249596983</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -864,6 +899,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299712" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -887,7 +923,6 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -933,7 +968,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="-commit for all missing js files" />
+    <option name="LAST_COMMIT_MESSAGE" value="-found syntax error within the reset function" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -947,8 +982,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="-added js file instead of typescript" />
-    <MESSAGE value="-added new scrolling background image&#10;-character now follows mouse on the y axis also" />
     <MESSAGE value="-replaced old code with new object oriented code&#10;-added new assets/images&#10;-seeking out a js version of the createjs-lib.d.ts file so that the game will work again" />
     <MESSAGE value="-got typescript transpiling correctly and added createjs minified version to the project so it should compile properly" />
     <MESSAGE value="-re-added the typescript files for the objects, states, and managers" />
@@ -971,6 +1004,9 @@
     <MESSAGE value="-got one image group to display on the screen and move as expected&#10;-added mute button that can be activated on click by using the up and down arrows" />
     <MESSAGE value="-started to create rotating group with individual images in it" />
     <MESSAGE value="-commit for all missing js files" />
+    <MESSAGE value="-added remaining missing js files" />
+    <MESSAGE value="-changed this.width and this.height to this.image to try and fix typescript transpile failure" />
+    <MESSAGE value="-found syntax error within the reset function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -996,56 +1032,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/filters/scale.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="54" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/movingImage.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="9" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="60" selection-start="1796" selection-end="1796" vertical-scroll-proportion="-22.5" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/candy.js">
+    <entry file="file://$PROJECT_DIR$/Scripts/objects/character.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/game.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="33" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/candy.js.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/rotatingGroup.js.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/rotatingGroup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="20" column="45" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1057,9 +1051,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/character.ts">
+    <entry file="file://$PROJECT_DIR$/Scripts/objects/movingImage.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
+        <state line="70" column="9" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/filters/scale.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="54" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/objects/rotatingGroup.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="40" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1071,23 +1079,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/objects/rotatingGroup.ts">
+    <entry file="file://$PROJECT_DIR$/Scripts/states/play.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
+        <state line="14" column="30" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/game.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="35" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/objects/candy.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/states/play.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="41" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.53323907">
+        <state line="9" column="14" selection-start="268" selection-end="268" vertical-scroll-proportion="0.1875">
           <folding />
         </state>
       </provider>
