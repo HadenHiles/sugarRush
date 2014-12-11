@@ -6,6 +6,9 @@
  *  Description:
  *  This file is used to load and index all of the game assets including sounds, images, and spritesheets
  */
+///<reference path="../../js/createjs-lib.d.ts" />
+///<reference path="../../js/preloadjs.d.ts" />
+///<reference path="../../js/soundjs.d.ts" />
 module managers {
     // Image and Sound Manifest;
     var assetManifest = [
@@ -56,7 +59,7 @@ module managers {
         ],
         "animations": {
 
-            "carrot":[0],
+            "carrot":[0,1,2],
             "cellery":[1],
             "green-pepper":[2],
             "hot-pepper":[3],

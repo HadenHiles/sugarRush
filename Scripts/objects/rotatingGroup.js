@@ -17,6 +17,7 @@ var objects;
         __extends(RotatingGroup, _super);
         function RotatingGroup(image, numberOfImages) {
             _super.call(this);
+            this.images = [];
             for (var count = 1; count <= numberOfImages; count++) {
                 this.images.push(image);
             }

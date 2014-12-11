@@ -1,0 +1,50 @@
+<component name="libraryTable">
+  <library name="3rdPartyJavascript" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/tweenjs.d.ts" />
+        <item url="file://$PROJECT_DIR$/js/easeljs.d.ts" />
+        <item url="file://$PROJECT_DIR$/js/soundjs.d.ts" />
+        <item url="file://$PROJECT_DIR$/js/preloadjs.d.ts" />
+        <item url="file://$PROJECT_DIR$/js/jquery-2.1.1.js" />
+        <item url="file://$PROJECT_DIR$/js/createjs-lib.d.ts" />
+        <item url="file://$PROJECT_DIR$/js/require.js" />
+        <item url="file://$PROJECT_DIR$/js/filters/BoxBlurFilter.js" />
+        <item url="file://$PROJECT_DIR$/js/filters/ColorMatrix.js" />
+        <item url="file://$PROJECT_DIR$/js/filters/AlphaMapFilter.js" />
+        <item url="file://$PROJECT_DIR$/js/filters/ColorMatrixFilter.js" />
+        <item url="file://$PROJECT_DIR$/js/filters/Filter.js" />
+        <item url="file://$PROJECT_DIR$/js/filters/AlphaMaskFilter.js" />
+        <item url="file://$PROJECT_DIR$/js/r.js" />
+        <item url="file://$PROJECT_DIR$/js/jquery-2.1.1.intellisense.js" />
+        <item url="file://$PROJECT_DIR$/js/filters/ColorFilter.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/tweenjs.d.ts" />
+      <root url="file://$PROJECT_DIR$/js/easeljs.d.ts" />
+      <root url="file://$PROJECT_DIR$/js/soundjs.d.ts" />
+      <root url="file://$PROJECT_DIR$/js/preloadjs-0.4.1.min.js" />
+      <root url="file://$PROJECT_DIR$/js/preloadjs.d.ts" />
+      <root url="file://$PROJECT_DIR$/js/jquery-2.1.1.js" />
+      <root url="file://$PROJECT_DIR$/js/easeljs-0.7.1.min.js" />
+      <root url="file://$PROJECT_DIR$/js/createjs-lib.d.ts" />
+      <root url="file://$PROJECT_DIR$/js/tweenjs-0.5.1.min.js" />
+      <root url="file://$PROJECT_DIR$/js/jquery-2.1.1.min.js" />
+      <root url="file://$PROJECT_DIR$/js/require.js" />
+      <root url="file://$PROJECT_DIR$/js/createjs-2013.12.12.min.js" />
+      <root url="file://$PROJECT_DIR$/js/filters/BoxBlurFilter.js" />
+      <root url="file://$PROJECT_DIR$/js/filters/ColorMatrix.js" />
+      <root url="file://$PROJECT_DIR$/js/filters/AlphaMapFilter.js" />
+      <root url="file://$PROJECT_DIR$/js/filters/ColorMatrixFilter.js" />
+      <root url="file://$PROJECT_DIR$/js/filters/Filter.js" />
+      <root url="file://$PROJECT_DIR$/js/filters/AlphaMaskFilter.js" />
+      <root url="file://$PROJECT_DIR$/js/r.js" />
+      <root url="file://$PROJECT_DIR$/js/soundjs-0.5.2.min.js" />
+      <root url="file://$PROJECT_DIR$/js/jquery-2.1.1.intellisense.js" />
+      <root url="file://$PROJECT_DIR$/js/filters/ColorFilter.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

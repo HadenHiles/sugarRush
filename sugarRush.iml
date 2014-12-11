@@ -6,7 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/Scripts" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="3rdParty Javascript" level="project" />
   </component>
 </module>
 

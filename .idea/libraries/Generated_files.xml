@@ -2,13 +2,21 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/Scripts/objects/movingImage.js" />
         <item url="file://$PROJECT_DIR$/Scripts/managers/ObstacleManager.js" />
-        <item url="file://$PROJECT_DIR$/Scripts/managers/ObstacleManager.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/objects/candy.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/states/play.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/managers/asset.js" />
+        <item url="file://$PROJECT_DIR$/Scripts/objects/rotatingGroup.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/Scripts/objects/movingImage.js" />
       <root url="file://$PROJECT_DIR$/Scripts/managers/ObstacleManager.js" />
-      <root url="file://$PROJECT_DIR$/Scripts/managers/ObstacleManager.js" />
+      <root url="file://$PROJECT_DIR$/Scripts/objects/candy.js" />
+      <root url="file://$PROJECT_DIR$/Scripts/states/play.js" />
+      <root url="file://$PROJECT_DIR$/Scripts/managers/asset.js" />
+      <root url="file://$PROJECT_DIR$/Scripts/objects/rotatingGroup.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

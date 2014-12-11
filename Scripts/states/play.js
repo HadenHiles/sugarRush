@@ -1,13 +1,13 @@
 /**
-*  File: play.ts
-*  Author: Haden Hiles
-*  Last Modified By: Haden Hiles
-*  Date Last Modified: November 14th
-*  Description:
-*  This class is where the actual game itself is played.
-*  Score/Sugar Meter updates are triggered here, as well as
-*  collision detection and obstacle management
-*/
+ *  File: play.ts
+ *  Author: Haden Hiles
+ *  Last Modified By: Haden Hiles
+ *  Date Last Modified: November 14th
+ *  Description:
+ *  This class is where the actual game itself is played.
+ *  Score/Sugar Meter updates are triggered here, as well as
+ *  collision detection and obstacle management
+ */
 var states;
 (function (states) {
     function playState() {
@@ -48,7 +48,7 @@ var states;
                 scoreboard.sugarMeterWidth = 0;
             }
         }
-        imageGroup.update();
+        //        imageGroup.update();
     }
     states.playState = playState;
     //Main loop of the play class

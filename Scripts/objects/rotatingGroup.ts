@@ -7,7 +7,7 @@
  */
 module objects {
     export class RotatingGroup extends createjs.Container {
-        images: Array;
+        images: Array = [];
         dy: number;
         dx: number;
         constructor(image: createjs.Sprite, numberOfImages: Number) {

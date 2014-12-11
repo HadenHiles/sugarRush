@@ -7,6 +7,7 @@
  *  This class is responsible for taking in a spritesheet, generating
  *  an image/display object, and then moving it on the screen in various directions.
  */
+///<reference path="../../js/createjs-lib.d.ts" />
 var objects;
 (function (objects) {
     // MovingImage class
@@ -50,7 +51,7 @@ var objects;
             this.image.rotation = this.image.rotation - Math.floor(Math.random() * (90 + 1)) + 1;
             //            this.image.rotation *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
             this.reset();
-            //            game.addChild(this.image);
+            game.addChild(this.image);
         }
         //Move the images on the x and y axis
         MovingImage.prototype.update = function () {

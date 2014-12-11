@@ -49,7 +49,7 @@ module states {
                 scoreboard.sugarMeterWidth = 0;
             }
         }
-        imageGroup.update();
+//        imageGroup.update();
     }
 
     //Main loop of the play class

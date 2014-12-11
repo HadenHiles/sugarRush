@@ -7,6 +7,10 @@
  *  This class is responsible for controlling, when and
  *  how many obstacles to place on the screen at any given time
  */
+///<reference path="../../js/createjs-lib.d.ts"  />
+///<reference path="../../js/easeljs.d.ts" />
+///<reference path="./asset.ts" />
+///<reference path="../objects/movingImage.ts" />
 var managers;
 (function (managers) {
     // Collision Manager Class
@@ -15,6 +19,15 @@ var managers;
             var _this = this;
             this.displayObjectsCreated = 0;
             this.tickCount = 0;
+            Object.defineProperty(this, "spriteSheet", {
+                set: function (sheet) {
+                    _this._spriteSheet = sheet;
+                    _this._animationNames = sheet.getAnimations();
+                },
+                get: function () {
+                    return _this._spriteSheet;
+                }
+            });
             this.stage = stage;
             this.game = game;
             this.spriteSheet = spriteSheet;
@@ -28,9 +41,9 @@ var managers;
         ObstacleManager.prototype.addDisplayObject = function (tickEvent) {
             //Gather random sprites from the veggies spritesheet
             if (this.tickCount++ > 0 && this.tickCount % 60 == 0) {
-                var randomAnimationIdx = Math.floor(Math.random() * (this.spriteSheet._animations.length + 1));
-                var image = new createjs.Sprite(this.spriteSheet, this.spriteSheet._animations[randomAnimationIdx]);
-                var o = new objects.MovingImage(stage, game, image);
+                var randomAnimationIdx = Math.floor(Math.random() * (this._animationNames.length + 1));
+                var image = new createjs.Sprite(this._spriteSheet, this._spriteSheet.getAnimation(this._animationNames[randomAnimationIdx]));
+                var o = new objects.MovingImage(this.stage, this.game, image);
                 this.displayObjectsCreated++;
                 this.newDisplayObjectCallback(o);
                 this.tickCount = 0;
