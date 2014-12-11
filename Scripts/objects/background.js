@@ -7,6 +7,12 @@
  *  This class is responsible for added and moving the
  *  background to make it appear like the game is scrolling
  */
+///<reference path="../managers/asset.ts"/>
+///<reference path="../game.ts"/>
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 var objects;
 (function (objects) {
     // Background Class
@@ -37,8 +43,8 @@ var objects;
         };
         //Remove the background
         Background.prototype.destroy = function () {
-            game.removeChild(this.whiteBg);
-            game.removeChild(this.image);
+            this.game.removeChild(this.whiteBg);
+            this.game.removeChild(this.image);
         };
         return Background;
     })();

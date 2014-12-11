@@ -12,8 +12,8 @@ var states;
 (function (states) {
     function playState() {
         background.update();
-        candy.moveImage();
-        character.moveImage();
+        candy.update();
+        character.update();
         for (var count = 0; count < veggies.length; count++) {
             veggies[count].update();
         }
@@ -48,7 +48,7 @@ var states;
                 scoreboard.sugarMeterWidth = 0;
             }
         }
-        imageGroup.update();
+        rotatingGroup.rotate();
     }
     states.playState = playState;
     //Main loop of the play class

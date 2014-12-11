@@ -7,6 +7,11 @@
  *  This class is responsible for controlling, when and
  *  how many obstacles to place on the screen at any given time
  */
+///<reference path="../objects/movingImage.ts"/>
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 module managers {
     // Collision Manager Class
     export class ObstacleManager {
@@ -36,7 +41,7 @@ module managers {
             if (this.tickCount++ > 0 && this.tickCount % 60 == 0){
                 var randomAnimationIdx:number = Math.floor(Math.random() * (this.spriteSheet._animations.length + 1));
                 var image:createjs.Sprite = new createjs.Sprite(this.spriteSheet, this.spriteSheet._animations[randomAnimationIdx]);
-                var o:objects.MovingImage = new objects.MovingImage(stage, game, image);
+                var o:objects.MovingImage = new objects.MovingImage(this.stage, this.game, image);
                 this.displayObjectsCreated++;
                 this.newDisplayObjectCallback(o);
                 this.tickCount = 0;

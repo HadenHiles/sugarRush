@@ -5,13 +5,17 @@
  * Time: 12:09 PM
  * To change this template use File | Settings | File Templates.
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 module objects {
     export class RotatingGroup extends createjs.Container {
-        images: Array;
-        dy: number;
+        images:createjs.Sprite[] = [];
         dx: number;
         constructor(image: createjs.Sprite, numberOfImages: Number) {
             super();
+            this.images.push(image);
             for(var count = 1; count <= numberOfImages; count++) {
                 this.images.push(image);
             }

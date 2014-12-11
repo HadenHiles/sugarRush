@@ -7,44 +7,20 @@
  *  This class is responsible for taking in a spritesheet, generating
  *  an image/display object, and then moving it on the screen in various directions.
  */
+///<reference path="image.ts"/>
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 module objects {
     // MovingImage class
-    export class MovingImage {
+    export class MovingImage extends objects.Image {
         //Class Variables
-        image: createjs.Sprite;
-        stage: createjs.Stage;
-        game: createjs.Container;
-//        obstacleGroup: objects.ImageGroup;
         dy: number;
         dx: number;
         constructor(stage: createjs.Stage, game: createjs.Container, image: createjs.Sprite) {
-            //Define the x coordinate
-            Object.defineProperty(this, "x",{
-                get: () => {
-                    return this.image.x;
-                }
-            });
-            //Define the y coordinate
-            Object.defineProperty(this, "y",{
-                get: () => {
-                    return this.image.y;
-                }
-            });
-            //Define the width of the image
-            Object.defineProperty(this, "height",{
-                get: () => {
-                    return this.image.getTransformedBounds().height;                }
-            });
-            //Define the height of the image
-            Object.defineProperty(this, "width",{
-                get: () => {
-                    return this.image.getTransformedBounds().width;
-                }
-            });
+            super(stage, game, image);
 
-            this.stage = stage;
-            this.game = game;
-            this.image = image;
             this.image.x = this.stage.canvas.width;
             //Scale relative to the collision/registration point
             this.image.scaleX = .3;
@@ -55,8 +31,6 @@ module objects {
             this.image.rotation = this.image.rotation - Math.floor(Math.random() * (90 + 1)) + 1;
 //            this.image.rotation *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
             this.reset();
-
-//            game.addChild(this.image);
         }
 
         //Move the images on the x and y axis
@@ -66,8 +40,6 @@ module objects {
             if (this.image.x <= 0) {
                 this.reset();
             }
-//            this.addImageGroup();
-//            this.obstacleGroup.update();
         }
 
         //Reset the positioning of the moving image to be at a random coordinate off to the right of the screen
@@ -80,7 +52,7 @@ module objects {
 
         //Remove the image
         destroy() {
-//            this.game.removeChild(this.image);
+            this.game.removeChild(this.image);
         }
    }
 

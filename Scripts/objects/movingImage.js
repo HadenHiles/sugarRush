@@ -1,3 +1,9 @@
+var __extends = this.__extends || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    __.prototype = b.prototype;
+    d.prototype = new __();
+};
 /**
  *  File: movingImage.ts
  *  Author: Haden Hiles
@@ -7,39 +13,18 @@
  *  This class is responsible for taking in a spritesheet, generating
  *  an image/display object, and then moving it on the screen in various directions.
  */
+///<reference path="image.ts"/>
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 var objects;
 (function (objects) {
     // MovingImage class
-    var MovingImage = (function () {
+    var MovingImage = (function (_super) {
+        __extends(MovingImage, _super);
         function MovingImage(stage, game, image) {
-            var _this = this;
-            //Define the x coordinate
-            Object.defineProperty(this, "x", {
-                get: function () {
-                    return _this.image.x;
-                }
-            });
-            //Define the y coordinate
-            Object.defineProperty(this, "y", {
-                get: function () {
-                    return _this.image.y;
-                }
-            });
-            //Define the width of the image
-            Object.defineProperty(this, "height", {
-                get: function () {
-                    return _this.image.getTransformedBounds().height;
-                }
-            });
-            //Define the height of the image
-            Object.defineProperty(this, "width", {
-                get: function () {
-                    return _this.image.getTransformedBounds().width;
-                }
-            });
-            this.stage = stage;
-            this.game = game;
-            this.image = image;
+            _super.call(this, stage, game, image);
             this.image.x = this.stage.canvas.width;
             //Scale relative to the collision/registration point
             this.image.scaleX = .3;
@@ -50,7 +35,6 @@ var objects;
             this.image.rotation = this.image.rotation - Math.floor(Math.random() * (90 + 1)) + 1;
             //            this.image.rotation *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
             this.reset();
-            //            game.addChild(this.image);
         }
         //Move the images on the x and y axis
         MovingImage.prototype.update = function () {
@@ -59,8 +43,6 @@ var objects;
             if (this.image.x <= 0) {
                 this.reset();
             }
-            //            this.addImageGroup();
-            //            this.obstacleGroup.update();
         };
         //Reset the positioning of the moving image to be at a random coordinate off to the right of the screen
         MovingImage.prototype.reset = function () {
@@ -71,10 +53,10 @@ var objects;
         };
         //Remove the image
         MovingImage.prototype.destroy = function () {
-            //            this.game.removeChild(this.image);
+            this.game.removeChild(this.image);
         };
         return MovingImage;
-    })();
+    })(objects.Image);
     objects.MovingImage = MovingImage;
 })(objects || (objects = {}));
 //# sourceMappingURL=movingImage.js.map

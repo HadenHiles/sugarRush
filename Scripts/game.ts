@@ -9,7 +9,20 @@
  *  optimizing for mobile touch screens and triggering what
  *  state the game is in.
  */
-
+///<reference path="../js/createjs-lib.d.ts"/>
+///<reference path="../js/easeljs.d.ts"/>
+///<reference path="../js/preloadjs.d.ts"/>
+///<reference path="../js/soundjs.d.ts"/>
+///<reference path="Scripts/objects/background.ts"/>
+///<reference path="Scripts/objects/rotatingGroup.ts"/>
+///<reference path="Scripts/objects/button.ts"/>
+///<reference path="Scripts/objects/candy.ts"/>
+///<reference path="Scripts/objects/character.ts"/>
+///<reference path="Scripts/objects/image.ts"/>
+///<reference path="Scripts/objects/instructions.ts"/>
+///<reference path="Scripts/objects/label.ts"/>
+///<reference path="Scripts/objects/movingImage.ts"/>
+///<reference path="Scripts/objects/scoreboard.ts"/>
 var stage: createjs.Stage;
 var game: createjs.Container;
 
@@ -18,6 +31,7 @@ var background: objects.Background;
 var character: objects.Character;
 var candy: objects.Candy;
 var veggies = []; // Veggies array;
+var candy = []; // Candy array;
 var scoreboard: objects.Scoreboard;
 
 var obstacleManager: managers.ObstacleManager;

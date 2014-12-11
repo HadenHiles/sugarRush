@@ -11,12 +11,18 @@ var __extends = this.__extends || function (d, b) {
  * Time: 12:09 PM
  * To change this template use File | Settings | File Templates.
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 var objects;
 (function (objects) {
     var RotatingGroup = (function (_super) {
         __extends(RotatingGroup, _super);
         function RotatingGroup(image, numberOfImages) {
             _super.call(this);
+            this.images = [];
+            this.images.push(image);
             for (var count = 1; count <= numberOfImages; count++) {
                 this.images.push(image);
             }

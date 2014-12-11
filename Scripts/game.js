@@ -9,6 +9,10 @@
  *  optimizing for mobile touch screens and triggering what
  *  state the game is in.
  */
+///<reference path="../js/createjs-lib.d.ts"/>
+///<reference path="../js/easeljs.d.ts"/>
+///<reference path="../js/preloadjs.d.ts"/>
+///<reference path="../js/soundjs.d.ts"/>
 var stage;
 var game;
 var rotatingGroup;
@@ -16,6 +20,7 @@ var background;
 var character;
 var candy;
 var veggies = []; // Veggies array;
+var candy = []; // Candy array;
 var scoreboard;
 var obstacleManager;
 var candyCollisionManager;

@@ -5,8 +5,12 @@
  * Time: 6:56 PM
  * To change this template use File | Settings | File Templates.
  */
-module filters{
-    export class Scale{
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
+module filters {
+    export class Scale {
         private _original: any;
         private _scaleX:number;
         private _scaleY:number;
@@ -38,12 +42,12 @@ module filters{
             });
             Object.defineProperty(this, "height", {
                 get: () => {
-                    return this._original.height + this._scaleHeight;
+                    return this._original.height * this._scaleHeight;
                 }
             });
             Object.defineProperty(this, "width", {
                 get: () => {
-                    return this._original.width + this._scaleWidth;
+                    return this._original.width * this._scaleWidth;
                 }
             });
         }

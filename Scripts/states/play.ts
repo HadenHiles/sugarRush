@@ -8,11 +8,15 @@
  *  Score/Sugar Meter updates are triggered here, as well as
  *  collision detection and obstacle management
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 module states {
     export function playState() {
         background.update();
-        candy.moveImage();
-        character.moveImage();
+        candy.update();
+        character.update();
         //Loop through the collection of veggies and update
         for (var count = 0; count < veggies.length; count++) {
             veggies[count].update();
@@ -49,7 +53,7 @@ module states {
                 scoreboard.sugarMeterWidth = 0;
             }
         }
-        imageGroup.update();
+        rotatingGroup.rotate();
     }
 
     //Main loop of the play class

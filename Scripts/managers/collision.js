@@ -8,6 +8,10 @@
  *  It detects collisions between two rectangular display objects and applies
  *  a "filter" to make the game more playable (makes collision objects smaller than actual objects)
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 var managers;
 (function (managers) {
     // Collision Manager Class
