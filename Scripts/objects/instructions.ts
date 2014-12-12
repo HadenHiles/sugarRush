@@ -6,6 +6,10 @@
  *  Description:
  *  This file generates the instructions for the menu screen
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 module objects {
     export class Instructions extends createjs.Text {
         constructor(x:number,y:number,labelText:string) {

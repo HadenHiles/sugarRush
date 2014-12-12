@@ -15,36 +15,52 @@ var __extends = this.__extends || function (d, b) {
 ///<reference path="../../js/easeljs.d.ts"/>
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="image.ts"/>
 var objects;
 (function (objects) {
     var RotatingGroup = (function (_super) {
         __extends(RotatingGroup, _super);
-        function RotatingGroup(image, numberOfImages) {
+        function RotatingGroup(images) {
             _super.call(this);
             this.images = [];
-            this.images.push(image);
-            for (var count = 1; count <= numberOfImages; count++) {
-                this.images.push(image);
-            }
-            if (numberOfImages == 3) {
+            this.regX = 300;
+            this.regY = 300;
+            this.images = images;
+            this.images[0].scaleX = .4;
+            this.images[0].scaleY = .4;
+            this.images[0].regX = this.images[0].width / 2;
+            this.images[0].regY = this.images[0].height / 2;
+            this.images[1].scaleX = .4;
+            this.images[1].scaleY = .4;
+            this.images[1].regX = this.images[1].width / 2;
+            this.images[1].regY = this.images[1].height / 2;
+            this.images[2].scaleX = .4;
+            this.images[2].scaleY = .4;
+            this.images[2].regX = this.images[2].width / 2;
+            this.images[2].regY = this.images[2].height / 2;
+            this.images[3].scaleX = .4;
+            this.images[3].scaleY = .4;
+            this.images[3].regX = this.images[3].width / 2;
+            this.images[3].regY = this.images[3].height / 2;
+            if (this.images.length == 3) {
                 this.images[1].x = 300;
                 this.images[2].x = 150;
                 this.images[2].y = 300;
             }
-            else if (numberOfImages == 4) {
+            else if (this.images.length == 4) {
                 this.images[1].x = 300;
                 this.images[2].y = 300;
                 this.images[3].x = 300;
                 this.images[3].y = 300;
             }
-            for (var count = 0; count <= this.images.length; count++) {
-                this.addChild(this.images[count]);
+            for (var idx = 0; idx <= this.images.length; idx++) {
+                this.addChild(this.images[idx]);
             }
         }
         //Rotate the group
         RotatingGroup.prototype.rotate = function () {
-            for (var count = 0; count <= this.images.length; count++) {
-                this.images[count].rotation += 1;
+            for (var idx = 0; idx < this.images.length; idx++) {
+                this.images[idx].rotation += 1;
             }
             this.rotation -= 1;
         };

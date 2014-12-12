@@ -13,16 +13,22 @@
 ///<reference path="../js/easeljs.d.ts"/>
 ///<reference path="../js/preloadjs.d.ts"/>
 ///<reference path="../js/soundjs.d.ts"/>
-///<reference path="Scripts/objects/background.ts"/>
-///<reference path="Scripts/objects/rotatingGroup.ts"/>
-///<reference path="Scripts/objects/button.ts"/>
-///<reference path="Scripts/objects/candy.ts"/>
-///<reference path="Scripts/objects/character.ts"/>
-///<reference path="Scripts/objects/image.ts"/>
-///<reference path="Scripts/objects/instructions.ts"/>
-///<reference path="Scripts/objects/label.ts"/>
-///<reference path="Scripts/objects/movingImage.ts"/>
-///<reference path="Scripts/objects/scoreboard.ts"/>
+///<reference path="constants.ts"/>
+///<reference path="filters/scale.ts"/>
+///<reference path="states/menu.ts"/>
+///<reference path="states/play.ts"/>
+///<reference path="states/gameover.ts"/>
+///<reference path="managers/collision.ts"/>
+///<reference path="objects/background.ts"/>
+///<reference path="objects/rotatingGroup.ts"/>
+///<reference path="objects/button.ts"/>
+///<reference path="objects/candy.ts"/>
+///<reference path="objects/character.ts"/>
+///<reference path="objects/image.ts"/>
+///<reference path="objects/instructions.ts"/>
+///<reference path="objects/label.ts"/>
+///<reference path="objects/movingImage.ts"/>
+///<reference path="objects/scoreboard.ts"/>
 var stage: createjs.Stage;
 var game: createjs.Container;
 
@@ -31,7 +37,7 @@ var background: objects.Background;
 var character: objects.Character;
 var candy: objects.Candy;
 var veggies = []; // Veggies array;
-var candy = []; // Candy array;
+var candies = []; // Candy array;
 var scoreboard: objects.Scoreboard;
 
 var obstacleManager: managers.ObstacleManager;

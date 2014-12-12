@@ -14,14 +14,13 @@ var filters;
     var Scale = (function () {
         function Scale() {
             var _this = this;
-            this._original = null;
             this._scaleX = 1;
             this._scaleY = 1;
             this._scaleWidth = .95;
-            this._scaleHeight = .9;
+            this._scaleHeight = .95;
             Object.defineProperty(this, "original", {
-                set: function (original) {
-                    _this._original = original;
+                set: function (value) {
+                    _this._original = value;
                 },
                 get: function () {
                     return _this._original;
@@ -29,22 +28,22 @@ var filters;
             });
             Object.defineProperty(this, "x", {
                 get: function () {
-                    return _this._original.x * _this._scaleX;
+                    return _this.original.x * _this._scaleX;
                 }
             });
             Object.defineProperty(this, "y", {
                 get: function () {
-                    return _this._original.y * _this._scaleY;
+                    return _this.original.y * _this._scaleY;
                 }
             });
             Object.defineProperty(this, "height", {
                 get: function () {
-                    return _this._original.height * _this._scaleHeight;
+                    return _this.original.height * _this._scaleHeight;
                 }
             });
             Object.defineProperty(this, "width", {
                 get: function () {
-                    return _this._original.width * _this._scaleWidth;
+                    return _this.original.width * _this._scaleWidth;
                 }
             });
         }

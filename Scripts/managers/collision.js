@@ -12,6 +12,7 @@
 ///<reference path="../../js/easeljs.d.ts"/>
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="../filters/scale.ts"/>
 var managers;
 (function (managers) {
     // Collision Manager Class
@@ -39,8 +40,8 @@ var managers;
             // We need to fake the object dimensions to improve perceived collisions.
             var scaledObjectA = new filters.Scale();
             var scaledObjectB = new filters.Scale();
-            for (var idx1 in this.displayObjectSet1) {
-                for (var idx2 in this.displayObjectSet2) {
+            for (var idx1 = 0; idx1 < this.displayObjectSet1.length; idx1++) {
+                for (var idx2 = 0; idx2 < this.displayObjectSet2.length; idx2++) {
                     scaledObjectA.original = this.displayObjectSet1[idx1];
                     scaledObjectB.original = this.displayObjectSet2[idx2];
                     if (this.rectIntersect(scaledObjectA, scaledObjectB)) {

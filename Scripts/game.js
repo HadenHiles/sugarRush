@@ -13,6 +13,22 @@
 ///<reference path="../js/easeljs.d.ts"/>
 ///<reference path="../js/preloadjs.d.ts"/>
 ///<reference path="../js/soundjs.d.ts"/>
+///<reference path="constants.ts"/>
+///<reference path="filters/scale.ts"/>
+///<reference path="states/menu.ts"/>
+///<reference path="states/play.ts"/>
+///<reference path="states/gameover.ts"/>
+///<reference path="managers/collision.ts"/>
+///<reference path="objects/background.ts"/>
+///<reference path="objects/rotatingGroup.ts"/>
+///<reference path="objects/button.ts"/>
+///<reference path="objects/candy.ts"/>
+///<reference path="objects/character.ts"/>
+///<reference path="objects/image.ts"/>
+///<reference path="objects/instructions.ts"/>
+///<reference path="objects/label.ts"/>
+///<reference path="objects/movingImage.ts"/>
+///<reference path="objects/scoreboard.ts"/>
 var stage;
 var game;
 var rotatingGroup;
@@ -20,7 +36,7 @@ var background;
 var character;
 var candy;
 var veggies = []; // Veggies array;
-var candy = []; // Candy array;
+var candies = []; // Candy array;
 var scoreboard;
 var obstacleManager;
 var candyCollisionManager;

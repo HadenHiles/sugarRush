@@ -7,6 +7,12 @@
  *  This class is responsible for displaying the scoreboard
  *  at the top of the screen while the game is being played
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="../constants.ts"/>
+///<reference path="../game.ts"/>
 var objects;
 (function (objects) {
     //Scoreboard Class
@@ -36,7 +42,7 @@ var objects;
             this.sugarMeterOutline = new createjs.Shape(this.sugarLevelBoxOutline);
             this.sugarMeterOutline.x = 245;
             this.sugarMeterOutline.y = 5;
-            game.addChild(this.sugarMeterOutline);
+            this.game.addChild(this.sugarMeterOutline);
         }
         //Update the scoreboard content
         Scoreboard.prototype.update = function () {
@@ -45,7 +51,7 @@ var objects;
             this.labelText = "Score: " + this.score.toString();
             this.label.text = this.labelText;
             //Sugar Meter box
-            game.removeChild(this.sugarMeter);
+            this.game.removeChild(this.sugarMeter);
             this.sugarLevelBox = new createjs.Graphics();
             this.sugarLevelBox.beginFill(this.sugarMeterColor);
             this.sugarLevelBox.drawRect(0, 0, this.sugarMeterWidth, 35);

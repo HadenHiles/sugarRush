@@ -8,6 +8,21 @@
 *  Score/Sugar Meter updates are triggered here, as well as
 *  collision detection and obstacle management
 */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="../game.ts"/>
+///<reference path="../objects/background.ts"/>
+///<reference path="../objects/character.ts"/>
+///<reference path="../objects/candy.ts"/>
+///<reference path="../objects/movingImage.ts"/>
+///<reference path="../objects/image.ts"/>
+///<reference path="../objects/rotatingGroup.ts"/>
+///<reference path="../objects/scoreboard.ts"/>
+///<reference path="../managers/collision.ts"/>
+///<reference path="../managers/ObstacleManager.ts"/>
+///<reference path="../filters/scale.ts"/>
 var states;
 (function (states) {
     function playState() {
@@ -56,11 +71,20 @@ var states;
         // Declare new Game Container
         game = new createjs.Container();
         // Instantiate Game Objects
-        rotatingGroup = new objects.RotatingGroup(new createjs.Sprite(managers.Assets.veggies, "red-pepper"), 4);
-        game.addChild(rotatingGroup);
         background = new objects.Background(stage, game);
         character = new objects.Character(stage, game);
         candy = new objects.Candy(stage, game);
+        var redPepperSprite1 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+        var redPepperSprite2 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+        var redPepperSprite3 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+        var redPepperSprite4 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+        var redPepperImage1 = new objects.Image(stage, game, redPepperSprite1);
+        var redPepperImage2 = new objects.Image(stage, game, redPepperSprite2);
+        var redPepperImage3 = new objects.Image(stage, game, redPepperSprite3);
+        var redPepperImage4 = new objects.Image(stage, game, redPepperSprite4);
+        var redPeppers = [redPepperImage1, redPepperImage2, redPepperImage3, redPepperImage4];
+        rotatingGroup = new objects.RotatingGroup(redPeppers);
+        game.addChild(rotatingGroup);
         // Hide Cursor
         stage.cursor = "default";
         //Pass through each veggie from the veggie collection of sprites

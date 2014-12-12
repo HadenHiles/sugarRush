@@ -7,11 +7,11 @@
  *  This class is responsible for taking in a spritesheet, generating
  *  an image/display object, and then moving it on the screen in various directions.
  */
-///<reference path="image.ts"/>
 ///<reference path="../../js/createjs-lib.d.ts"/>
 ///<reference path="../../js/easeljs.d.ts"/>
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="image.ts"/>
 module objects {
     // MovingImage class
     export class MovingImage extends objects.Image {

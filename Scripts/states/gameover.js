@@ -7,6 +7,12 @@
  *  This class is responsible for displaying the game over screen text
  *  along with their score when the user loses the game.
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="../objects/background.ts"/>
+///<reference path="../game.ts"/>
 var states;
 (function (states) {
     function gameOverState() {

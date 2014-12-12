@@ -7,36 +7,50 @@
  *  This class is responsible for randomly continuing to add candies from
  *  the candy spritesheet to the screen
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="image.ts"/>
+///<reference path="../managers/asset.ts"/>
 module objects {
     // Candy Class
     export class Candy extends objects.Image {
-        image: createjs.Sprite;
         dx: number;
         randomAnimationIdx: number = 0;
+        public _spriteSheet: createjs.SpriteSheet = managers.Assets.candy;
+        public _animationNames:string[] = managers.Assets.candy.getAnimations();
         constructor(stage: createjs.Stage, game: createjs.Container) {
-            super(stage, game, new createjs.Sprite(managers.Assets.candy, managers.Assets.candy._animations[this.randomAnimationIdx]));
-            this.reset();
+            super(stage, game, new createjs.Sprite(managers.Assets.candy, managers.Assets.candy[0]));
             this.dx = 4;
         }
 
         //Move the candy on the x axis and reset when it goes off screen
         moveImage() {
-            this.image.x -= this.dx;
-            if (this.image.x <= 0) {
-                this.reset();
+            if(this.image) {
+                this.image.x -= this.dx;
+                if (this.image.x <= 0) {
+                    this.reset();
+                }
             }
         }
 
         //Set the candy back to the right of the canvas
         reset() {
-            this.randomAnimationIdx = Math.floor(Math.random() * (managers.Assets.candy._animations.length + 1));
-            this.image = new createjs.Sprite(managers.Assets.candy, managers.Assets.candy._animations[this.randomAnimationIdx]);
-            this.image.scaleX = .7;
-            this.image.scaleY = .7;
-            this.image.regX = this.width / 2;
-            this.image.regY = this.height / 2;
-            this.image.y = Math.floor(Math.random() * this.stage.canvas.height);
-            this.image.x = this.stage.canvas.width;
+            this._animationNames = managers.Assets.candy.getAnimations();
+            this.randomAnimationIdx = Math.floor(Math.random() * (this._animationNames.length + 1));
+
+            this.image = new createjs.Sprite(managers.Assets.candy, this._animationNames[this.randomAnimationIdx]);
+            this.adjustImage(this.image);
+        }
+
+        adjustImage(image: createjs.Sprite){
+            image.scaleX = .7;
+            image.scaleY = .7;
+            image.regX = this.width / 2;
+            image.regY = this.height / 2;
+            image.y = Math.floor(Math.random() * this.stage.canvas.height);
+            image.x = this.stage.canvas.width;
         }
    }
 }

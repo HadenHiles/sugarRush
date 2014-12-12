@@ -12,6 +12,10 @@ var __extends = this.__extends || function (d, b) {
  *  Description:
  *  This file generates the instructions for the menu screen
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
 var objects;
 (function (objects) {
     var Instructions = (function (_super) {

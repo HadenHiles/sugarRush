@@ -14,6 +14,12 @@ var __extends = this.__extends || function (d, b) {
  *  around the screen according to the user's mouse position
  *  on the canvas
  */
+///<reference path="../../js/createjs-lib.d.ts"/>
+///<reference path="../../js/easeljs.d.ts"/>
+///<reference path="../../js/preloadjs.d.ts"/>
+///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="image.ts"/>
+///<reference path="../managers/asset.ts"/>
 var objects;
 (function (objects) {
     // Character Class
@@ -30,8 +36,8 @@ var objects;
             this.image.y = 220;
             this.image.scaleX = .5;
             this.image.scaleY = .5;
-            this.image.regX = 30;
-            this.image.regY = 53;
+            this.image.regX = this.width / 2;
+            this.image.regY = this.height / 2;
             this.soundTrack = createjs.Sound.play('candypump', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }
         //Update the position of the character according to the mouse position
@@ -42,7 +48,7 @@ var objects;
             this.line.graphics.moveTo(this.linePosX - 15, this.linePosY);
             this.line.graphics.lineTo(this.image.x - 15, this.image.y);
             this.line.graphics.endStroke();
-            //            super.update();
+            _super.prototype.update.call(this);
         };
         Character.prototype.moveImage = function () {
             var speed = 7;
