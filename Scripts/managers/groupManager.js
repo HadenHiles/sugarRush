@@ -9,6 +9,7 @@
 ///<reference path="../../js/easeljs.d.ts"/>
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="../objects/rotatingGroup.ts"/>
 var managers;
 (function (managers) {
     var GroupManager = (function () {
@@ -23,22 +24,19 @@ var managers;
                 game.addChild(this.groups[count]);
             }
         }
-        GroupManager.prototype.moveGroup = function () {
+        GroupManager.prototype.update = function () {
             var randomGroup = this.groups[0];
             randomGroup.y += this.dy;
             randomGroup.x -= this.dx;
             //            if(randomGroup.x <= 200) {
-            //                this.moveGroup();
+            //                this.update();
             //            }
             if (randomGroup.x <= -200) {
-                this.reset(randomGroup);
+                //When group reaches the end reset it to the beginning
+                randomGroup.reset();
             }
         };
-        GroupManager.prototype.reset = function (group) {
-            group.x = 1200;
-            group.y = 200;
-        };
-        GroupManager.prototype.randomGroup = function () {
+        GroupManager.prototype.generateRandomGroup = function () {
             var randomNum = Math.floor(Math.random() * (this.groups.length + 1));
             return this.groups[randomNum];
         };

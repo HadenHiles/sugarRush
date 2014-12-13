@@ -40,7 +40,6 @@ module objects {
             Object.defineProperty(this, "x",{
                 set: (xValue) => {
                     this._image.x = xValue;
-                    return this.image.x;
                 },
                 get: () => {
                     return this.image.x;
@@ -50,7 +49,6 @@ module objects {
             Object.defineProperty(this, "y",{
                 set: (yValue) => {
                     this._image.y = yValue;
-                    return this.image.y;
                 },
                 get: () => {
                     return this.image.y;
@@ -58,20 +56,12 @@ module objects {
             });
             //Define the width of the image
             Object.defineProperty(this, "height",{
-                set: (heightValue) => {
-                    this.height = heightValue;
-                    return this.height;
-                },
                 get: () => {
                     return this.image.getTransformedBounds().height;
                 }
             });
             //Define the height of the image
             Object.defineProperty(this, "width",{
-                set: (widthValue) => {
-                    this.width = widthValue;
-                    return this.width;
-                },
                 get: () => {
                     return this.image.getTransformedBounds().width;
                 }
@@ -79,7 +69,6 @@ module objects {
             Object.defineProperty(this, "scaleX", {
                 set: (scaleXValue) => {
                     this.image.scaleX = scaleXValue;
-                    return this.image.scaleX;
                 },
                 get: () => {
                     return this.image.scaleX;
@@ -88,7 +77,6 @@ module objects {
             Object.defineProperty(this, "scaleY", {
                 set: (scaleYValue) => {
                     this.image.scaleY = scaleYValue;
-                    return this.image.scaleY;
                 },
                 get: () => {
                     return this.image.scaleY;
@@ -97,7 +85,6 @@ module objects {
             Object.defineProperty(this, "regX", {
                 set: (regXValue) => {
                     this.image.regX = regXValue;
-                    return this.image.regX;
                 },
                 get: () => {
                     return this.image.regX;
@@ -106,7 +93,6 @@ module objects {
             Object.defineProperty(this, "regY", {
                 set: (regYValue) => {
                     this.image.regY = regYValue;
-                    return this.image.regY;
                 },
                 get: () => {
                     return this._image.regY;
@@ -115,7 +101,6 @@ module objects {
             Object.defineProperty(this, "rotation", {
                 set: (rotationValue) => {
                     this._image.rotation = rotationValue;
-                    return this._image.rotation;
                 },
                 get: () => {
                     return this._image.rotation;
@@ -147,6 +132,9 @@ module objects {
             return this.image.getTransformedBounds();
         }
 
+        getBounds() {
+            return this.image.getBounds();
+        }
         //remove the character
         destroy() {
             this.game.removeChild(this._image);

@@ -35,6 +35,7 @@ var states;
         }
         candyCollisionManager.update();
         veggieCollisionManager.update();
+        veggieGroupCollisionManager.update();
         scoreboard.update();
         //Determine when the game is over
         if (scoreboard.lives <= 0) {
@@ -65,7 +66,7 @@ var states;
             }
         }
         rotatingGroup.rotate();
-        groupManager.moveGroup();
+        groupManager.update();
     }
     states.playState = playState;
     //Main loop of the play class
@@ -76,6 +77,7 @@ var states;
         background = new objects.Background(stage, game);
         character = new objects.Character(stage, game);
         candy = new objects.Candy(stage, game);
+        // Rotating Group objects
         var redPepperSprite1 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
         var redPepperSprite2 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
         var redPepperSprite3 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
@@ -83,6 +85,28 @@ var states;
         var redPeppers = [redPepperSprite1, redPepperSprite2, redPepperSprite3, redPepperSprite4];
         rotatingGroup = new objects.RotatingGroup(redPeppers);
         groupManager = new managers.GroupManager(stage, game, [rotatingGroup]);
+        //Instantiate Collision Manager for character and images withing rotating group
+        veggieGroupCollisionManager = new managers.Collision([character], rotatingGroup.images, function (object1, object2) {
+            //Update the lives and Sugar Meter accordingly
+            if (scoreboard.lives >= 0) {
+                if (scoreboard.sugarMeterWidth <= 80) {
+                    scoreboard.sugarMeterColor = "#FE0000";
+                }
+                else {
+                    scoreboard.sugarMeterColor = "#B1C243";
+                }
+                scoreboard.lives -= 1;
+            }
+            if (scoreboard.sugarMeterWidth >= 10) {
+                scoreboard.sugarMeterWidth -= 10;
+            }
+            else if (scoreboard.sugarMeterWidth > 0) {
+                scoreboard.sugarMeterWidth = 0;
+            }
+            createjs.Sound.play("ew");
+            // Prevent duplicate collisions by disabling collision detection for a second
+            veggieGroupCollisionManager.pauseForDuration();
+        });
         // Hide Cursor
         stage.cursor = "default";
         //Pass through each veggie from the veggie collection of sprites
@@ -114,27 +138,6 @@ var states;
         });
         //Instantiate Collision Manager for character and veggies
         veggieCollisionManager = new managers.Collision([character], veggies, function (object1, object2) {
-            //Update the lives and Sugar Meter accordingly
-            if (scoreboard.lives >= 0) {
-                if (scoreboard.sugarMeterWidth <= 80) {
-                    scoreboard.sugarMeterColor = "#FE0000";
-                }
-                else {
-                    scoreboard.sugarMeterColor = "#B1C243";
-                }
-                scoreboard.lives -= 1;
-            }
-            if (scoreboard.sugarMeterWidth >= 10) {
-                scoreboard.sugarMeterWidth -= 10;
-            }
-            else if (scoreboard.sugarMeterWidth > 0) {
-                scoreboard.sugarMeterWidth = 0;
-            }
-            object2.reset();
-            createjs.Sound.play("ew");
-        });
-        //Instantiate Collision Manager for character and images withing rotating group
-        veggieGroupCollisionManager = new managers.Collision([character], rotatingGroup.children, function (object1, object2) {
             //Update the lives and Sugar Meter accordingly
             if (scoreboard.lives >= 0) {
                 if (scoreboard.sugarMeterWidth <= 80) {

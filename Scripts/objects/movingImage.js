@@ -30,8 +30,9 @@ var objects;
             this.scaleX = .3;
             this.scaleY = .3;
             //Set collision/registraion point to be in the center of the object
-            this.regX = this.width / 2;
-            this.regY = this.height / 2;
+            var bounds = this.getTransformedBounds();
+            this.regX = bounds.width / 2;
+            this.regY = bounds.height / 2;
             this.rotation = this.rotation - Math.floor(Math.random() * (90 + 1)) + 1;
             //            this.image.rotation *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
             this.reset();

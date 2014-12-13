@@ -34,15 +34,28 @@ module filters {
                     return this._original.parent;
                 }
             });
+            Object.defineProperty(this, "scaleWidth", {
+                set: (value) => {
+                    this._scaleWidth = value;
+                },
+                get: () => {
+                    return this._scaleWidth;
+                }
+            });
+            Object.defineProperty(this, "scaleHeight", {
+                set: (value) => {
+                    this._scaleHeight = value;
+                },
+                get: () => {
+                    return this._scaleHeight;
+                }
+            });
         }
 
         getTransformedBounds() {
             var bounds = this._original.getTransformedBounds();
-            bounds.x = bounds.x * this._scaleX;
-            bounds.y = bounds.y * this._scaleY;
-            bounds.height = bounds.height * this._scaleHeight;
-            bounds.width = bounds.width * this._scaleWidth;
-            return bounds;
+            var newRectangle = new createjs.Rectangle(bounds.x * this._scaleX, bounds.y * this._scaleY, bounds.width * this._scaleWidth, bounds.height * this._scaleHeight);
+            return newRectangle;
         }
 
         localToGlobal(x: number, y: number): createjs.Point{

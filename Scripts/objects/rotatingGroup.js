@@ -16,6 +16,7 @@ var __extends = this.__extends || function (d, b) {
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="image.ts"/>
+///<reference path="../filters/scale.ts"/>
 var objects;
 (function (objects) {
     var RotatingGroup = (function (_super) {
@@ -23,27 +24,12 @@ var objects;
         function RotatingGroup(images) {
             _super.call(this);
             this.images = [];
+            this.removedImages = [];
             this.x = 400;
             this.y = 200;
             this.regX = 100;
             this.regY = 100;
             this.images = images;
-            this.images[0].scaleX = .3;
-            this.images[0].scaleY = .3;
-            this.images[0].regX = this.images[0].width / 2;
-            this.images[0].regY = this.images[0].height / 2;
-            this.images[1].scaleX = .3;
-            this.images[1].scaleY = .3;
-            this.images[1].regX = this.images[1].width / 2;
-            this.images[1].regY = this.images[1].height / 2;
-            this.images[2].scaleX = .3;
-            this.images[2].scaleY = .3;
-            this.images[2].regX = this.images[2].width / 2;
-            this.images[2].regY = this.images[2].height / 2;
-            this.images[3].scaleX = .3;
-            this.images[3].scaleY = .3;
-            this.images[3].regX = this.images[3].width / 2;
-            this.images[3].regY = this.images[3].height / 2;
             if (this.images.length == 3) {
                 this.images[1].x = 250;
                 this.images[2].x = 100;
@@ -55,17 +41,26 @@ var objects;
                 this.images[3].x = 250;
                 this.images[3].y = 250;
             }
-            for (var idx = 0; idx < this.images.length; idx++) {
-                this.addChild(this.images[idx]);
+            var bounds;
+            for (var i = 0; i < this.images.length; i++) {
+                this.images[i].scaleX = .3;
+                this.images[i].scaleY = .3;
+                bounds = this.images[i].getTransformedBounds();
+                this.images[i].regX = bounds.width / 2;
+                this.images[i].regY = bounds.height / 2;
+                this.addChild(this.images[i]);
             }
         }
         //Rotate the group
         RotatingGroup.prototype.rotate = function () {
             for (var idx = 0; idx < this.images.length; idx++) {
                 this.images[idx].rotation += 1;
-                console.log(this.images[idx].height + " " + this.images[idx].width + "\n");
             }
-            this.rotation -= 1;
+            //            this.rotation -= 1;
+        };
+        RotatingGroup.prototype.reset = function () {
+            this.x = 1200;
+            this.y = 200;
         };
         //Remove the images
         RotatingGroup.prototype.destroy = function () {

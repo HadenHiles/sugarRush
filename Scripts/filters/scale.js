@@ -31,14 +31,27 @@ var filters;
                     return _this._original.parent;
                 }
             });
+            Object.defineProperty(this, "scaleWidth", {
+                set: function (value) {
+                    _this._scaleWidth = value;
+                },
+                get: function () {
+                    return _this._scaleWidth;
+                }
+            });
+            Object.defineProperty(this, "scaleHeight", {
+                set: function (value) {
+                    _this._scaleHeight = value;
+                },
+                get: function () {
+                    return _this._scaleHeight;
+                }
+            });
         }
         Scale.prototype.getTransformedBounds = function () {
             var bounds = this._original.getTransformedBounds();
-            bounds.x = bounds.x * this._scaleX;
-            bounds.y = bounds.y * this._scaleY;
-            bounds.height = bounds.height * this._scaleHeight;
-            bounds.width = bounds.width * this._scaleWidth;
-            return bounds;
+            var newRectangle = new createjs.Rectangle(bounds.x * this._scaleX, bounds.y * this._scaleY, bounds.width * this._scaleWidth, bounds.height * this._scaleHeight);
+            return newRectangle;
         };
         Scale.prototype.localToGlobal = function (x, y) {
             return this._original.parent.localToGlobal(x, y);

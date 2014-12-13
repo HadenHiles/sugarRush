@@ -9,14 +9,15 @@
 ///<reference path="../../js/easeljs.d.ts"/>
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="../objects/rotatingGroup.ts"/>
 module managers {
     export class GroupManager {
         stage: createjs.Stage;
         game: createjs.Container;
-        groups: createjs.Container[];
+        groups: objects.RotatingGroup[];
         dx: number;
         dy: number;
-        constructor(stage: createjs.Stage, game: createjs.Container, groups: createjs.Container[]) {
+        constructor(stage: createjs.Stage, game: createjs.Container, groups: objects.RotatingGroup[]) {
             this.stage = stage;
             this.game = game;
             this.groups = groups;
@@ -28,24 +29,20 @@ module managers {
             }
         }
 
-        moveGroup(){
+        update(){
             var randomGroup = this.groups[0];
             randomGroup.y += this.dy;
             randomGroup.x -= this.dx;
 //            if(randomGroup.x <= 200) {
-//                this.moveGroup();
+//                this.update();
 //            }
             if (randomGroup.x <= -200) {
-                this.reset(randomGroup);
+                //When group reaches the end reset it to the beginning
+                randomGroup.reset();
             }
         }
 
-        reset(group: createjs.Container){
-            group.x = 1200;
-            group.y = 200;
-        }
-
-        randomGroup(): createjs.Container {
+        generateRandomGroup(): createjs.Container {
             var randomNum = Math.floor(Math.random() * (this.groups.length + 1));
             return this.groups[randomNum];
         }

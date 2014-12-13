@@ -19,8 +19,17 @@ module managers {
         // class variables
         private displayObjectSet1 = [];
         private displayObjectSet2 = [];
+        private _enabled: Boolean = true;
         public collisionHandlerCallback: (displayObject1: any, dispalyObject2: any) => void;
         constructor(displayObjectSet1, displayObjectSet2, collisionHandler: (displayObject1: any, displayObject2: any)=>void) {
+            Object.defineProperty(this, "enabled", {
+                set: (enabledValue) => {
+                    this._enabled = enabledValue;
+                },
+                get: () => {
+                    return this._enabled;
+                }
+            });
             this.displayObjectSet1 = displayObjectSet1;
             this.displayObjectSet2 = displayObjectSet2;
             this.collisionHandlerCallback = collisionHandler;
@@ -39,18 +48,28 @@ module managers {
                     Math.min(rangeAMin, rangeAMax) <= Math.max(rangeBMin, rangeBMax);
         }
 
+        public pauseForDuration(milliseconds:number=1000) {
+            this._enabled = false;
+            var __this = this;
+            setTimeout(function(){
+                __this._enabled = true;
+            }, milliseconds);
+        }
+
         //loop through both object collections and check for a collision with each item in a collection (ex. veggies)
         update() {
-            // We need to fake the object dimensions to improve perceived collisions.
-            var scaledObjectA = new filters.Scale();
-            var scaledObjectB = new filters.Scale();
-            for(var idx1 = 0; idx1 < this.displayObjectSet1.length; idx1++) {
-                for (var idx2 = 0; idx2 < this.displayObjectSet2.length; idx2++) {
-                    scaledObjectA.original = this.displayObjectSet1[idx1];
-                    scaledObjectB.original = this.displayObjectSet2[idx2];
-                    if (this.rectIntersect(this.getTransformedRectangle(scaledObjectA), this.getTransformedRectangle(scaledObjectB))) {
-                        this.collisionHandlerCallback(scaledObjectA.original, scaledObjectB.original);
+            if (this._enabled) {
+                // We need to fake the object dimensions to improve perceived collisions.
+                var scaledObjectA = new filters.Scale();
+                var scaledObjectB = new filters.Scale();
+                for(var idx1 = 0; idx1 < this.displayObjectSet1.length; idx1++) {
+                    for (var idx2 = 0; idx2 < this.displayObjectSet2.length; idx2++) {
+                        scaledObjectA.original = this.displayObjectSet1[idx1];
+                        scaledObjectB.original = this.displayObjectSet2[idx2];
+                        if (this.rectIntersect(this.getTransformedRectangle(scaledObjectA), this.getTransformedRectangle(scaledObjectB))) {
+                            this.collisionHandlerCallback(scaledObjectA.original, scaledObjectB.original);
 //                        console.log("Collision:\nObject A: " + scaledObjectA.original.getTransformedBounds() + ", Object B: " + scaledObjectB.original.getTransformedBounds());
+                        }
                     }
                 }
             }

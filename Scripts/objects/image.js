@@ -38,7 +38,6 @@ var objects;
             Object.defineProperty(this, "x", {
                 set: function (xValue) {
                     _this._image.x = xValue;
-                    return _this.image.x;
                 },
                 get: function () {
                     return _this.image.x;
@@ -48,7 +47,6 @@ var objects;
             Object.defineProperty(this, "y", {
                 set: function (yValue) {
                     _this._image.y = yValue;
-                    return _this.image.y;
                 },
                 get: function () {
                     return _this.image.y;
@@ -56,20 +54,12 @@ var objects;
             });
             //Define the width of the image
             Object.defineProperty(this, "height", {
-                set: function (heightValue) {
-                    _this.height = heightValue;
-                    return _this.height;
-                },
                 get: function () {
                     return _this.image.getTransformedBounds().height;
                 }
             });
             //Define the height of the image
             Object.defineProperty(this, "width", {
-                set: function (widthValue) {
-                    _this.width = widthValue;
-                    return _this.width;
-                },
                 get: function () {
                     return _this.image.getTransformedBounds().width;
                 }
@@ -77,7 +67,6 @@ var objects;
             Object.defineProperty(this, "scaleX", {
                 set: function (scaleXValue) {
                     _this.image.scaleX = scaleXValue;
-                    return _this.image.scaleX;
                 },
                 get: function () {
                     return _this.image.scaleX;
@@ -86,7 +75,6 @@ var objects;
             Object.defineProperty(this, "scaleY", {
                 set: function (scaleYValue) {
                     _this.image.scaleY = scaleYValue;
-                    return _this.image.scaleY;
                 },
                 get: function () {
                     return _this.image.scaleY;
@@ -95,7 +83,6 @@ var objects;
             Object.defineProperty(this, "regX", {
                 set: function (regXValue) {
                     _this.image.regX = regXValue;
-                    return _this.image.regX;
                 },
                 get: function () {
                     return _this.image.regX;
@@ -104,7 +91,6 @@ var objects;
             Object.defineProperty(this, "regY", {
                 set: function (regYValue) {
                     _this.image.regY = regYValue;
-                    return _this.image.regY;
                 },
                 get: function () {
                     return _this._image.regY;
@@ -113,7 +99,6 @@ var objects;
             Object.defineProperty(this, "rotation", {
                 set: function (rotationValue) {
                     _this._image.rotation = rotationValue;
-                    return _this._image.rotation;
                 },
                 get: function () {
                     return _this._image.rotation;
@@ -138,6 +123,9 @@ var objects;
         };
         Image.prototype.getTransformedBounds = function () {
             return this.image.getTransformedBounds();
+        };
+        Image.prototype.getBounds = function () {
+            return this.image.getBounds();
         };
         //remove the character
         Image.prototype.destroy = function () {
