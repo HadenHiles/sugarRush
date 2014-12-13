@@ -23,12 +23,12 @@ module objects {
 
             this.image.x = this.stage.canvas.width;
             //Scale relative to the collision/registration point
-            this.image.scaleX = .3;
-            this.image.scaleY = .3;
+            this.scaleX = .3;
+            this.scaleY = .3;
             //Set collision/registraion point to be in the center of the object
-            this.image.regX = this.width / 2;
-            this.image.regY = this.height / 2;
-            this.image.rotation = this.image.rotation - Math.floor(Math.random() * (90 + 1)) + 1;
+            this.regX = this.width / 2;
+            this.regY = this.height / 2;
+            this.rotation = this.rotation - Math.floor(Math.random() * (90 + 1)) + 1;
 //            this.image.rotation *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
             this.reset();
         }

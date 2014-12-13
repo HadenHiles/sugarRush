@@ -22,14 +22,16 @@ module objects {
         public _animationNames:string[] = managers.Assets.candy.getAnimations();
         constructor(stage: createjs.Stage, game: createjs.Container) {
             super(stage, game, new createjs.Sprite(managers.Assets.candy, managers.Assets.candy[0]));
+            this.regX = this.width / 2;
+            this.regY = this.height / 2;
             this.dx = 4;
         }
 
         //Move the candy on the x axis and reset when it goes off screen
         moveImage() {
-            if(this.image) {
-                this.image.x -= this.dx;
-                if (this.image.x <= 0) {
+            if(this) {
+                this.x -= this.dx;
+                if (this.x <= 0) {
                     this.reset();
                 }
             }

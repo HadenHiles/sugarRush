@@ -19,6 +19,7 @@
 ///<reference path="states/play.ts"/>
 ///<reference path="states/gameover.ts"/>
 ///<reference path="managers/collision.ts"/>
+///<reference path="managers/groupManager.ts"/>
 ///<reference path="objects/background.ts"/>
 ///<reference path="objects/rotatingGroup.ts"/>
 ///<reference path="objects/button.ts"/>
@@ -44,6 +45,7 @@ var obstacleManager: managers.ObstacleManager;
 var candyCollisionManager: managers.Collision;
 var veggieCollisionManager: managers.Collision;
 var veggieGroupCollisionManager: managers.Collision;
+var groupManager: managers.GroupManager;
 
 var tryAgain: objects.Button;
 var playButton: objects.Button;

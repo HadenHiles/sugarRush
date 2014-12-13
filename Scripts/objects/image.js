@@ -19,66 +19,6 @@ var objects;
     var Image = (function () {
         function Image(stage, game, image) {
             var _this = this;
-            //Define the x coordinate
-            Object.defineProperty(this, "x", {
-                get: function () {
-                    return _this._image.x;
-                }
-            });
-            //Define the y coordinate
-            Object.defineProperty(this, "y", {
-                get: function () {
-                    return _this._image.y;
-                }
-            });
-            Object.defineProperty(this, "regX", {
-                set: function (regXValue) {
-                    _this._image.regX = regXValue;
-                    return _this._image.regX;
-                },
-                get: function () {
-                    return _this._image.regX;
-                }
-            });
-            Object.defineProperty(this, "regY", {
-                set: function (regYValue) {
-                    _this._image.regY = regYValue;
-                    return _this._image.regY;
-                },
-                get: function () {
-                    return _this._image.regY;
-                }
-            });
-            Object.defineProperty(this, "scaleX", {
-                set: function (scaleXValue) {
-                    _this._image.scaleX = scaleXValue;
-                    return _this._image.scaleX;
-                },
-                get: function () {
-                    return _this._image.scaleX;
-                }
-            });
-            Object.defineProperty(this, "scaleY", {
-                set: function (scaleYValue) {
-                    _this._image.scaleY = scaleYValue;
-                    return _this._image.scaleY;
-                },
-                get: function () {
-                    return _this._image.scaleY;
-                }
-            });
-            //Define the width of the image
-            Object.defineProperty(this, "height", {
-                get: function () {
-                    return _this._image.getTransformedBounds().height;
-                }
-            });
-            //Define the height of the image
-            Object.defineProperty(this, "width", {
-                get: function () {
-                    return _this._image.getTransformedBounds().width;
-                }
-            });
             Object.defineProperty(this, "image", {
                 set: function (image) {
                     stage.removeChild(_this._image);
@@ -87,6 +27,96 @@ var objects;
                 },
                 get: function () {
                     return _this._image;
+                }
+            });
+            Object.defineProperty(this, "parent", {
+                get: function () {
+                    return _this._image.parent;
+                }
+            });
+            //Define the x coordinate
+            Object.defineProperty(this, "x", {
+                set: function (xValue) {
+                    _this._image.x = xValue;
+                    return _this.image.x;
+                },
+                get: function () {
+                    return _this.image.x;
+                }
+            });
+            //Define the y coordinate
+            Object.defineProperty(this, "y", {
+                set: function (yValue) {
+                    _this._image.y = yValue;
+                    return _this.image.y;
+                },
+                get: function () {
+                    return _this.image.y;
+                }
+            });
+            //Define the width of the image
+            Object.defineProperty(this, "height", {
+                set: function (heightValue) {
+                    _this.height = heightValue;
+                    return _this.height;
+                },
+                get: function () {
+                    return _this.image.getTransformedBounds().height;
+                }
+            });
+            //Define the height of the image
+            Object.defineProperty(this, "width", {
+                set: function (widthValue) {
+                    _this.width = widthValue;
+                    return _this.width;
+                },
+                get: function () {
+                    return _this.image.getTransformedBounds().width;
+                }
+            });
+            Object.defineProperty(this, "scaleX", {
+                set: function (scaleXValue) {
+                    _this.image.scaleX = scaleXValue;
+                    return _this.image.scaleX;
+                },
+                get: function () {
+                    return _this.image.scaleX;
+                }
+            });
+            Object.defineProperty(this, "scaleY", {
+                set: function (scaleYValue) {
+                    _this.image.scaleY = scaleYValue;
+                    return _this.image.scaleY;
+                },
+                get: function () {
+                    return _this.image.scaleY;
+                }
+            });
+            Object.defineProperty(this, "regX", {
+                set: function (regXValue) {
+                    _this.image.regX = regXValue;
+                    return _this.image.regX;
+                },
+                get: function () {
+                    return _this.image.regX;
+                }
+            });
+            Object.defineProperty(this, "regY", {
+                set: function (regYValue) {
+                    _this.image.regY = regYValue;
+                    return _this.image.regY;
+                },
+                get: function () {
+                    return _this._image.regY;
+                }
+            });
+            Object.defineProperty(this, "rotation", {
+                set: function (rotationValue) {
+                    _this._image.rotation = rotationValue;
+                    return _this._image.rotation;
+                },
+                get: function () {
+                    return _this._image.rotation;
                 }
             });
             this.stage = stage;
@@ -104,7 +134,10 @@ var objects;
         Image.prototype.moveImage = function () {
         };
         Image.prototype.localToGlobal = function (x, y) {
-            return this._image.localToGlobal(x, y);
+            return this.image.localToGlobal(x, y);
+        };
+        Image.prototype.getTransformedBounds = function () {
+            return this.image.getTransformedBounds();
         };
         //remove the character
         Image.prototype.destroy = function () {

@@ -29,39 +29,39 @@ module objects {
             this.lineColor = createjs.Graphics.getRGB(166, 214, 231);
             this.line.graphics.setStrokeStyle(8, "round", "round");
             game.addChild(this.line);
-            this.image.x = 100;
-            this.image.y = 220;
-            this.image.scaleX = .5;
-            this.image.scaleY = .5;
-            this.image.regX = this.width / 2;
-            this.image.regY = this.height / 2;
+            this.x = 100;
+            this.y = 220;
+            this.scaleX = .5;
+            this.scaleY = .5;
+            this.regX = this.width / 2 - 10;
+            this.regY = this.height / 2 + 20;
             this.soundTrack = createjs.Sound.play('candypump', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }
 
         //Update the position of the character according to the mouse position
         update() {
-            this.linePosX = this.image.x;
-            this.linePosY = this.image.y;
+            this.linePosX = this.x;
+            this.linePosY = this.y;
             this.line.graphics.beginStroke(this.lineColor);
             this.line.graphics.moveTo(this.linePosX - 15, this.linePosY);
-            this.line.graphics.lineTo(this.image.x - 15, this.image.y);
+            this.line.graphics.lineTo(this.x - 15, this.y);
             this.line.graphics.endStroke();
             super.update();
         }
 
         moveImage() {
             var speed = 7;
-            if (this.image.x < this.stage.mouseX + speed) {
-                this.image.x += speed;
+            if (this.x < this.stage.mouseX + speed) {
+                this.x += speed;
             }
-            if (this.image.x > this.stage.mouseX - speed) {
-                this.image.x -= speed;
+            if (this.x > this.stage.mouseX - speed) {
+                this.x -= speed;
             }
-            if (this.image.y < this.stage.mouseY + speed) {
-                this.image.y += speed;
+            if (this.y < this.stage.mouseY + speed) {
+                this.y += speed;
             }
-            if (this.image.y > this.stage.mouseY - speed) {
-                this.image.y -= speed;
+            if (this.y > this.stage.mouseY - speed) {
+                this.y -= speed;
             }
         }
 

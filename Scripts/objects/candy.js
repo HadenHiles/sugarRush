@@ -29,13 +29,15 @@ var objects;
             this.randomAnimationIdx = 0;
             this._spriteSheet = managers.Assets.candy;
             this._animationNames = managers.Assets.candy.getAnimations();
+            this.regX = this.width / 2;
+            this.regY = this.height / 2;
             this.dx = 4;
         }
         //Move the candy on the x axis and reset when it goes off screen
         Candy.prototype.moveImage = function () {
-            if (this.image) {
-                this.image.x -= this.dx;
-                if (this.image.x <= 0) {
+            if (this) {
+                this.x -= this.dx;
+                if (this.x <= 0) {
                     this.reset();
                 }
             }

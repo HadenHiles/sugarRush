@@ -22,6 +22,7 @@
 ///<reference path="../objects/scoreboard.ts"/>
 ///<reference path="../managers/collision.ts"/>
 ///<reference path="../managers/ObstacleManager.ts"/>
+///<reference path="../managers/groupManager.ts"/>
 ///<reference path="../filters/scale.ts"/>
 module states {
     export function playState() {
@@ -65,6 +66,7 @@ module states {
             }
         }
         rotatingGroup.rotate();
+        groupManager.moveGroup();
     }
 
     //Main loop of the play class
@@ -80,14 +82,10 @@ module states {
         var redPepperSprite2 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
         var redPepperSprite3 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
         var redPepperSprite4 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
-        var redPepperImage1 = new objects.Image(stage, game, redPepperSprite1);
-        var redPepperImage2 = new objects.Image(stage, game, redPepperSprite2);
-        var redPepperImage3 = new objects.Image(stage, game, redPepperSprite3);
-        var redPepperImage4 = new objects.Image(stage, game, redPepperSprite4);
-        var redPeppers = [redPepperImage1, redPepperImage2, redPepperImage3, redPepperImage4];
+        var redPeppers = [redPepperSprite1, redPepperSprite2, redPepperSprite3, redPepperSprite4];
         rotatingGroup = new objects.RotatingGroup(redPeppers);
 
-        game.addChild(rotatingGroup);
+        groupManager = new managers.GroupManager(stage, game, [rotatingGroup]);
 
         // Hide Cursor
         stage.cursor = "default";

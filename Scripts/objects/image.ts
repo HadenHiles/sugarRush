@@ -21,66 +21,6 @@ module objects {
         _image: createjs.Sprite;
 
         constructor(stage: createjs.Stage, game: createjs.Container, image: createjs.Sprite) {
-            //Define the x coordinate
-            Object.defineProperty(this, "x",{
-                get: () => {
-                    return this._image.x;
-                }
-            });
-            //Define the y coordinate
-            Object.defineProperty(this, "y",{
-                get: () => {
-                    return this._image.y;
-                }
-            });
-            Object.defineProperty(this, "regX", {
-                set: (regXValue) => {
-                    this._image.regX = regXValue;
-                    return this._image.regX;
-                },
-                get: () => {
-                    return this._image.regX;
-                }
-            });
-            Object.defineProperty(this, "regY", {
-                set: (regYValue) => {
-                    this._image.regY = regYValue;
-                    return this._image.regY;
-                },
-                get: () => {
-                    return this._image.regY;
-                }
-            });
-            Object.defineProperty(this, "scaleX", {
-                set: (scaleXValue) => {
-                    this._image.scaleX = scaleXValue;
-                    return this._image.scaleX;
-                },
-                get: () => {
-                    return this._image.scaleX;
-                }
-            });
-            Object.defineProperty(this, "scaleY", {
-                set: (scaleYValue) => {
-                    this._image.scaleY = scaleYValue;
-                    return this._image.scaleY;
-                },
-                get: () => {
-                    return this._image.scaleY;
-                }
-            });
-            //Define the width of the image
-            Object.defineProperty(this, "height",{
-                get: () => {
-                    return this._image.getTransformedBounds().height;
-                }
-            });
-            //Define the height of the image
-            Object.defineProperty(this, "width",{
-                get: () => {
-                    return this._image.getTransformedBounds().width;
-                }
-            });
             Object.defineProperty(this, "image", {
                 set: (image) => {
                     stage.removeChild(this._image);
@@ -89,6 +29,96 @@ module objects {
                 },
                 get: () => {
                     return this._image;
+                }
+            });
+            Object.defineProperty(this, "parent", {
+                get: () => {
+                    return this._image.parent;
+                }
+            });
+            //Define the x coordinate
+            Object.defineProperty(this, "x",{
+                set: (xValue) => {
+                    this._image.x = xValue;
+                    return this.image.x;
+                },
+                get: () => {
+                    return this.image.x;
+                }
+            });
+            //Define the y coordinate
+            Object.defineProperty(this, "y",{
+                set: (yValue) => {
+                    this._image.y = yValue;
+                    return this.image.y;
+                },
+                get: () => {
+                    return this.image.y;
+                }
+            });
+            //Define the width of the image
+            Object.defineProperty(this, "height",{
+                set: (heightValue) => {
+                    this.height = heightValue;
+                    return this.height;
+                },
+                get: () => {
+                    return this.image.getTransformedBounds().height;
+                }
+            });
+            //Define the height of the image
+            Object.defineProperty(this, "width",{
+                set: (widthValue) => {
+                    this.width = widthValue;
+                    return this.width;
+                },
+                get: () => {
+                    return this.image.getTransformedBounds().width;
+                }
+            });
+            Object.defineProperty(this, "scaleX", {
+                set: (scaleXValue) => {
+                    this.image.scaleX = scaleXValue;
+                    return this.image.scaleX;
+                },
+                get: () => {
+                    return this.image.scaleX;
+                }
+            });
+            Object.defineProperty(this, "scaleY", {
+                set: (scaleYValue) => {
+                    this.image.scaleY = scaleYValue;
+                    return this.image.scaleY;
+                },
+                get: () => {
+                    return this.image.scaleY;
+                }
+            });
+            Object.defineProperty(this, "regX", {
+                set: (regXValue) => {
+                    this.image.regX = regXValue;
+                    return this.image.regX;
+                },
+                get: () => {
+                    return this.image.regX;
+                }
+            });
+            Object.defineProperty(this, "regY", {
+                set: (regYValue) => {
+                    this.image.regY = regYValue;
+                    return this.image.regY;
+                },
+                get: () => {
+                    return this._image.regY;
+                }
+            });
+            Object.defineProperty(this, "rotation", {
+                set: (rotationValue) => {
+                    this._image.rotation = rotationValue;
+                    return this._image.rotation;
+                },
+                get: () => {
+                    return this._image.rotation;
                 }
             });
 
@@ -110,7 +140,11 @@ module objects {
         }
 
         localToGlobal(x: number, y: number): createjs.Point{
-            return this._image.localToGlobal(x, y);
+            return this.image.localToGlobal(x, y);
+        }
+
+        getTransformedBounds() {
+            return this.image.getTransformedBounds();
         }
 
         //remove the character

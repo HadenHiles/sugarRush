@@ -26,29 +26,22 @@ var filters;
                     return _this._original;
                 }
             });
-            Object.defineProperty(this, "x", {
+            Object.defineProperty(this, "parent", {
                 get: function () {
-                    return _this.original.x * _this._scaleX;
-                }
-            });
-            Object.defineProperty(this, "y", {
-                get: function () {
-                    return _this.original.y * _this._scaleY;
-                }
-            });
-            Object.defineProperty(this, "height", {
-                get: function () {
-                    return _this.original.height * _this._scaleHeight;
-                }
-            });
-            Object.defineProperty(this, "width", {
-                get: function () {
-                    return _this.original.width * _this._scaleWidth;
+                    return _this._original.parent;
                 }
             });
         }
+        Scale.prototype.getTransformedBounds = function () {
+            var bounds = this._original.getTransformedBounds();
+            bounds.x = bounds.x * this._scaleX;
+            bounds.y = bounds.y * this._scaleY;
+            bounds.height = bounds.height * this._scaleHeight;
+            bounds.width = bounds.width * this._scaleWidth;
+            return bounds;
+        };
         Scale.prototype.localToGlobal = function (x, y) {
-            return this._original.localToGlobal(x, y);
+            return this._original.parent.localToGlobal(x, y);
         };
         return Scale;
     })();

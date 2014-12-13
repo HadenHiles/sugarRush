@@ -27,11 +27,10 @@ module managers {
         }
 
         //Get the min and max values of 2 objects and pass them through the rangeIntersect method to determine if there is overlap
-        public rectIntersect(objectA: any, objectB: any): boolean {
-            var globalPointA = objectA.localToGlobal(objectA.x, objectA.y);
-            var globalPointB = objectB.localToGlobal(objectB.x, objectB.y);
-            return  this.rangeIntersect(globalPointA.x,globalPointA.x + objectA.width, globalPointB.x, globalPointB.x + objectB.width) &&
-                    this.rangeIntersect(globalPointA.y, globalPointA.y + objectA.height, globalPointB.y, globalPointB.y + objectB.height);
+        public rectIntersect(rectangleA: createjs.Rectangle, rectangleB: createjs.Rectangle): boolean {
+//            console.log("Object A: " + rectangleA + ", Object B: " + rectangleB);
+            return  this.rangeIntersect(rectangleA.x,rectangleA.x + rectangleA.width, rectangleB.x, rectangleB.x + rectangleB.width) &&
+                    this.rangeIntersect(rectangleA.y, rectangleA.y + rectangleA.height, rectangleB.y, rectangleB.y + rectangleB.height);
         }
 
         //Determine whethere there is an overlap with the two display objects or not
@@ -49,11 +48,20 @@ module managers {
                 for (var idx2 = 0; idx2 < this.displayObjectSet2.length; idx2++) {
                     scaledObjectA.original = this.displayObjectSet1[idx1];
                     scaledObjectB.original = this.displayObjectSet2[idx2];
-                    if (this.rectIntersect(scaledObjectA, scaledObjectB)) {
+                    if (this.rectIntersect(this.getTransformedRectangle(scaledObjectA), this.getTransformedRectangle(scaledObjectB))) {
                         this.collisionHandlerCallback(scaledObjectA.original, scaledObjectB.original);
+//                        console.log("Collision:\nObject A: " + scaledObjectA.original.getTransformedBounds() + ", Object B: " + scaledObjectB.original.getTransformedBounds());
                     }
                 }
             }
+        }
+        
+        private getTransformedRectangle(displayObject:any): createjs.Rectangle {
+            var bounds = displayObject.getTransformedBounds();
+            var globalOrigin = displayObject.parent.localToGlobal(bounds.x, bounds.y);
+            bounds.x = globalOrigin.x;
+            bounds.y = globalOrigin.y;
+            return bounds;
         }
     }
 } 

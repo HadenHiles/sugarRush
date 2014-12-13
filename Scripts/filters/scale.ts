@@ -29,30 +29,24 @@ module filters {
                     return this._original;
                 }
             });
-            Object.defineProperty(this, "x", {
+            Object.defineProperty(this, "parent", {
                 get: () => {
-                    return this.original.x * this._scaleX;
-                }
-            });
-            Object.defineProperty(this, "y", {
-                get: () => {
-                    return this.original.y * this._scaleY;
-                }
-            });
-            Object.defineProperty(this, "height", {
-                get: () => {
-                    return this.original.height * this._scaleHeight;
-                }
-            });
-            Object.defineProperty(this, "width", {
-                get: () => {
-                    return this.original.width * this._scaleWidth;
+                    return this._original.parent;
                 }
             });
         }
 
+        getTransformedBounds() {
+            var bounds = this._original.getTransformedBounds();
+            bounds.x = bounds.x * this._scaleX;
+            bounds.y = bounds.y * this._scaleY;
+            bounds.height = bounds.height * this._scaleHeight;
+            bounds.width = bounds.width * this._scaleWidth;
+            return bounds;
+        }
+
         localToGlobal(x: number, y: number): createjs.Point{
-            return this._original.localToGlobal(x, y);
+            return this._original.parent.localToGlobal(x, y);
         }
     }
 }
