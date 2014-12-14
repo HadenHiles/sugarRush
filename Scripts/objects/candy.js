@@ -19,13 +19,14 @@ var __extends = this.__extends || function (d, b) {
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="image.ts"/>
 ///<reference path="../managers/asset.ts"/>
+///<reference path="collidableSprite.ts"/>
 var objects;
 (function (objects) {
     // Candy Class
     var Candy = (function (_super) {
         __extends(Candy, _super);
         function Candy(stage, game) {
-            _super.call(this, stage, game, new createjs.Sprite(managers.Assets.candy, managers.Assets.candy[0]));
+            _super.call(this, stage, game, new objects.CollidableSprite(managers.Assets.candy, managers.Assets.candy[0]));
             this.randomAnimationIdx = 0;
             this._spriteSheet = managers.Assets.candy;
             this._animationNames = managers.Assets.candy.getAnimations();
@@ -46,7 +47,7 @@ var objects;
         Candy.prototype.reset = function () {
             this._animationNames = managers.Assets.candy.getAnimations();
             this.randomAnimationIdx = Math.floor(Math.random() * (this._animationNames.length + 1));
-            this.image = new createjs.Sprite(managers.Assets.candy, this._animationNames[this.randomAnimationIdx]);
+            this.image = new objects.CollidableSprite(managers.Assets.candy, this._animationNames[this.randomAnimationIdx]);
             this.adjustImage(this.image);
         };
         Candy.prototype.adjustImage = function (image) {

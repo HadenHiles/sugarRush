@@ -11,13 +11,15 @@
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="image.ts"/>
 ///<reference path="../filters/scale.ts"/>
+///<reference path="collidableSprite.ts"/>
+
 module objects {
     export class RotatingGroup extends createjs.Container {
         images:any[] = [];
         removedImages: any[] = [];
         dx: number;
         scale: filters.Scale;
-        constructor(images: createjs.Sprite[]) {
+        constructor(images: objects.CollidableSprite[]) {
             super();
             this.x = 400;
             this.y = 200;

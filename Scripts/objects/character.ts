@@ -14,6 +14,8 @@
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="image.ts"/>
 ///<reference path="../managers/asset.ts"/>
+///<reference path="collidableSprite.ts"/>
+
 module objects {
     // Character Class
     export class Character extends objects.Image {
@@ -23,7 +25,7 @@ module objects {
         linePosY: number;
         lineColor: string;
         constructor(stage: createjs.Stage, game: createjs.Container) {
-            super(stage, game, new createjs.Sprite(managers.Assets.atlas, "candy-craver"));
+            super(stage, game, new objects.CollidableSprite(managers.Assets.atlas, "candy-craver"));
             this.line = new createjs.Shape();
 //            this.lineColor = createjs.Graphics.getRGB(0xFFFFFF * Math.random(), 1);
             this.lineColor = createjs.Graphics.getRGB(166, 214, 231);

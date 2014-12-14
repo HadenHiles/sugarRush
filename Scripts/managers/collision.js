@@ -13,6 +13,7 @@
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="../filters/scale.ts"/>
+///<reference path="../objects/collidableSprite.ts"/>
 var managers;
 (function (managers) {
     // Collision Manager Class
@@ -62,8 +63,10 @@ var managers;
                     for (var idx2 = 0; idx2 < this.displayObjectSet2.length; idx2++) {
                         scaledObjectA.original = this.displayObjectSet1[idx1];
                         scaledObjectB.original = this.displayObjectSet2[idx2];
-                        if (this.rectIntersect(this.getTransformedRectangle(scaledObjectA), this.getTransformedRectangle(scaledObjectB))) {
-                            this.collisionHandlerCallback(scaledObjectA.original, scaledObjectB.original);
+                        if (scaledObjectA.original.collissionEnabled && scaledObjectB.original.collissionEnabled) {
+                            if (this.rectIntersect(this.getTransformedRectangle(scaledObjectA), this.getTransformedRectangle(scaledObjectB))) {
+                                this.collisionHandlerCallback(scaledObjectA.original, scaledObjectB.original);
+                            }
                         }
                     }
                 }

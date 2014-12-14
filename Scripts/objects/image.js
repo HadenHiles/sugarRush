@@ -13,6 +13,7 @@
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="../managers/asset.ts"/>
+///<reference path="collidableSprite.ts"/>
 var objects;
 (function (objects) {
     // Character Class
@@ -104,11 +105,23 @@ var objects;
                     return _this._image.rotation;
                 }
             });
+            Object.defineProperty(this, "collissionEnabled", {
+                set: function (value) {
+                    if (_this._image instanceof objects.CollidableSprite) {
+                        _this._image.collissionEnabled = value;
+                    }
+                },
+                get: function () {
+                    if (_this._image instanceof objects.CollidableSprite) {
+                        return _this._image.collissionEnabled;
+                    }
+                }
+            });
             this.stage = stage;
             this.game = game;
             this._image = image;
             if (!image) {
-                this._image = new createjs.Sprite(managers.Assets.candy, managers.Assets.candy[0]);
+                this._image = new objects.CollidableSprite(managers.Assets.candy, managers.Assets.candy[0]);
             }
             game.addChild(this._image);
         }
@@ -130,6 +143,10 @@ var objects;
         //remove the character
         Image.prototype.destroy = function () {
             this.game.removeChild(this._image);
+        };
+        Image.prototype.disableCollissionForDuration = function (milliseconds) {
+            if (milliseconds === void 0) { milliseconds = 1000; }
+            this._image.disabledCollissionForDuration(milliseconds);
         };
         return Image;
     })();

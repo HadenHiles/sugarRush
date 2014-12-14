@@ -13,6 +13,7 @@
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="image.ts"/>
 ///<reference path="../managers/asset.ts"/>
+///<reference path="collidableSprite.ts"/>
 module objects {
     // Candy Class
     export class Candy extends objects.Image {
@@ -21,7 +22,7 @@ module objects {
         public _spriteSheet: createjs.SpriteSheet = managers.Assets.candy;
         public _animationNames:string[] = managers.Assets.candy.getAnimations();
         constructor(stage: createjs.Stage, game: createjs.Container) {
-            super(stage, game, new createjs.Sprite(managers.Assets.candy, managers.Assets.candy[0]));
+            super(stage, game, new objects.CollidableSprite(managers.Assets.candy, managers.Assets.candy[0]));
             this.regX = this.width / 2;
             this.regY = this.height / 2;
             this.dx = 4;
@@ -42,7 +43,7 @@ module objects {
             this._animationNames = managers.Assets.candy.getAnimations();
             this.randomAnimationIdx = Math.floor(Math.random() * (this._animationNames.length + 1));
 
-            this.image = new createjs.Sprite(managers.Assets.candy, this._animationNames[this.randomAnimationIdx]);
+            this.image = new objects.CollidableSprite(managers.Assets.candy, this._animationNames[this.randomAnimationIdx]);
             this.adjustImage(this.image);
         }
 

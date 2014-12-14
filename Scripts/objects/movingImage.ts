@@ -12,13 +12,15 @@
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="image.ts"/>
+///<reference path="collidableSprite.ts"/>
+
 module objects {
     // MovingImage class
     export class MovingImage extends objects.Image {
         //Class Variables
         dy: number;
         dx: number;
-        constructor(stage: createjs.Stage, game: createjs.Container, image: createjs.Sprite) {
+        constructor(stage: createjs.Stage, game: createjs.Container, image: objects.CollidableSprite) {
             super(stage, game, image);
 
             this.image.x = this.stage.canvas.width;

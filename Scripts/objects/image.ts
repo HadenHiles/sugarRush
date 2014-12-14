@@ -13,14 +13,15 @@
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="../managers/asset.ts"/>
+///<reference path="collidableSprite.ts"/>
 module objects {
     // Character Class
     export class Image {
         stage: createjs.Stage;
         game: createjs.Container;
-        _image: createjs.Sprite;
+        _image: objects.CollidableSprite;
 
-        constructor(stage: createjs.Stage, game: createjs.Container, image: createjs.Sprite) {
+        constructor(stage: createjs.Stage, game: createjs.Container, image: objects.CollidableSprite) {
             Object.defineProperty(this, "image", {
                 set: (image) => {
                     stage.removeChild(this._image);
@@ -106,12 +107,24 @@ module objects {
                     return this._image.rotation;
                 }
             });
+            Object.defineProperty(this, "collissionEnabled", {
+                set: (value:Boolean) => {
+                    if (this._image instanceof objects.CollidableSprite) {
+                        this._image.collissionEnabled = value;
+                    }
+                },
+                get: () => {
+                    if (this._image instanceof objects.CollidableSprite) {
+                        return this._image.collissionEnabled;
+                    }
+                }
+            });
 
             this.stage = stage;
             this.game = game;
             this._image = image;
             if(!image) {
-                this._image = new createjs.Sprite(managers.Assets.candy, managers.Assets.candy[0]);
+                this._image = new objects.CollidableSprite(managers.Assets.candy, managers.Assets.candy[0]);
             }
             game.addChild(this._image);
         }
@@ -139,6 +152,9 @@ module objects {
         destroy() {
             this.game.removeChild(this._image);
         }
-    }
 
+        public disableCollissionForDuration(milliseconds:number=1000) {
+            this._image.disabledCollissionForDuration(milliseconds);
+        }
+    }
 }

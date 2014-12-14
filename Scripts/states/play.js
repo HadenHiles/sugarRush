@@ -20,6 +20,7 @@
 ///<reference path="../objects/image.ts"/>
 ///<reference path="../objects/rotatingGroup.ts"/>
 ///<reference path="../objects/scoreboard.ts"/>
+///<reference path="../objects/collidableSprite.ts"/>
 ///<reference path="../managers/collision.ts"/>
 ///<reference path="../managers/ObstacleManager.ts"/>
 ///<reference path="../managers/groupManager.ts"/>
@@ -78,10 +79,10 @@ var states;
         character = new objects.Character(stage, game);
         candy = new objects.Candy(stage, game);
         // Rotating Group objects
-        var redPepperSprite1 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
-        var redPepperSprite2 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
-        var redPepperSprite3 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
-        var redPepperSprite4 = new createjs.Sprite(managers.Assets.veggies, "red-pepper");
+        var redPepperSprite1 = new objects.CollidableSprite(managers.Assets.veggies, "red-pepper");
+        var redPepperSprite2 = new objects.CollidableSprite(managers.Assets.veggies, "red-pepper");
+        var redPepperSprite3 = new objects.CollidableSprite(managers.Assets.veggies, "red-pepper");
+        var redPepperSprite4 = new objects.CollidableSprite(managers.Assets.veggies, "red-pepper");
         var redPeppers = [redPepperSprite1, redPepperSprite2, redPepperSprite3, redPepperSprite4];
         rotatingGroup = new objects.RotatingGroup(redPeppers);
         groupManager = new managers.GroupManager(stage, game, [rotatingGroup]);
@@ -105,7 +106,7 @@ var states;
             }
             createjs.Sound.play("ew");
             // Prevent duplicate collisions by disabling collision detection for a second
-            veggieGroupCollisionManager.pauseForDuration();
+            object2.disableCollissionForDuration(750);
         });
         // Hide Cursor
         stage.cursor = "default";

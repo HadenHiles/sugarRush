@@ -1,9 +1,3 @@
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
 /**
  * Created with IntelliJ IDEA.
  * User: HandsHiles
@@ -17,6 +11,13 @@ var __extends = this.__extends || function (d, b) {
 ///<reference path="../../js/soundjs.d.ts"/>
 ///<reference path="image.ts"/>
 ///<reference path="../filters/scale.ts"/>
+///<reference path="collidableSprite.ts"/>
+var __extends = this.__extends || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    __.prototype = b.prototype;
+    d.prototype = new __();
+};
 var objects;
 (function (objects) {
     var RotatingGroup = (function (_super) {

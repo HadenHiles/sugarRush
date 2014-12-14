@@ -12,6 +12,7 @@
 ///<reference path="../../js/easeljs.d.ts"/>
 ///<reference path="../../js/preloadjs.d.ts"/>
 ///<reference path="../../js/soundjs.d.ts"/>
+///<reference path="../objects/collidableSprite.ts"/>
 module managers {
     // Collision Manager Class
     export class ObstacleManager {
@@ -51,7 +52,7 @@ module managers {
             //Gather random sprites from the veggies spritesheet
             if (this.tickCount++ > 0 && this.tickCount % 60 == 0){
                 var randomAnimationIdx:number = Math.floor(Math.random() * (this._animationNames.length + 1));
-                var image:createjs.Sprite = new createjs.Sprite(this._spriteSheet, this._animationNames[randomAnimationIdx]);
+                var image:objects.CollidableSprite = new objects.CollidableSprite(this._spriteSheet, this._animationNames[randomAnimationIdx]);
                 var o:objects.MovingImage = new objects.MovingImage(this.stage, this.game, image);
                 this.displayObjectsCreated++;
                 this.newDisplayObjectCallback(o);
