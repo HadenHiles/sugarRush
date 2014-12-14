@@ -16,7 +16,6 @@
 module objects {
     export class RotatingGroup extends createjs.Container {
         images:any[] = [];
-        removedImages: any[] = [];
         dx: number;
         scale: filters.Scale;
         constructor(images: objects.CollidableSprite[]) {
@@ -54,7 +53,7 @@ module objects {
                 this.images[idx].rotation += 1;
 //                console.log(this.images[idx].getBounds() + "\n");
             }
-//            this.rotation -= 1;
+            this.rotation -= 1;
         }
 
         reset(){

@@ -34,6 +34,7 @@ var stage: createjs.Stage;
 var game: createjs.Container;
 
 var rotatingGroup: objects.RotatingGroup;
+var greenRotatingGroup: objects.RotatingGroup;
 var background: objects.Background;
 var character: objects.Character;
 var candy: objects.Candy;

@@ -81,7 +81,7 @@ module states {
         character = new objects.Character(stage, game);
         candy = new objects.Candy(stage, game);
 
-        // Rotating Group objects
+        // Red pepper Rotating Group objects
         var redPepperSprite1 = new objects.CollidableSprite(managers.Assets.veggies, "red-pepper");
         var redPepperSprite2 = new objects.CollidableSprite(managers.Assets.veggies, "red-pepper");
         var redPepperSprite3 = new objects.CollidableSprite(managers.Assets.veggies, "red-pepper");

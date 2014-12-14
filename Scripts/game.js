@@ -33,6 +33,7 @@
 var stage;
 var game;
 var rotatingGroup;
+var greenRotatingGroup;
 var background;
 var character;
 var candy;

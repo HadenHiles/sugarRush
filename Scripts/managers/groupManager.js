@@ -28,9 +28,6 @@ var managers;
             var randomGroup = this.groups[0];
             randomGroup.y += this.dy;
             randomGroup.x -= this.dx;
-            //            if(randomGroup.x <= 200) {
-            //                this.update();
-            //            }
             if (randomGroup.x <= -200) {
                 //When group reaches the end reset it to the beginning
                 randomGroup.reset();

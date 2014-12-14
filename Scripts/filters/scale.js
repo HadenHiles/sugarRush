@@ -16,8 +16,8 @@ var filters;
             var _this = this;
             this._scaleX = 1;
             this._scaleY = 1;
-            this._scaleWidth = .95;
-            this._scaleHeight = .95;
+            this._scaleWidth = .85;
+            this._scaleHeight = .85;
             Object.defineProperty(this, "original", {
                 set: function (value) {
                     _this._original = value;

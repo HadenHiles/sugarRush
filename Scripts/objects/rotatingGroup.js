@@ -25,7 +25,6 @@ var objects;
         function RotatingGroup(images) {
             _super.call(this);
             this.images = [];
-            this.removedImages = [];
             this.x = 400;
             this.y = 200;
             this.regX = 100;
@@ -57,7 +56,7 @@ var objects;
             for (var idx = 0; idx < this.images.length; idx++) {
                 this.images[idx].rotation += 1;
             }
-            //            this.rotation -= 1;
+            this.rotation -= 1;
         };
         RotatingGroup.prototype.reset = function () {
             this.x = 1200;
